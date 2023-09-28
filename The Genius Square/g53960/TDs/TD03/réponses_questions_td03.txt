@@ -1,0 +1,136 @@
+										Javafx : bases
+
+ **2. La salle de spectacle**
+**1. Dans la classe HelloWorld modifiez le code d’instanciation de la scène ci-dessous en modifiant la valeur des paramètres numériques**
+
+
+Scene scene = new Scene(root, 250, 100);
+```
+
+**Quel est l’effet de ce changement de paramètres ?**
+
+Modifier la dimension de la fenêtre.
+
+
+**2. Juste après avoir modifié le titre de la primaryStage ajoutez le code ci-dessous :**
+
+
+primaryStage.initStyle(StageStyle.TRANSPARENT);
+
+
+**Quel est l’effet de cette méthode initStyle() sur la fenêtre ? Après consultation de la javadoc 5 de la classe Stage donnez les valeurs possibles de l’énumération StageStyle.**
+
+Elle permet de modifer l'apparence du titre. Dans cet exemple, le titre est devenu transparent.
+
+Les valeurs possibles sont :
+    - DECORATED
+    - UNDECORATED
+    - TRANSPARENT 
+    - UTILITY 
+
+
+**3. Afin de placer le composant Text au centre de l’écran, la méthode setCenter() de la classe BorderPane est appelée**
+
+
+BorderPane root = new BorderPane();
+root.setCenter(helloText);
+
+**Que ce passe-t-il si on choisit d’appeler une des méthodes ci-dessous ?**
+
+
+setTop()    -> place le texte au-dessus 
+setBottom() -> place le texte en-dessous 
+setLeft()   -> place le texte à gauche
+setRight()  -> place le texte à droite
+```
+
+ **3. Les composants, controls, widgets**
+
+**3.1 Labeled**
+
+**3.1.2 Check Box**
+
+**1. Quel est la différence de comportement entre les trois CheckBox de la classe HelloWorldCheckBox ?**
+```
+setSelected(true)           -> l'état de la checkbox est sélectionnée par défaut
+setIndeterminate(true)      -> l'état de la checkbox est indéterminée par défaut
+setAllowIndeterminate(true) -> la checkbox passe par 3 états, sélectionné, déselectionné et indeterminé.
+```
+**2. Quel est l’effet sur l’affichage des CheckBox si on supprime les lignes de code ci-dessous?**
+
+BorderPane.setAlignment(checkBox1, Pos.CENTER);
+BorderPane.setAlignment(checkBox3, Pos.CENTER);
+
+
+L'alignement des checkbox1 et checkbox3 ont changé. Ils ne sont plus placés
+au centre du cadre.
+
+
+**3.2 TextInputControl**
+
+**3.2.1 TextField**
+**1. Modifiez la classe HelloWorldtextField et transformez le composant TextField en un PasswordField. Quelles sont les conséquences de cette modification ?**
+
+
+Le texte rentré par l'utilisateur est caché.
+
+
+**2. Lors de l’exécution de HelloWorldTextFieldAction, que se passe-t-il après avoir pressé la touche enter ?**
+
+Lorsque l'utilisateur appuye sur enter, il ne pourra plus modifier son texte.
+```
+
+ **3.2.2 TextArea**
+**Dans le code de présentation ci-dessous, nous avons ajouté l’utilisation du composant Button qui possède également la propriété onAction. Essayez de comprendre ce qui se produit lors d’une pression sur le bouton de cet écran.**
+
+
+Lorsque l'utilisateur appuye sur print, le texte est affiché dans l'output netbeans.
+
+
+ **4. Les Layouts**
+
+ **4.1. Le graphe de scène**
+**Vérifiez via la documentation ce que retourne la méthode getChildren(). Quel peut être l’intérêt d’un tel type de retour ?**
+
+
+La méthode getChildren() retourne la liste des enfants. Ca permet d'accèder aux composants des enfants.
+
+**4.2. Les différents Layouts**
+
+ **4.2.2 HBox, VBox**
+**1. Le layout VBox place les composants sur une ligne verticale de haut en bas les uns en dessous des autres. Transformez la classe HBoxSample en une classe VBoxSample afin de disposer d’un écran comme sur la figure 14.**
+
+
+Voir projet NetBeans
+
+
+**2. Pour ajouter les composants au layout vous avez utilisé la méthode addChildren(). Pouvez-vous modifier votre code en utilisant la méthode addAll() ?**
+
+
+root.getChildren().addAll(checkBox1, checkBox2, checkBox3);
+
+
+**3. Dans la documentation du Layout VBox vous trouverez la remarque suivante : VBox does not clip its content by default, so it is possible that childrens’ bounds may extend outside its own bounds if a child’s min size prevents it from being fit within the vbox.. Quel impact sur le développement de nos interfaces graphiques peut avoir cette notion de clip ? Quelles méthodes sont à notre disposition pour gérer cette notion ?**
+
+Certains objets sont trop large. 
+Une solution c'est de modifier prefWidthProperty.
+
+
+#### **4.2.3 GridPane**
+
+**1. Au sein d’un GridPane placez plusieurs composants dans une même cellule. Comment sont-ils répartis au sein de cette cellule ?**
+
+
+Les composants sont placés les uns sur les autres.
+
+**2. Remplacez les paramètres de la méthode statique GridPane.setHalignment(
+lblPassword, HPos.RIGHT) par GridPane.setHalignment(lblPassword, HPos.CENTER). Quel est l’impact sur l’affichage de l’écran ?**
+
+
+Le label est décalé vers la droite (parce qu'il y a un textfield à côté)
+
+**3. Remplacez les paramètres de la méthode statique GridPane.setFillWidth(
+tfdPassword, false) par GridPane.setFillWidth(tfdPassword, true).
+Quel(s) changements(s) pouvez-vous noter ?**
+
+Le textfield va jusqu'à la longueur maximale.

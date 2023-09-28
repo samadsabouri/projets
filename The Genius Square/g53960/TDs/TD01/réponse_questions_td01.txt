@@ -1,0 +1,234 @@
+>>QUESTION **1**
+
+1. Qu’affiche ce programme (en réfléchissant, sur papier, sans l’exécuter) ?
+	Le programme affiche :  (0.0, 0.0)
+						(2.0, 2.0)
+
+						-------------------------------------
+
+2. Si vous changez la visibilité de la classe TestPoint en public, quelle erreur le compilateur rapporte-t-il ?
+
+	L'erreur obtenue est : "The public type TestPoint must be defined in its can file." 
+	C'est à dire que le fichier TestPoint doit être définit dans un autre fichier 
+	C'est à dire dans son propre fichier .java car on ne peut pas avoir 2 classes publiques dans le même fichier Java.
+
+						--------------------------------------
+
+3. Si vous changez la visibilité de la classe Point en visibilité par défaut (retirer le modificateur public),
+   quelle erreur obtenez-vous ?
+
+	Aucune erreur car on a une visibilité package pour Point et une visibilité publique pour TestPoint, 
+	Remarque : Qu'on met rien (publique, private, protected..) ça veut dire que c'est package.
+
+						--------------------------------------
+4. Remettez le code dans son état d’origine?
+	 Le code est remis à son état d'origine
+						
+
+									*********************************
+
+>>QUESTION **2**
+
+1.Ajoutez dans la méthode principale de la classe TestPoint la ligne?
+
+	System.out.println(p.x);
+
+	Quelle erreur obtient-on ? Remettez ensuite le code dans son état d’origine.
+	
+	On peut pas accéder à l'attribut x car il est privé. On peut le récupérer grâce aux getteurs.
+						 -------------------------------------
+
+2. Ajoutez la méthode suivante à la classe Point?
+
+		public void move(int dx, int dy) {
+			System.out.println("méthode move(int, int)");
+			x += dx;
+			y += dy;
+		}
+
+  Qu’affiche maintenant le programme ?
+
+(0.0, 0.0)
+méthode move(int, int)
+(2.0, 2.0)
+
+						----------------------------------------
+
+3. Que se passe-t-il si on tente d’ajouter la méthode (le type de retour est différent
+mais le nombre et le type des paramètres sont identiques)
+
+	public boolean move(double dx, double dy) {
+		x += dx;
+		y += dy;
+		return true;
+	}
+	
+	L'erreur obtenue est : "move(double, double) is already defined."
+		La méthode move a été déjà défini dans la classe.
+
+						-------------------------------------------
+4. Remettez le code dans son état d’origine.
+		code remis..
+
+						
+							********************************
+>>QUESTION **3**
+
+1. Modifiez le constructeur sans paramètre comme suit (ajout de l’appel println) :
+
+	public Point() {
+		System.out.println("test");
+		this(0,0);
+	}
+
+	Quelle erreur obtient-on ?
+		System.out.println("test"); c'est cette ligne qui cause problème (l'ordre importe)
+		l'appel à this() doit être la première instruction du corps du constructeur.
+
+						-------------------------------------------------
+2. Supprimez le constructeur sans paramètre de la classe Point.
+   Quelle erreur de compilation obtient-on ?
+		Lorsqu’une classe ne définit aucun constructeur, un constructeur par défaut sans paramètre est créé,
+ 		c’est ce constructeur qui est utilisé à la première ligne : Point p = new Point();
+						---------------------------------------------------
+		
+		Dans le première cas sa nous à causer une erreur de compilation car on a supprimer le premier constructeur sans paramétres
+		parcontre dans le déuxieme cas çava fonctionner parce que un constructeur par défaut est crée.
+3. Il est possible, mais déconseillé, d’initialiser les attributs avec des valeurs par défaut
+	explicites. Par exemple à partir du code de la question précédente :
+
+	public class Point {
+		private double x = 10;
+		private double y = 10;
+		...
+	}
+
+	Qu’affiche maintenant ce programme ?
+
+		(10.0, 10.0)
+		(12.0, 12.0)
+
+4. Remettez le code dans son état d’origine.
+	code remis..
+
+							************************************
+
+>>QUESTION **4**
+
+	1. Qu’affiche ce programme ?
+		
+	Circle : [(0.0, 0.0), 5.0]
+	Circle : [(2.0, 5.0), 5.0]
+	Circle : [(2.0, 5.0), 10.0]
+
+					----------------------------------
+
+2. Combien d’instances différentes de la classe Point sont créées dans ce programme ?
+	1 instance (faut juste compter les nombres de new)
+
+						***************************************************
+
+>>QUESTION **5**
+
+1.Qu’affiche ce programme ?
+	Circle : [(0.0, 0.0), 5.0]
+	Circle : [(2.0, 5.0), 5.0]
+	Circle : [(0.0, 0.0), 5.0]
+
+				----------------------------------------
+
+2. Combien d’instances de la classe Point et Circle sont créées dans ce programme ?
+			
+			1 instance pour Point et 1 instance pour Circle
+
+Quelles sont les instances référencées par la variable p et p2 dans le main ?
+Quelle instance référence l’attribut center de l’instance c créée dans le main ?
+
+		p -> référence à l'objet Point
+		p2 -> référence à p
+
+		center -> réference à p
+
+				---------------------------------------
+
+3. Ajoutez une copie défensive à la ligne 14 de la classe Circle comme suit :
+
+		this.center = new Point(center.getX(), center.getY()); //copie défensive.
+
+				-------------------------------------
+
+4. Remplacez la ligne 26 de la classe Circle par la ligne suivante :
+
+	return new Point(center.getX(), center.getY()); //copie défensive
+
+
+		 Il affiche:
+				Circle : [(10.0, 10.0), 5.0]
+    				Circle : [(12.0, 15.0), 5.0]
+				Circle : [(12.0, 15.0), 10.0]
+	
+	
+		 Il affiche:
+
+				Circle : [(10.0, 10.0), 5.0]
+				Circle : [(12.0, 15.0), 5.0]
+				Circle : [(12.0, 15.0), 10.0]
+
+
+				---------------------------------------
+
+5. Après avoir effectué ces modifications au programme :
+	Combien d’instances de la classe Point et Circle sont créées dans ce programme ?
+	Quelles sont les instances référencées par la variable p et p2 dans le main ?
+	Quelle instance référence l’attribut center de l’instance c créée dans le main ?
+
+
+		* 3 instances de Point et 1 instance de Cercle
+
+	En effectuant une copie défensive du centre lors de la construction du cercle et dans la
+	méthode getCenter() on assure que l’unique manière de déplacer le cercle est d’utiliser
+	la méthode move de Circle.
+
+
+			******************************************
+
+>>QUESTION **6**
+	
+		
+
+1. Il affiche:
+	
+	Rectangle : [(0.0, 0.0), (5.0, 3.0)]
+	perimeter: 16.0
+	Rectangle : [(2.0, 5.0), (7.0, 8.0)]
+	perimeter: 16.0
+	
+		_______________________________________________
+	
+2. bl et ur instancient chaqun un Point et r instancie un 	Rectangle
+	
+		_______________________________________________	
+	
+3. l'invariant n'est pas respecté.
+
+ Il affiche: 
+	
+	Rectangle : [(0.0, 0.0), (5.0, 3.0)]
+	perimeter: 16.0
+	méthode move(int,int)
+	Rectangle : [(12.0, 15.0), (7.0, 8.0)]
+	perimeter: -24.0
+	
+	La valeur est de -24.
+	Le 1er point est plus grand que le 2eme point.
+	
+
+		_____________________________________________		
+	
+4. Il affiche la même chose: 
+	
+	Rectangle : [(0.0, 0.0), (5.0, 3.0)]
+	perimeter: 16.0
+	méthode move(int,int)
+	Rectangle : [(12.0, 15.0), (7.0, 8.0)]
+	perimeter: -24.0
