@@ -1,0 +1,77 @@
+\hypertarget{class_game_rule}{}\doxysection{Game\+Rule Class Reference}
+\label{class_game_rule}\index{GameRule@{GameRule}}
+
+
+The \mbox{\hyperlink{class_game_rule}{Game\+Rule}} class.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Rule.\+h$>$}
+
+Inheritance diagram for Game\+Rule\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.623188cm]{class_game_rule}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_game_rule_a297d84f86d064f1420555b9e157520bd}{apply}} (\mbox{\hyperlink{class_element}{Element}} elem, \mbox{\hyperlink{class_board_loader}{Board\+Loader}} $\ast$board\+Loader)=0
+\begin{DoxyCompactList}\small\item\em Applies a rule based on the different elements. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_rule_ad8009ada19a22c5ad7681d357c1f77dd}{disapply}} (\mbox{\hyperlink{class_element}{Element}} elem, \mbox{\hyperlink{class_board_loader}{Board\+Loader}} $\ast$board\+Loader)
+\begin{DoxyCompactList}\small\item\em Disapplies a rule based on the different elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_game_rule}{Game\+Rule}} class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_rule_a297d84f86d064f1420555b9e157520bd}\label{class_game_rule_a297d84f86d064f1420555b9e157520bd}} 
+\index{GameRule@{GameRule}!apply@{apply}}
+\index{apply@{apply}!GameRule@{GameRule}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}}
+{\footnotesize\ttfamily virtual void Game\+Rule\+::apply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}}}]{elem,  }\item[{\mbox{\hyperlink{class_board_loader}{Board\+Loader}} $\ast$}]{board\+Loader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Applies a rule based on the different elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & The element to apply the rule on. \\
+\hline
+{\em board\+Loader} & The board loader object to modify the board state. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_element___is___kill_ae4d1df2ba70e09cf1e54eeda9977690a}{Element\+\_\+\+Is\+\_\+\+Kill}}, \mbox{\hyperlink{class_element___is___push_a4419f243b0b01ba6c2bfedacc0254351}{Element\+\_\+\+Is\+\_\+\+Push}}, \mbox{\hyperlink{class_element___is___sink_aa2f71083f28ae12fee209a7b00fd3214}{Element\+\_\+\+Is\+\_\+\+Sink}}, \mbox{\hyperlink{class_element___is___stop_aa748c3ff1273afb2e9091cd26067d8d1}{Element\+\_\+\+Is\+\_\+\+Stop}}, \mbox{\hyperlink{class_element___is___win_a234dfb3c3968e529de50e9a1f6767fae}{Element\+\_\+\+Is\+\_\+\+Win}}, and \mbox{\hyperlink{class_element___is___you_a91dd1b129ce2e085d03da61b4fd1506f}{Element\+\_\+\+Is\+\_\+\+You}}.
+
+\mbox{\Hypertarget{class_game_rule_ad8009ada19a22c5ad7681d357c1f77dd}\label{class_game_rule_ad8009ada19a22c5ad7681d357c1f77dd}} 
+\index{GameRule@{GameRule}!disapply@{disapply}}
+\index{disapply@{disapply}!GameRule@{GameRule}}
+\doxysubsubsection{\texorpdfstring{disapply()}{disapply()}}
+{\footnotesize\ttfamily virtual void Game\+Rule\+::disapply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}}}]{elem,  }\item[{\mbox{\hyperlink{class_board_loader}{Board\+Loader}} $\ast$}]{board\+Loader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Disapplies a rule based on the different elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & The element to disapply the rule on. \\
+\hline
+{\em board\+Loader} & The board loader object to modify the board state. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_element___is___kill_a14316bdc70c8d21aaad19a9fbb931fa3}{Element\+\_\+\+Is\+\_\+\+Kill}}, \mbox{\hyperlink{class_element___is___push_a0bb1797eebd4d54c64b461adbb158982}{Element\+\_\+\+Is\+\_\+\+Push}}, \mbox{\hyperlink{class_element___is___sink_add369a82f6606603ed0dd35300ad08da}{Element\+\_\+\+Is\+\_\+\+Sink}}, \mbox{\hyperlink{class_element___is___stop_ab524b5d6fabe20bde9721fafd67ed5cc}{Element\+\_\+\+Is\+\_\+\+Stop}}, \mbox{\hyperlink{class_element___is___win_ad4a40a94a47bca3c135abd714eec630a}{Element\+\_\+\+Is\+\_\+\+Win}}, and \mbox{\hyperlink{class_element___is___you_aba6dd1574c5506b368f09f676ad1c282}{Element\+\_\+\+Is\+\_\+\+You}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+metier/Game\+Rule.\+h\end{DoxyCompactItemize}

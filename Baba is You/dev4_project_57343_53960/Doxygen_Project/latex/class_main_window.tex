@@ -1,0 +1,145 @@
+\hypertarget{class_main_window}{}\doxysection{Main\+Window Class Reference}
+\label{class_main_window}\index{MainWindow@{MainWindow}}
+Inheritance diagram for Main\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_window}
+\end{center}
+\end{figure}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_window_a82e9735fab300319ea1e6c587312c728}{send\+Signal\+Key}} (int event)
+\begin{DoxyCompactList}\small\item\em send\+Signal\+Key to send a signal in manual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a66e6677a62a3e648766dae89d5fd9e9f}{key\+Pressed}} (int event)
+\begin{DoxyCompactList}\small\item\em key\+Pressed to see if a key is pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_window_a6777b0854be107ab1d6d687af721d9ef}\label{class_main_window_a6777b0854be107ab1d6d687af721d9ef}} 
+{\bfseries Main\+Window} (int row\+Board=0, int col\+Board=0, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_square}{Square}} $\ast$ $>$ $>$ squares\+Board=\{\}, QWidget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor of Mainwindow. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a2b5968beb5e2d77c67a27ec8ffcf3a44}{display\+Board}} (\mbox{\hyperlink{class_game}{Game}} $\ast$g)
+\begin{DoxyCompactList}\small\item\em Displays the game board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a029a9c6c2b98cc0bc91b700baf942453}{print\+Message}} (std\+::string message)
+\begin{DoxyCompactList}\small\item\em Prints a message to the console. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_window_ab560d69d7c3e66c85984bf937069c51f}\label{class_main_window_ab560d69d7c3e66c85984bf937069c51f}} 
+void {\bfseries clear\+Text\+Edit} ()
+\begin{DoxyCompactList}\small\item\em clear\+Text\+Edit to clear the text\+Edit ui. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_main_window_a34dce5fede9f87d95270583bed333435}{Update}} (\mbox{\hyperlink{class_subject}{Subject}} $\ast$) override
+\begin{DoxyCompactList}\small\item\em The update method for the \mbox{\hyperlink{class_observer}{Observer}} pattern. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}\label{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}} 
+{\bfseries $\sim$\+Main\+Window} ()
+\begin{DoxyCompactList}\small\item\em The destructor of the class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_observer_ab5e067280bf8e1f102853f65a62a726c}{Update}} (\mbox{\hyperlink{class_subject}{Subject}} $\ast$subject)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual method that each concrete observer must implement\+: it is this method that the observed subject calls when a notification. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_window_a55ae3e0d4303334ccabae0a5050cfd88}{key\+Press\+Event}} (QKey\+Event $\ast$event) override
+\begin{DoxyCompactList}\small\item\em key\+Press\+Event to catch an event and do things depending on that. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_main_window_a2b5968beb5e2d77c67a27ec8ffcf3a44}\label{class_main_window_a2b5968beb5e2d77c67a27ec8ffcf3a44}} 
+\index{MainWindow@{MainWindow}!displayBoard@{displayBoard}}
+\index{displayBoard@{displayBoard}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{displayBoard()}{displayBoard()}}
+{\footnotesize\ttfamily void Main\+Window\+::display\+Board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game}{Game}} $\ast$}]{g }\end{DoxyParamCaption})}
+
+
+
+Displays the game board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & The game instance. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_a66e6677a62a3e648766dae89d5fd9e9f}\label{class_main_window_a66e6677a62a3e648766dae89d5fd9e9f}} 
+\index{MainWindow@{MainWindow}!keyPressed@{keyPressed}}
+\index{keyPressed@{keyPressed}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{keyPressed}{keyPressed}}
+{\footnotesize\ttfamily void Main\+Window\+::key\+Pressed (\begin{DoxyParamCaption}\item[{int}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+key\+Pressed to see if a key is pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & tje event to catch if any key is pressed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_a55ae3e0d4303334ccabae0a5050cfd88}\label{class_main_window_a55ae3e0d4303334ccabae0a5050cfd88}} 
+\index{MainWindow@{MainWindow}!keyPressEvent@{keyPressEvent}}
+\index{keyPressEvent@{keyPressEvent}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{keyPressEvent()}{keyPressEvent()}}
+{\footnotesize\ttfamily void Main\+Window\+::key\+Press\+Event (\begin{DoxyParamCaption}\item[{QKey\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+key\+Press\+Event to catch an event and do things depending on that. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & the event to catch. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_a029a9c6c2b98cc0bc91b700baf942453}\label{class_main_window_a029a9c6c2b98cc0bc91b700baf942453}} 
+\index{MainWindow@{MainWindow}!printMessage@{printMessage}}
+\index{printMessage@{printMessage}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{printMessage()}{printMessage()}}
+{\footnotesize\ttfamily void Main\+Window\+::print\+Message (\begin{DoxyParamCaption}\item[{std\+::string}]{message }\end{DoxyParamCaption})}
+
+
+
+Prints a message to the console. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & message to be printed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_a82e9735fab300319ea1e6c587312c728}\label{class_main_window_a82e9735fab300319ea1e6c587312c728}} 
+\index{MainWindow@{MainWindow}!sendSignalKey@{sendSignalKey}}
+\index{sendSignalKey@{sendSignalKey}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{sendSignalKey}{sendSignalKey}}
+{\footnotesize\ttfamily void Main\+Window\+::send\+Signal\+Key (\begin{DoxyParamCaption}\item[{int}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+send\+Signal\+Key to send a signal in manual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & the event in the signat to send. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_a34dce5fede9f87d95270583bed333435}\label{class_main_window_a34dce5fede9f87d95270583bed333435}} 
+\index{MainWindow@{MainWindow}!Update@{Update}}
+\index{Update@{Update}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_subject}{Subject}} $\ast$}]{game }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+The update method for the \mbox{\hyperlink{class_observer}{Observer}} pattern. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subject} & The subject instance. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_observer_ab5e067280bf8e1f102853f65a62a726c}{Observer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+gui/Mainwindow.\+h\item 
+gui/Mainwindow.\+cpp\end{DoxyCompactItemize}

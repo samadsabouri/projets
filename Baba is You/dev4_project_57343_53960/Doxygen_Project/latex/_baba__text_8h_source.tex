@@ -1,0 +1,44 @@
+\hypertarget{_baba__text_8h_source}{}\doxysection{Baba\+\_\+text.\+h}
+\label{_baba__text_8h_source}\index{metier/elements/Baba\_text.h@{metier/elements/Baba\_text.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BABA\_TEXT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BABA\_TEXT\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}../Element.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_baba___text}{Baba\_Text}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_element}{Element}}\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{class_baba___text}{Baba\_Text}}(\mbox{\hyperlink{class_position}{Position}}\ pos,\ Direction\ dir):\ \mbox{\hyperlink{class_element_ab0d0e20be9a36ae676202db753faeec9}{Element}}(pos,\ dir,\ ElementType::BLOCK\_TEXT,\ \textcolor{stringliteral}{"{}baba\_text"{}},\ \textcolor{keyword}{false},\ \textcolor{stringliteral}{"{}baba\ "{}})\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{class_baba___text_afd493bb9d0535868e42415a0a0a0da0d}{getName}}()\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_element_a2e2ee96d5698ea2aa998fd84e2c34f4f}{Element::getName}}();}
+\DoxyCodeLine{00012\ \ \ \ \};}
+\DoxyCodeLine{00013\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ Direction\ \mbox{\hyperlink{class_baba___text_a5d4c30958587e1b3633a57f27a148c98}{getDirection}}()\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_element_a905bce215c7f79a309e6b4bbf58fa0c7}{Element::getDirection}}();}
+\DoxyCodeLine{00015\ \ \ \ \ \};}
+\DoxyCodeLine{00016\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ ElementType\ \mbox{\hyperlink{class_baba___text_a7b316269811d2b5cc4e553af268e5f9f}{getElementType}}()\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_element_acea040d7ac78bc939ae1716da3627490}{Element::getElementType}}();}
+\DoxyCodeLine{00018\ \ \ \ \};}
+\DoxyCodeLine{00019\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_position}{Position}}\ \mbox{\hyperlink{class_baba___text_a09290a47065e396a529c7b7da5db3f38}{getPosition}}()\textcolor{keyword}{override}\{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_element_a290586fad7fc5baf794201988953fd2d}{Element::getPosition}}();}
+\DoxyCodeLine{00021\ \ \ \ \};}
+\DoxyCodeLine{00022\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_baba___text_a6e47d8e0b386b4ac03ee9494a436ed5b}{setPosition}}(\mbox{\hyperlink{class_position}{Position}}\ position)\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_element_a66d1bf8786a21fbffac92d5ecbde5330}{Element::setPosition}}(position);}
+\DoxyCodeLine{00024\ \ \ \ \};}
+\DoxyCodeLine{00025\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_baba___text_a3aca7c8dff7149a28f73a65ffce47c8b}{setDirection}}(Direction\ dir)\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_element_a6932f29a049ff097f0eec9a68bfd842d}{Element::setDirection}}(dir);}
+\DoxyCodeLine{00027\ \ \ \ \};}
+\DoxyCodeLine{00028\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_baba___text_a472c2feb16e269172823505b6504c65c}{setMoveble}}(\textcolor{keywordtype}{bool}\ movable)\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00029\ \ \ \ \mbox{\hyperlink{class_element_a47632e8b85694fe6093e4add948ac50d}{Element::setMoveble}}(movable);}
+\DoxyCodeLine{00030\ \ \ \ \};}
+\DoxyCodeLine{00031\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_baba___text_a00d9166964e69b240cdb8d31ed65f172}{isMoveble}}()\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_element_a465e7abc5a6075880d47b48bc8c5318d}{Element::isMoveble}}();}
+\DoxyCodeLine{00033\ \ \ \ \};}
+\DoxyCodeLine{00034\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{class_baba___text_a4fb31bedfb17755683821b9da0cd7300}{getSymbol}}()\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_element_ac453bc42415eae9ddb5a349d2b539a20}{Element::getSymbol}}();}
+\DoxyCodeLine{00036\ \ \ \ \};}
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BABA\_TEXT\_H}}
+
+\end{DoxyCode}

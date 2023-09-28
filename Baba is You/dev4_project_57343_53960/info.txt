@@ -1,0 +1,6 @@
+# Étudiants 
+- Fixelles Alban 57343
+- Sabouri Abdessamad 53960
+
+# Structure choisie
+Nous avons choisi QtCreator pour plusieurs raisons qui sont expliquées dans le rapport.

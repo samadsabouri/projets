@@ -1,0 +1,44 @@
+\hypertarget{_element___is___you_8h_source}{}\doxysection{Element\+\_\+\+Is\+\_\+\+You.\+h}
+\label{_element___is___you_8h_source}\index{metier/Element\_Is\_You.h@{metier/Element\_Is\_You.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ELEMENT\_IS\_YOU\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ELEMENT\_IS\_YOU\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}GameRule.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_element___is___you}{Element\_Is\_You}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_rule}{GameRule}}\{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_element___is___you_a91dd1b129ce2e085d03da61b4fd1506f}{apply}}(\mbox{\hyperlink{class_element}{Element}}\ elem,\ \mbox{\hyperlink{class_board_loader}{BoardLoader}}*\ boardLoader)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ std::string\ name\ =\ elem.\mbox{\hyperlink{class_element_a2e2ee96d5698ea2aa998fd84e2c34f4f}{getName}}();}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ std::vector<Element>\ newMovable\ ;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (name\ ==\ \textcolor{stringliteral}{"{}text\_baba"{}})\{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ newMovable.push\_back(boardLoader-\/>\mbox{\hyperlink{class_board_loader_a3153d92f71ec79ed15d22cb558dbef0f}{getBabaPtr}}());}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (name\ ==\ \textcolor{stringliteral}{"{}text\_flag"{}})\{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ newMovable.push\_back(boardLoader-\/>\mbox{\hyperlink{class_board_loader_a6762ff30d0affc84f65715ff67226396}{getFlagPtr}}());}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (name\ ==\ \textcolor{stringliteral}{"{}text\_grass"{}})\{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ newMovable\ =\ boardLoader-\/>\mbox{\hyperlink{class_board_loader_aba59f18e576a069c0b9ff19373e20325}{getGrassPtr}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (name==\textcolor{stringliteral}{"{}text\_lava"{}})\{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ newMovable\ =\ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a5e20e41a87770375941d9e238ae2e5dc}{getLavaPtr}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (name\ ==\ \textcolor{stringliteral}{"{}text\_metal"{}})\{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ newMovable\ =\ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a3398c77c945e81245048c9d6fc817ec3}{getMetalPtr}}();}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (name\ ==\ \textcolor{stringliteral}{"{}text\_rock"{}})\{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ newMovable\ =\ boardLoader-\/>\mbox{\hyperlink{class_board_loader_aa5c70ad457ea57198c40376b628d2728}{getRockPtr}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (name\ ==\ \textcolor{stringliteral}{"{}text\_wall"{}})\{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ newMovable\ =\ boardLoader-\/>\mbox{\hyperlink{class_board_loader_af9226d722be25f98c6919a79b9097a98}{getWallPtr}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (name\ ==\ \textcolor{stringliteral}{"{}text\_water"{}})\{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ newMovable\ =\ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a6b2a3438ed3a37d12761d7a7c7b988ce}{getWaterPtr}}();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a5d90bda47c0c2c524382772a88289d87}{getBoardPtr}}()-\/>\mbox{\hyperlink{class_board_af6f402b503ecbffeda24ade6cb5afcb5}{updateMovableElements}}(newMovable);}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_element___is___you_aba6dd1574c5506b368f09f676ad1c282}{disapply}}(\mbox{\hyperlink{class_element}{Element}}\ elem,\ \mbox{\hyperlink{class_board_loader}{BoardLoader}}*\ boardLoader)\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ std::vector<Element>\ notYou\{\};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a5d90bda47c0c2c524382772a88289d87}{getBoardPtr}}()-\/>\mbox{\hyperlink{class_board_af6f402b503ecbffeda24ade6cb5afcb5}{updateMovableElements}}(notYou);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_element}{Element}}\ element1\ =\ elem;}
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ELEMENT\_IS\_YOU\_H}}
+\DoxyCodeLine{00051\ }
+
+\end{DoxyCode}

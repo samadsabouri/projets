@@ -1,0 +1,90 @@
+\hypertarget{class_subject}{}\doxysection{Subject Class Reference}
+\label{class_subject}\index{Subject@{Subject}}
+Inheritance diagram for Subject\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_subject}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_subject_ae5980067d5ec5522db5a0d78100a34be}\label{class_subject_ae5980067d5ec5522db5a0d78100a34be}} 
+virtual {\bfseries $\sim$\+Subject} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor by default, prevent polymorphic use. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_subject_a581f8b2df56da9a4e150b4f87f999c16}{Attach}} (\mbox{\hyperlink{class_observer}{Observer}} $\ast$observer)=0
+\begin{DoxyCompactList}\small\item\em Method allowing an observer to record himself as listener of the subject of observation. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_subject_ab4cab8641e46ebcb280ec881952d528c}{Detach}} (\mbox{\hyperlink{class_observer}{Observer}} $\ast$observer)=0
+\begin{DoxyCompactList}\small\item\em Method allowing an observer to withdraw from the list of the listener of the subject of observation. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_subject_ac00d35bcd330090f9db946a0c883aca3}{Notify}} ()=0
+\begin{DoxyCompactList}\small\item\em A method that warns the observers of a change of state of the subject of observation, by invoking their method Observer\+::update(). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_subject_afd3df5fd2eb3f169980fe40f5eacf5c5}\label{class_subject_afd3df5fd2eb3f169980fe40f5eacf5c5}} 
+std\+::set$<$ \mbox{\hyperlink{class_observer}{Observer}} $\ast$ $>$ {\bfseries observers\+\_\+} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_subject_a581f8b2df56da9a4e150b4f87f999c16}\label{class_subject_a581f8b2df56da9a4e150b4f87f999c16}} 
+\index{Subject@{Subject}!Attach@{Attach}}
+\index{Attach@{Attach}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{Attach()}{Attach()}}
+{\footnotesize\ttfamily void Subject\+::\+Attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_observer}{Observer}} $\ast$}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Method allowing an observer to record himself as listener of the subject of observation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observe} & a pointer to the observing candidate. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_game_a2bb3eb4ee0745eb959d110fe578e5381}{Game}}.
+
+\mbox{\Hypertarget{class_subject_ab4cab8641e46ebcb280ec881952d528c}\label{class_subject_ab4cab8641e46ebcb280ec881952d528c}} 
+\index{Subject@{Subject}!Detach@{Detach}}
+\index{Detach@{Detach}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{Detach()}{Detach()}}
+{\footnotesize\ttfamily void Subject\+::\+Detach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_observer}{Observer}} $\ast$}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Method allowing an observer to withdraw from the list of the listener of the subject of observation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observe} & the skill of the disinterested observer. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_game_ac2a83e0f67fc7449459626527ef2ed10}{Game}}.
+
+\mbox{\Hypertarget{class_subject_ac00d35bcd330090f9db946a0c883aca3}\label{class_subject_ac00d35bcd330090f9db946a0c883aca3}} 
+\index{Subject@{Subject}!Notify@{Notify}}
+\index{Notify@{Notify}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{Notify()}{Notify()}}
+{\footnotesize\ttfamily void Subject\+::\+Notify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+A method that warns the observers of a change of state of the subject of observation, by invoking their method Observer\+::update(). 
+
+\begin{DoxySeeAlso}{See also}
+Observer\+::update(const Subject $\ast$). 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{class_game_a36e7cac31a774293aafa460278196134}{Game}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+metier/Subject.\+h\item 
+metier/Subject.\+cpp\end{DoxyCompactItemize}

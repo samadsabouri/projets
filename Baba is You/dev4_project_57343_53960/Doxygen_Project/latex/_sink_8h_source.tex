@@ -1,0 +1,42 @@
+\hypertarget{_sink_8h_source}{}\doxysection{Sink.\+h}
+\label{_sink_8h_source}\index{metier/elements/Sink.h@{metier/elements/Sink.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SINK\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SINK\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}../Element.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sink}{Sink}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_element}{Element}}\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{class_sink}{Sink}}(\mbox{\hyperlink{class_position}{Position}}\ pos,\ Direction\ dir):\ \mbox{\hyperlink{class_element_ab0d0e20be9a36ae676202db753faeec9}{Element}}(pos,\ dir,\ ElementType::RULE,\ \textcolor{stringliteral}{"{}sink"{}},\ \textcolor{keyword}{false},\ \textcolor{stringliteral}{"{}sink\ "{}})\ \{\}}
+\DoxyCodeLine{00008\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{class_sink_a392e49d5bba700f5844e3ee8745a07cc}{getName}}()\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_element_a2e2ee96d5698ea2aa998fd84e2c34f4f}{Element::getName}}();}
+\DoxyCodeLine{00010\ \ \ \ \ \};}
+\DoxyCodeLine{00011\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ Direction\ \mbox{\hyperlink{class_sink_ae86c2dcd6c6453ef58ec72febc9e850c}{getDirection}}()\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_element_a905bce215c7f79a309e6b4bbf58fa0c7}{Element::getDirection}}();}
+\DoxyCodeLine{00013\ \ \ \ \ \};}
+\DoxyCodeLine{00014\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ ElementType\ \mbox{\hyperlink{class_sink_af99bdf48df60026b2d851c7b42d0a047}{getElementType}}()\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_element_acea040d7ac78bc939ae1716da3627490}{Element::getElementType}}();}
+\DoxyCodeLine{00016\ \ \ \ \};}
+\DoxyCodeLine{00017\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_position}{Position}}\ \mbox{\hyperlink{class_sink_ab890dacf35f077345bb7abdec397625e}{getPosition}}()\textcolor{keyword}{override}\{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_element_a290586fad7fc5baf794201988953fd2d}{Element::getPosition}}();}
+\DoxyCodeLine{00019\ \ \ \ \};}
+\DoxyCodeLine{00020\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sink_a33e8298578e38c3f471514c80c6af027}{setPosition}}(\mbox{\hyperlink{class_position}{Position}}\ position)\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_element_a66d1bf8786a21fbffac92d5ecbde5330}{Element::setPosition}}(position);}
+\DoxyCodeLine{00022\ \ \ \ \};}
+\DoxyCodeLine{00023\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sink_afc2c1fe947b9aef7032748354e6e077d}{setDirection}}(Direction\ dir)\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_element_a6932f29a049ff097f0eec9a68bfd842d}{Element::setDirection}}(dir);}
+\DoxyCodeLine{00025\ \ \ \ \};}
+\DoxyCodeLine{00026\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sink_ab56f05a45d9701bad666afd70459eb23}{setMoveble}}(\textcolor{keywordtype}{bool}\ movable)\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00027\ \ \ \ \mbox{\hyperlink{class_element_a47632e8b85694fe6093e4add948ac50d}{Element::setMoveble}}(movable);}
+\DoxyCodeLine{00028\ \ \ \ \};}
+\DoxyCodeLine{00029\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_sink_a0febdc914e226bbc21498f94d6e90fd7}{isMoveble}}()\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_element_a465e7abc5a6075880d47b48bc8c5318d}{Element::isMoveble}}();}
+\DoxyCodeLine{00031\ \ \ \ \};}
+\DoxyCodeLine{00032\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{class_sink_a93d7fab6a5b01891d674af1b6a526d56}{getSymbol}}()\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_element_ac453bc42415eae9ddb5a349d2b539a20}{Element::getSymbol}}();}
+\DoxyCodeLine{00034\ \ \ \ \};}
+\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SINK\_H}}
+
+\end{DoxyCode}

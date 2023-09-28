@@ -1,0 +1,125 @@
+\hypertarget{class_controller_g_u_i}{}\doxysection{Controller\+GUI Class Reference}
+\label{class_controller_g_u_i}\index{ControllerGUI@{ControllerGUI}}
+
+
+The \mbox{\hyperlink{class_controller}{Controller}} class represents the game controller.  
+
+
+
+
+{\ttfamily \#include $<$Controller\+GUI.\+h$>$}
+
+Inheritance diagram for Controller\+GUI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_controller_g_u_i}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_controller_g_u_i_a4c0fa2f363c3e0abe6460d039832348b}{Controller\+GUI}} (int current\+Level)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{class_controller}{Controller}} class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_controller_g_u_i_af86f52a3179ce420aba00dd22264a009}\label{class_controller_g_u_i_af86f52a3179ce420aba00dd22264a009}} 
+void {\bfseries play} ()
+\begin{DoxyCompactList}\small\item\em Plays the game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_controller_g_u_i_a45cbede889293338332d4f5e5af62121}\label{class_controller_g_u_i_a45cbede889293338332d4f5e5af62121}} 
+void {\bfseries reset\+Attribute} ()
+\begin{DoxyCompactList}\small\item\em reset\+Attribute to reset r\+Pressed, s\+Pressed, l\+Pressed and dir attribute. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_controller_g_u_i_ac553b401acf601c620265873d1a8a013}{is\+File\+Empty}} (std\+::ifstream \&file)
+\begin{DoxyCompactList}\small\item\em is\+File\+Empty to check if a file is empty. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_controller_g_u_i}{Controller\+GUI}} $\ast$ \mbox{\hyperlink{class_controller_g_u_i_ab053f13dea5969695645c2396499868a}{get\+Controller}} ()
+\begin{DoxyCompactList}\small\item\em get\+Controller getter of the controller. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game}{Game}} $\ast$ \mbox{\hyperlink{class_controller_g_u_i_a86bbcb4ed0337aa46a3590ed37c02358}{get\+Game}} ()
+\begin{DoxyCompactList}\small\item\em get\+Game getter of the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controller_g_u_i_ac8528986004d9c6dd6463b3b9e94560b}{key\+Press\+Event}} (QKey\+Event $\ast$event) override
+\begin{DoxyCompactList}\small\item\em key\+Press\+Event to catch an event and do things depending on that. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_controller}{Controller}} class represents the game controller. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_controller_g_u_i_a4c0fa2f363c3e0abe6460d039832348b}\label{class_controller_g_u_i_a4c0fa2f363c3e0abe6460d039832348b}} 
+\index{ControllerGUI@{ControllerGUI}!ControllerGUI@{ControllerGUI}}
+\index{ControllerGUI@{ControllerGUI}!ControllerGUI@{ControllerGUI}}
+\doxysubsubsection{\texorpdfstring{ControllerGUI()}{ControllerGUI()}}
+{\footnotesize\ttfamily Controller\+GUI\+::\+Controller\+GUI (\begin{DoxyParamCaption}\item[{int}]{current\+Level }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{class_controller}{Controller}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Level} & The current level of the game. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_controller_g_u_i_ab053f13dea5969695645c2396499868a}\label{class_controller_g_u_i_ab053f13dea5969695645c2396499868a}} 
+\index{ControllerGUI@{ControllerGUI}!getController@{getController}}
+\index{getController@{getController}!ControllerGUI@{ControllerGUI}}
+\doxysubsubsection{\texorpdfstring{getController()}{getController()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_controller_g_u_i}{Controller\+GUI}} $\ast$ Controller\+GUI\+::get\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Controller getter of the controller. 
+
+\begin{DoxyReturn}{Returns}
+the controller. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_controller_g_u_i_a86bbcb4ed0337aa46a3590ed37c02358}\label{class_controller_g_u_i_a86bbcb4ed0337aa46a3590ed37c02358}} 
+\index{ControllerGUI@{ControllerGUI}!getGame@{getGame}}
+\index{getGame@{getGame}!ControllerGUI@{ControllerGUI}}
+\doxysubsubsection{\texorpdfstring{getGame()}{getGame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game}{Game}} $\ast$ Controller\+GUI\+::get\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Game getter of the game. 
+
+\begin{DoxyReturn}{Returns}
+the game. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_controller_g_u_i_ac553b401acf601c620265873d1a8a013}\label{class_controller_g_u_i_ac553b401acf601c620265873d1a8a013}} 
+\index{ControllerGUI@{ControllerGUI}!isFileEmpty@{isFileEmpty}}
+\index{isFileEmpty@{isFileEmpty}!ControllerGUI@{ControllerGUI}}
+\doxysubsubsection{\texorpdfstring{isFileEmpty()}{isFileEmpty()}}
+{\footnotesize\ttfamily bool Controller\+GUI\+::is\+File\+Empty (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{file }\end{DoxyParamCaption})}
+
+
+
+is\+File\+Empty to check if a file is empty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & the file to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the file is empty. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_controller_g_u_i_ac8528986004d9c6dd6463b3b9e94560b}\label{class_controller_g_u_i_ac8528986004d9c6dd6463b3b9e94560b}} 
+\index{ControllerGUI@{ControllerGUI}!keyPressEvent@{keyPressEvent}}
+\index{keyPressEvent@{keyPressEvent}!ControllerGUI@{ControllerGUI}}
+\doxysubsubsection{\texorpdfstring{keyPressEvent()}{keyPressEvent()}}
+{\footnotesize\ttfamily void Controller\+GUI\+::key\+Press\+Event (\begin{DoxyParamCaption}\item[{QKey\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+key\+Press\+Event to catch an event and do things depending on that. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & the event to catch. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+gui/Controller\+GUI.\+h\item 
+gui/Controller\+GUI.\+cpp\end{DoxyCompactItemize}

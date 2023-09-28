@@ -1,0 +1,196 @@
+\hypertarget{class_square}{}\doxysection{Square Class Reference}
+\label{class_square}\index{Square@{Square}}
+
+
+Class representing a square.  
+
+
+
+
+{\ttfamily \#include $<$Square.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_square_a3dc7ff9aefc2725172b5d3153973d243}{Square}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_square}{Square}} class default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_square_ac10ad50b2a0bf558bc3c828823941ce4}{Square}} (\mbox{\hyperlink{class_position}{Position}} pos)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_square}{Square}} class constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_square_affbf511e84d5bb9341fb956a14cd6083}{Square}} (std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ \&elements, \mbox{\hyperlink{class_position}{Position}} pos)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_square}{Square}} class constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_square_a5106cbc2c7547675afe2ad78545101b7}{add\+Element}} (\mbox{\hyperlink{class_element}{Element}} $\ast$element)
+\begin{DoxyCompactList}\small\item\em To add an element on the \mbox{\hyperlink{class_square}{Square}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_square_a54a11180bf4b04423871fd42108347b9}{remove\+Element}} (\mbox{\hyperlink{class_element}{Element}} $\ast$elem)
+\begin{DoxyCompactList}\small\item\em To remove an element on the \mbox{\hyperlink{class_square}{Square}}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ \mbox{\hyperlink{class_square_a8c86f266a48a6f0539fc47f486f4128f}{get\+Elements}} ()
+\begin{DoxyCompactList}\small\item\em Gets the vector of elements on the square. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $\ast$ $>$ \mbox{\hyperlink{class_square_a65b3e355a1eb27d9aa75dd07e2b2801d}{get\+Elements\+Ptr}} ()
+\begin{DoxyCompactList}\small\item\em Gets the vector of pointers to the elements on the square. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ \mbox{\hyperlink{class_square_ad164e2a91de52094888a8a78dd0c89e7}{get\+Elements\+At}} (\mbox{\hyperlink{class_position}{Position}} pos)
+\begin{DoxyCompactList}\small\item\em Gets the elements at a given position on the square. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_square_a0abab3aa580f9837cdb24a6b9e0ee8b9}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the position of the square. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_square_a69f926b7ab71aecdc00bc5bd32a49b11}{operator$<$}} (const \mbox{\hyperlink{class_square}{Square}} \&other) const
+\begin{DoxyCompactList}\small\item\em operator \texorpdfstring{$<$}{<} less-\/than comparison operator for squares based on their positions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a square. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_square_a3dc7ff9aefc2725172b5d3153973d243}\label{class_square_a3dc7ff9aefc2725172b5d3153973d243}} 
+\index{Square@{Square}!Square@{Square}}
+\index{Square@{Square}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{Square()}{Square()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Square\+::\+Square (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{class_square}{Square}} class default constructor. 
+
+\mbox{\Hypertarget{class_square_ac10ad50b2a0bf558bc3c828823941ce4}\label{class_square_ac10ad50b2a0bf558bc3c828823941ce4}} 
+\index{Square@{Square}!Square@{Square}}
+\index{Square@{Square}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{Square()}{Square()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Square\+::\+Square (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}}}]{pos }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_square}{Square}} class constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & the position of the square. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_square_affbf511e84d5bb9341fb956a14cd6083}\label{class_square_affbf511e84d5bb9341fb956a14cd6083}} 
+\index{Square@{Square}!Square@{Square}}
+\index{Square@{Square}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{Square()}{Square()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Square\+::\+Square (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ \&}]{elements,  }\item[{\mbox{\hyperlink{class_position}{Position}}}]{pos }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_square}{Square}} class constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elements} & the vector of elements on the square. \\
+\hline
+{\em pos} & the position of the square. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_square_a5106cbc2c7547675afe2ad78545101b7}\label{class_square_a5106cbc2c7547675afe2ad78545101b7}} 
+\index{Square@{Square}!addElement@{addElement}}
+\index{addElement@{addElement}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{addElement()}{addElement()}}
+{\footnotesize\ttfamily void Square\+::add\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}} $\ast$}]{element }\end{DoxyParamCaption})}
+
+
+
+To add an element on the \mbox{\hyperlink{class_square}{Square}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & the element. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_square_a8c86f266a48a6f0539fc47f486f4128f}\label{class_square_a8c86f266a48a6f0539fc47f486f4128f}} 
+\index{Square@{Square}!getElements@{getElements}}
+\index{getElements@{getElements}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{getElements()}{getElements()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ Square\+::get\+Elements (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the vector of elements on the square. 
+
+\begin{DoxyReturn}{Returns}
+a vector of elements. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_square_ad164e2a91de52094888a8a78dd0c89e7}\label{class_square_ad164e2a91de52094888a8a78dd0c89e7}} 
+\index{Square@{Square}!getElementsAt@{getElementsAt}}
+\index{getElementsAt@{getElementsAt}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{getElementsAt()}{getElementsAt()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ Square\+::get\+Elements\+At (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}}}]{pos }\end{DoxyParamCaption})}
+
+
+
+Gets the elements at a given position on the square. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & the position to check for elements. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector of elements. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_square_a65b3e355a1eb27d9aa75dd07e2b2801d}\label{class_square_a65b3e355a1eb27d9aa75dd07e2b2801d}} 
+\index{Square@{Square}!getElementsPtr@{getElementsPtr}}
+\index{getElementsPtr@{getElementsPtr}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{getElementsPtr()}{getElementsPtr()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $\ast$ $>$ Square\+::get\+Elements\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the vector of pointers to the elements on the square. 
+
+\begin{DoxyReturn}{Returns}
+a vector of pointers to elements 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_square_a0abab3aa580f9837cdb24a6b9e0ee8b9}\label{class_square_a0abab3aa580f9837cdb24a6b9e0ee8b9}} 
+\index{Square@{Square}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_position}{Position}} Square\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the position of the square. 
+
+\begin{DoxyReturn}{Returns}
+the position of the square. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_square_a69f926b7ab71aecdc00bc5bd32a49b11}\label{class_square_a69f926b7ab71aecdc00bc5bd32a49b11}} 
+\index{Square@{Square}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Square\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_square}{Square}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator \texorpdfstring{$<$}{<} less-\/than comparison operator for squares based on their positions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & the other square to compare to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if this square\textquotesingle{}s position is less than the other\textquotesingle{}s, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_square_a54a11180bf4b04423871fd42108347b9}\label{class_square_a54a11180bf4b04423871fd42108347b9}} 
+\index{Square@{Square}!removeElement@{removeElement}}
+\index{removeElement@{removeElement}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{removeElement()}{removeElement()}}
+{\footnotesize\ttfamily void Square\+::remove\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}} $\ast$}]{elem }\end{DoxyParamCaption})}
+
+
+
+To remove an element on the \mbox{\hyperlink{class_square}{Square}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & the element to remove. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+metier/Square.\+h\item 
+metier/Square.\+cpp\end{DoxyCompactItemize}

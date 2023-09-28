@@ -1,0 +1,45 @@
+\hypertarget{_square_8h_source}{}\doxysection{Square.\+h}
+\label{_square_8h_source}\index{metier/Square.h@{metier/Square.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SQUARE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SQUARE\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Element.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_square}{Square}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \ \ \ std::vector<Element>\ elements;}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_position}{Position}}\ pos;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_square_a3dc7ff9aefc2725172b5d3153973d243}{Square}}()\{\}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_square_a3dc7ff9aefc2725172b5d3153973d243}{Square}}(\mbox{\hyperlink{class_position}{Position}}\ pos);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_square_a3dc7ff9aefc2725172b5d3153973d243}{Square}}(\ std::vector<Element>\&\ elements,\ \mbox{\hyperlink{class_position}{Position}}\ pos);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_square_a5106cbc2c7547675afe2ad78545101b7}{addElement}}(\mbox{\hyperlink{class_element}{Element}}\ *element);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_square_a54a11180bf4b04423871fd42108347b9}{removeElement}}(\mbox{\hyperlink{class_element}{Element}}*\ elem);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ std::vector<Element>\ \mbox{\hyperlink{class_square_a8c86f266a48a6f0539fc47f486f4128f}{getElements}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ std::vector<Element*>\ \mbox{\hyperlink{class_square_a65b3e355a1eb27d9aa75dd07e2b2801d}{getElementsPtr}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ \ \ std::vector<Element>\ \mbox{\hyperlink{class_square_ad164e2a91de52094888a8a78dd0c89e7}{getElementsAt}}(\mbox{\hyperlink{class_position}{Position}}\ pos);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class_position}{Position}}\ \mbox{\hyperlink{class_square_a0abab3aa580f9837cdb24a6b9e0ee8b9}{getPosition}}()\textcolor{keyword}{const}\{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>pos;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_square_a69f926b7ab71aecdc00bc5bd32a49b11}{operator<}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_square}{Square}}\&\ other)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{class_square_a0abab3aa580f9837cdb24a6b9e0ee8b9}{getPosition}}()\ <\ other.\mbox{\hyperlink{class_square_a0abab3aa580f9837cdb24a6b9e0ee8b9}{getPosition}}();}
+\DoxyCodeLine{00082\ \ \ \ \ \ \}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \};}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SQUARE\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,518 @@
+\hypertarget{class_element}{}\doxysection{Element Class Reference}
+\label{class_element}\index{Element@{Element}}
+
+
+Class representing an element of the game.  
+
+
+
+
+{\ttfamily \#include $<$Element.\+h$>$}
+
+Inheritance diagram for Element\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_element}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_element_ab0d0e20be9a36ae676202db753faeec9}\label{class_element_ab0d0e20be9a36ae676202db753faeec9}} 
+{\bfseries Element} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \mbox{\hyperlink{class_element}{Element}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_element_a273a0e9c0a90b4c4b33a5e353b9d4b95}{Element}} (\mbox{\hyperlink{class_position}{Position}} pos, Direction dir, Element\+Type type, std\+::string name, bool is\+Movable, std\+::string symbol)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{class_element}{Element}} class. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_element_a31b2eeacc8129d994a2d48d41e20e998}{get\+You}} ()
+\begin{DoxyCompactList}\small\item\em Gets the \char`\"{}you\char`\"{} tag of the element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_element_aabcc62f909fc30f76fad28d856c1f239}{set\+You}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the \char`\"{}you\char`\"{} tag of the element. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_element_a8f4bff88380ffe99be22ad1d58666907}{get\+Kill}} ()
+\begin{DoxyCompactList}\small\item\em Gets the \char`\"{}kill\char`\"{} tag of the element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_element_a423861257105c671326d9fbfe2f4bdde}{set\+Kill}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the \char`\"{}kill\char`\"{} tag of the element. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_element_a7046460fdcf7a03fc6ac6fb827f6ad73}{get\+Push}} ()
+\begin{DoxyCompactList}\small\item\em Gets the \char`\"{}push\char`\"{} tag of the element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_element_a569d58173f6a634d9b0c25d567217772}{set\+Push}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the \char`\"{}push\char`\"{} tag of the element. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_element_aedb3046a307f8ea7afb0f98a23a630a8}{get\+Sink}} ()
+\begin{DoxyCompactList}\small\item\em Gets the \char`\"{}sink\char`\"{} tag of the element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_element_ad90417a5e124421b60a8a75561e4c300}{set\+Sink}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the \char`\"{}sink\char`\"{} tag of the element. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_element_a343efa58df1253861b1f2b4f99cb3d47}{get\+Win}} ()
+\begin{DoxyCompactList}\small\item\em Gets the \char`\"{}win\char`\"{} tag of the element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_element_a8b087aaba82829ea736b4a4ea879b986}{set\+Win}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the \char`\"{}win\char`\"{} tag of the element. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_element_aedd6f3d02eb5d2d809796d7e4581737b}{get\+Flag}} ()
+\begin{DoxyCompactList}\small\item\em Gets the \char`\"{}flag\char`\"{} tag of the element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_element_a94b06e3c7c27bdc8e70a8275887cd6fc}{set\+Flag}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the flag value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_element_ac919f70642e91b71da0944a0fe0f6ad2}{get\+Stop}} ()
+\begin{DoxyCompactList}\small\item\em Gets the value of the stop variable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_element_a9bbf906bd2012fb77e2d221d32baeb08}{set\+Stop}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the value of the stop variable. \end{DoxyCompactList}\item 
+virtual Element\+Type \mbox{\hyperlink{class_element_acea040d7ac78bc939ae1716da3627490}{get\+Element\+Type}} ()
+\begin{DoxyCompactList}\small\item\em To get the Element\+Type. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_element_a2e2ee96d5698ea2aa998fd84e2c34f4f}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em To get the name of the element. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_element_a290586fad7fc5baf794201988953fd2d}{get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em To get the position of the element. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_element_a66d1bf8786a21fbffac92d5ecbde5330}{set\+Position}} (\mbox{\hyperlink{class_position}{Position}} position)
+\begin{DoxyCompactList}\small\item\em To set the position of the element. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_element_a6932f29a049ff097f0eec9a68bfd842d}{set\+Direction}} (Direction dir)
+\begin{DoxyCompactList}\small\item\em To set the direction of the element. \end{DoxyCompactList}\item 
+virtual Direction \mbox{\hyperlink{class_element_a905bce215c7f79a309e6b4bbf58fa0c7}{get\+Direction}} ()
+\begin{DoxyCompactList}\small\item\em To get the direction of the element. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_element_a47632e8b85694fe6093e4add948ac50d}{set\+Moveble}} (bool movable)
+\begin{DoxyCompactList}\small\item\em To set an element on movable or not. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_element_a465e7abc5a6075880d47b48bc8c5318d}{is\+Moveble}} ()
+\begin{DoxyCompactList}\small\item\em Determines if the object is moveable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_element_a1b94fa1fbfe746d65f9a042867367cb8}{set\+Crossable}} (bool \mbox{\hyperlink{class_element_aada97c4795b7136f03c3de38f76d36ee}{crossable}})
+\begin{DoxyCompactList}\small\item\em Sets whether or not the object can be crossed. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_element_aada97c4795b7136f03c3de38f76d36ee}{crossable}} ()
+\begin{DoxyCompactList}\small\item\em Determines if the object can be crossed. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_element_ac453bc42415eae9ddb5a349d2b539a20}{get\+Symbol}} ()
+\begin{DoxyCompactList}\small\item\em Returns the symbol of the element. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_element_ac1bb3c155da9123cb06dfec67045cfd0}{operator==}} (const \mbox{\hyperlink{class_element}{Element}} \&other) const
+\begin{DoxyCompactList}\small\item\em operator == Checks if this element is equal to another element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing an element of the game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_element_a273a0e9c0a90b4c4b33a5e353b9d4b95}\label{class_element_a273a0e9c0a90b4c4b33a5e353b9d4b95}} 
+\index{Element@{Element}!Element@{Element}}
+\index{Element@{Element}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{Element()}{Element()}}
+{\footnotesize\ttfamily Element\+::\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}}}]{pos,  }\item[{Direction}]{dir,  }\item[{Element\+Type}]{type,  }\item[{std\+::string}]{name,  }\item[{bool}]{is\+Movable,  }\item[{std\+::string}]{symbol }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{class_element}{Element}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The position of the element. \\
+\hline
+{\em dir} & The direction of the element. \\
+\hline
+{\em type} & The type of the element. \\
+\hline
+{\em name} & The name of the element. \\
+\hline
+{\em is\+Movable} & Whether the element is movable or not \\
+\hline
+{\em symbol} & The symbol representing the element. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_element_aada97c4795b7136f03c3de38f76d36ee}\label{class_element_aada97c4795b7136f03c3de38f76d36ee}} 
+\index{Element@{Element}!crossable@{crossable}}
+\index{crossable@{crossable}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{crossable()}{crossable()}}
+{\footnotesize\ttfamily bool Element\+::crossable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Determines if the object can be crossed. 
+
+\begin{DoxyReturn}{Returns}
+true if the object is crossable, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_element_a905bce215c7f79a309e6b4bbf58fa0c7}\label{class_element_a905bce215c7f79a309e6b4bbf58fa0c7}} 
+\index{Element@{Element}!getDirection@{getDirection}}
+\index{getDirection@{getDirection}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{getDirection()}{getDirection()}}
+{\footnotesize\ttfamily Direction Element\+::get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+To get the direction of the element. 
+
+\begin{DoxyReturn}{Returns}
+the direction of the element. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_baba_a4c31107ea5c4dd2891fa83b10085d889}{Baba}}, \mbox{\hyperlink{class_baba___text_a5d4c30958587e1b3633a57f27a148c98}{Baba\+\_\+\+Text}}, \mbox{\hyperlink{class_best___text_a58520e4d82cad6aa760b343bbd35ab3a}{Best\+\_\+\+Text}}, \mbox{\hyperlink{class_bone_a3389383ded01a7f85ba2a098e46386bb}{Bone}}, \mbox{\hyperlink{class_flag_a0cf2784d5b321a54c85125518202aba2}{Flag}}, \mbox{\hyperlink{class_flag___text_a522a1b88fbe53f7870cc29400d2df9db}{Flag\+\_\+\+Text}}, \mbox{\hyperlink{class_grass_ab8f62928ddef5ac104d57c1d0163ffbc}{Grass}}, \mbox{\hyperlink{class_grass___text_a62ce7b9438a79505281002f399fb0589}{Grass\+\_\+\+Text}}, \mbox{\hyperlink{class_is_a9725709a2cbf39c2a70cd0a7f681cdb9}{Is}}, \mbox{\hyperlink{class_kill_af9a1461db3ca768018335806f1055c3c}{Kill}}, \mbox{\hyperlink{class_lava_a82a0fb1e7f8e2f1de65aa5acf0499e79}{Lava}}, \mbox{\hyperlink{class_lava___text_a9e5123770c10121cced8c3465c39181c}{Lava\+\_\+\+Text}}, \mbox{\hyperlink{class_metal_a09bb9962c7b12e523615f38f68ffd182}{Metal}}, \mbox{\hyperlink{class_metal___text_ad636b45e788e4baaa5fba885865d3234}{Metal\+\_\+\+Text}}, \mbox{\hyperlink{class_push_af7adae873ef1e1cf83aa73c2eea38c75}{Push}}, \mbox{\hyperlink{class_rock_a4feac2125add4fcea4a445b9fc933328}{Rock}}, \mbox{\hyperlink{class_rock___text_a31297f0f4750ba836cd68d57d60115c4}{Rock\+\_\+\+Text}}, \mbox{\hyperlink{class_sink_ae86c2dcd6c6453ef58ec72febc9e850c}{Sink}}, \mbox{\hyperlink{class_stop_ade6b3a6f33d1879cd7027b3e0cf5b3ea}{Stop}}, \mbox{\hyperlink{class_wall_ae0ddb251bd0418a46fd320240f209629}{Wall}}, \mbox{\hyperlink{class_wall___text_acb9e1050983036d80504c51612968870}{Wall\+\_\+\+Text}}, \mbox{\hyperlink{class_water_ac0d013b83980f09665369d551e5631d5}{Water}}, \mbox{\hyperlink{class_water___text_a34772d39d6daee179f22a99422ec19c4}{Water\+\_\+\+Text}}, \mbox{\hyperlink{class_win_a18f20072f519b4a4da590e96a839d218}{Win}}, and \mbox{\hyperlink{class_you_aeac6ffebe36830189767a283fe6abb7c}{You}}.
+
+\mbox{\Hypertarget{class_element_acea040d7ac78bc939ae1716da3627490}\label{class_element_acea040d7ac78bc939ae1716da3627490}} 
+\index{Element@{Element}!getElementType@{getElementType}}
+\index{getElementType@{getElementType}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{getElementType()}{getElementType()}}
+{\footnotesize\ttfamily Element\+Type Element\+::get\+Element\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+To get the Element\+Type. 
+
+\begin{DoxyReturn}{Returns}
+the type of the element. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_baba_adbd8fa4f082dc06c5380bdb16793054f}{Baba}}, \mbox{\hyperlink{class_baba___text_a7b316269811d2b5cc4e553af268e5f9f}{Baba\+\_\+\+Text}}, \mbox{\hyperlink{class_best___text_a1f9f076ad53b8929d3ad6116a67d87d2}{Best\+\_\+\+Text}}, \mbox{\hyperlink{class_bone_a55a70c1120711646f20a45d7de8a292e}{Bone}}, \mbox{\hyperlink{class_flag_acc1e0e44c46a2965be3861928afc1254}{Flag}}, \mbox{\hyperlink{class_flag___text_a44ac51a669574afdda56501dbaea28f0}{Flag\+\_\+\+Text}}, \mbox{\hyperlink{class_grass_a69e23aee24cb0da00ccb662f09a530a8}{Grass}}, \mbox{\hyperlink{class_grass___text_acdb2c3d28648a83ddc82ee606c36b3e9}{Grass\+\_\+\+Text}}, \mbox{\hyperlink{class_is_a2cf7694cf36f6a78339e2513fc96d5cd}{Is}}, \mbox{\hyperlink{class_kill_a6c74c768f891b3d85166a4f0d4fb8997}{Kill}}, \mbox{\hyperlink{class_lava_a184869992c1671d40e60fbf5901d44e8}{Lava}}, \mbox{\hyperlink{class_lava___text_ae78ffb0aced0b091a439696f1715b515}{Lava\+\_\+\+Text}}, \mbox{\hyperlink{class_metal_a32c472266b2edf60a8d960099badb833}{Metal}}, \mbox{\hyperlink{class_metal___text_a85e255722e662a712e83b56db1d8c1b9}{Metal\+\_\+\+Text}}, \mbox{\hyperlink{class_push_a1510da1b86944b4529cf350283978e0f}{Push}}, \mbox{\hyperlink{class_rock_ad615bed72a625fc595012ef564363e01}{Rock}}, \mbox{\hyperlink{class_rock___text_a7f91758f150873793cafa611977139e2}{Rock\+\_\+\+Text}}, \mbox{\hyperlink{class_sink_af99bdf48df60026b2d851c7b42d0a047}{Sink}}, \mbox{\hyperlink{class_stop_a6ee72b0c108edbc80fa0d736620dd2c0}{Stop}}, \mbox{\hyperlink{class_wall_a4de1e0174ca109a3f8a7b7dafcf7cf03}{Wall}}, \mbox{\hyperlink{class_wall___text_a9f156ec05be87c070a76c808cb3d0e4e}{Wall\+\_\+\+Text}}, \mbox{\hyperlink{class_water_ac74635d625af94aabb1c565e5b00e733}{Water}}, \mbox{\hyperlink{class_water___text_a89eddbcf38c129ef3f5eb0ad4ba6c9d4}{Water\+\_\+\+Text}}, \mbox{\hyperlink{class_win_ab5c99fd5142cbb5a8c6dd936ca9cab26}{Win}}, and \mbox{\hyperlink{class_you_a73be7e5946e66d3fda1d225db067e938}{You}}.
+
+\mbox{\Hypertarget{class_element_aedd6f3d02eb5d2d809796d7e4581737b}\label{class_element_aedd6f3d02eb5d2d809796d7e4581737b}} 
+\index{Element@{Element}!getFlag@{getFlag}}
+\index{getFlag@{getFlag}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{getFlag()}{getFlag()}}
+{\footnotesize\ttfamily bool Element\+::get\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the \char`\"{}flag\char`\"{} tag of the element. 
+
+\begin{DoxyReturn}{Returns}
+Whether the element is tagged as \char`\"{}flag\char`\"{}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_element_a8f4bff88380ffe99be22ad1d58666907}\label{class_element_a8f4bff88380ffe99be22ad1d58666907}} 
+\index{Element@{Element}!getKill@{getKill}}
+\index{getKill@{getKill}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{getKill()}{getKill()}}
+{\footnotesize\ttfamily bool Element\+::get\+Kill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the \char`\"{}kill\char`\"{} tag of the element. 
+
+\begin{DoxyReturn}{Returns}
+Whether the element is tagged as \char`\"{}kill\char`\"{}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_element_a2e2ee96d5698ea2aa998fd84e2c34f4f}\label{class_element_a2e2ee96d5698ea2aa998fd84e2c34f4f}} 
+\index{Element@{Element}!getName@{getName}}
+\index{getName@{getName}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Element\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+To get the name of the element. 
+
+\begin{DoxyReturn}{Returns}
+the name of the element. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_baba_a12b7d50b4e6e94035488aedeff78516f}{Baba}}, \mbox{\hyperlink{class_baba___text_afd493bb9d0535868e42415a0a0a0da0d}{Baba\+\_\+\+Text}}, \mbox{\hyperlink{class_best___text_a057fc951d1319dadd07abdfac8b522ea}{Best\+\_\+\+Text}}, \mbox{\hyperlink{class_bone_ac6c6bb76846320f19bb1e75e253131f6}{Bone}}, \mbox{\hyperlink{class_flag_a5ad3046a28f61b0779456a14281ecaa0}{Flag}}, \mbox{\hyperlink{class_flag___text_a29d791a1078275d00710a2d51e7f2a01}{Flag\+\_\+\+Text}}, \mbox{\hyperlink{class_grass_ad6ad7bcdc13c91b944aced8012b08e12}{Grass}}, \mbox{\hyperlink{class_grass___text_afa227ba76dca4e8f835a8019adb7c1de}{Grass\+\_\+\+Text}}, \mbox{\hyperlink{class_is_a0d7a0e32271feb200f3268bcf8a186ae}{Is}}, \mbox{\hyperlink{class_kill_a43b2dbe996d538c4da9d68cc47df3a4e}{Kill}}, \mbox{\hyperlink{class_lava_a8a95faf638c8b059e1188c8c5ed97c0e}{Lava}}, \mbox{\hyperlink{class_lava___text_ad1b6a47408271780dcc4a3c0b2ad6977}{Lava\+\_\+\+Text}}, \mbox{\hyperlink{class_metal_aff52485a198f7019d53f873804e45ae3}{Metal}}, \mbox{\hyperlink{class_metal___text_a41edb6e6a501448e410bae5c28549df7}{Metal\+\_\+\+Text}}, \mbox{\hyperlink{class_push_aab34f82a892640fef4378e0aebaa5bda}{Push}}, \mbox{\hyperlink{class_rock_ad4092cb32d12ad0817a9e5c41c63cd19}{Rock}}, \mbox{\hyperlink{class_rock___text_a12371c00fd43957afe427346c5c1830d}{Rock\+\_\+\+Text}}, \mbox{\hyperlink{class_sink_a392e49d5bba700f5844e3ee8745a07cc}{Sink}}, \mbox{\hyperlink{class_stop_afcdcc7ed0f276bb0c11040537b117fed}{Stop}}, \mbox{\hyperlink{class_wall_a700070afcfa6fc22330ed5be1299db8c}{Wall}}, \mbox{\hyperlink{class_wall___text_a40b19dd06992779ff535aeded1f34168}{Wall\+\_\+\+Text}}, \mbox{\hyperlink{class_water_a1bc38a991afe2bd54f2e737b7eb512a1}{Water}}, \mbox{\hyperlink{class_water___text_a94d9e09aaa5af030e07991adee2f601a}{Water\+\_\+\+Text}}, \mbox{\hyperlink{class_win_a2c1794b6e9a69d89bff3558d03473eab}{Win}}, and \mbox{\hyperlink{class_you_aba5417e7039478fe1efbb795bada23c7}{You}}.
+
+\mbox{\Hypertarget{class_element_a290586fad7fc5baf794201988953fd2d}\label{class_element_a290586fad7fc5baf794201988953fd2d}} 
+\index{Element@{Element}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_position}{Position}} Element\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+To get the position of the element. 
+
+\begin{DoxyReturn}{Returns}
+the position of the element. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_baba_a77bb6b7c287157e4357bd49e946a641d}{Baba}}, \mbox{\hyperlink{class_baba___text_a09290a47065e396a529c7b7da5db3f38}{Baba\+\_\+\+Text}}, \mbox{\hyperlink{class_best___text_ae48ef7689a778c1a0d8cbdef20502df6}{Best\+\_\+\+Text}}, \mbox{\hyperlink{class_bone_aae7b51c6bf2e58e85963d90f04f89f87}{Bone}}, \mbox{\hyperlink{class_flag_a7fcb21899d9e75c57140cb8aaaa013de}{Flag}}, \mbox{\hyperlink{class_flag___text_a155507166d30cf10de908525a473540f}{Flag\+\_\+\+Text}}, \mbox{\hyperlink{class_grass_ab65ee81661b734413b952b3c23f1fb04}{Grass}}, \mbox{\hyperlink{class_grass___text_aca6f4abf686be5202706982bec543e4a}{Grass\+\_\+\+Text}}, \mbox{\hyperlink{class_is_a3966ebc90ca67faaeab903f9506d9413}{Is}}, \mbox{\hyperlink{class_kill_a66a596caa5730d745fd52ab298bf5e40}{Kill}}, \mbox{\hyperlink{class_lava_a71c88f3a0d1643420838bf0fff70b253}{Lava}}, \mbox{\hyperlink{class_lava___text_aeffccc25f733280f1756e174ace3345a}{Lava\+\_\+\+Text}}, \mbox{\hyperlink{class_metal_a65e88e207eb450c5c2118e04a4b0d528}{Metal}}, \mbox{\hyperlink{class_metal___text_a823a205e0c6f1af44da8a07cf40a66ab}{Metal\+\_\+\+Text}}, \mbox{\hyperlink{class_push_a7ef5d2c909d0db4928e0eef0aea38a85}{Push}}, \mbox{\hyperlink{class_rock_a7933899c9390b26b383df467a942f420}{Rock}}, \mbox{\hyperlink{class_rock___text_aa366d616d64c94e8bad80b10c10034ed}{Rock\+\_\+\+Text}}, \mbox{\hyperlink{class_sink_ab890dacf35f077345bb7abdec397625e}{Sink}}, \mbox{\hyperlink{class_stop_a0659a330e8843856e2d470422a166cf3}{Stop}}, \mbox{\hyperlink{class_wall_ac4eafdb88ff0c84875b756abb5f5c59d}{Wall}}, \mbox{\hyperlink{class_wall___text_ac500c84e7c8c369ef1a82de240b331aa}{Wall\+\_\+\+Text}}, \mbox{\hyperlink{class_water_ae7ebd1b364a77a9d6c8b466e27bd60df}{Water}}, \mbox{\hyperlink{class_water___text_ae95e32aa8603f952fd74a350121a092c}{Water\+\_\+\+Text}}, \mbox{\hyperlink{class_win_ac439a8f373e99565c002ff1a5505dd69}{Win}}, and \mbox{\hyperlink{class_you_a8e928240e7c7e0d3356f869a12831e6e}{You}}.
+
+\mbox{\Hypertarget{class_element_a7046460fdcf7a03fc6ac6fb827f6ad73}\label{class_element_a7046460fdcf7a03fc6ac6fb827f6ad73}} 
+\index{Element@{Element}!getPush@{getPush}}
+\index{getPush@{getPush}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{getPush()}{getPush()}}
+{\footnotesize\ttfamily bool Element\+::get\+Push (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the \char`\"{}push\char`\"{} tag of the element. 
+
+\begin{DoxyReturn}{Returns}
+Whether the element is tagged as \char`\"{}push\char`\"{}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_element_aedb3046a307f8ea7afb0f98a23a630a8}\label{class_element_aedb3046a307f8ea7afb0f98a23a630a8}} 
+\index{Element@{Element}!getSink@{getSink}}
+\index{getSink@{getSink}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{getSink()}{getSink()}}
+{\footnotesize\ttfamily bool Element\+::get\+Sink (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the \char`\"{}sink\char`\"{} tag of the element. 
+
+\begin{DoxyReturn}{Returns}
+Whether the element is tagged as \char`\"{}sink\char`\"{}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_element_ac919f70642e91b71da0944a0fe0f6ad2}\label{class_element_ac919f70642e91b71da0944a0fe0f6ad2}} 
+\index{Element@{Element}!getStop@{getStop}}
+\index{getStop@{getStop}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{getStop()}{getStop()}}
+{\footnotesize\ttfamily bool Element\+::get\+Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the value of the stop variable. 
+
+\begin{DoxyReturn}{Returns}
+The current value of stop. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_element_ac453bc42415eae9ddb5a349d2b539a20}\label{class_element_ac453bc42415eae9ddb5a349d2b539a20}} 
+\index{Element@{Element}!getSymbol@{getSymbol}}
+\index{getSymbol@{getSymbol}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{getSymbol()}{getSymbol()}}
+{\footnotesize\ttfamily std\+::string Element\+::get\+Symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the symbol of the element. 
+
+\begin{DoxyReturn}{Returns}
+The symbol of the element as a string. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_baba_a68f34ea583ffce398187746fcc0bb26e}{Baba}}, \mbox{\hyperlink{class_baba___text_a4fb31bedfb17755683821b9da0cd7300}{Baba\+\_\+\+Text}}, \mbox{\hyperlink{class_best___text_a28a910810e01fd2f4c27c9c2d6eb278f}{Best\+\_\+\+Text}}, \mbox{\hyperlink{class_bone_a92eefc3524110e03101d398ef51b3d11}{Bone}}, \mbox{\hyperlink{class_flag_a638d54b32f6dc1d8e90e294ccc21364e}{Flag}}, \mbox{\hyperlink{class_flag___text_ab661ad4494ff459a4e905de04d3d4862}{Flag\+\_\+\+Text}}, \mbox{\hyperlink{class_grass_abde1277eff9d8500e9b4ad9bf8824018}{Grass}}, \mbox{\hyperlink{class_grass___text_aa455617eb4b7b818220ba76f941ffd25}{Grass\+\_\+\+Text}}, \mbox{\hyperlink{class_is_a452cbb0bf5bc70ecbd58ff44d3c661b5}{Is}}, \mbox{\hyperlink{class_kill_af4303ddee9be1cf9b3a14436665202e4}{Kill}}, \mbox{\hyperlink{class_lava_afe25008b8dd4d09496d2d3a199ebd544}{Lava}}, \mbox{\hyperlink{class_lava___text_a6fef43f3d7cfe905bcd9af57477056c7}{Lava\+\_\+\+Text}}, \mbox{\hyperlink{class_metal_a69445b2580f1dd825f23856682a9dc84}{Metal}}, \mbox{\hyperlink{class_metal___text_ad3ac966bf8ec10ad597abf48cca8bfb5}{Metal\+\_\+\+Text}}, \mbox{\hyperlink{class_push_a5a8cc0fc79dfc5b6261cc2cefc5357d8}{Push}}, \mbox{\hyperlink{class_rock_aac5917125f2e7cbd882715206bb29224}{Rock}}, \mbox{\hyperlink{class_rock___text_afc75914d00a9dd0d2df01d523c85686b}{Rock\+\_\+\+Text}}, \mbox{\hyperlink{class_sink_a93d7fab6a5b01891d674af1b6a526d56}{Sink}}, \mbox{\hyperlink{class_stop_af8f255fe4fb934fdf2738303d4186fcd}{Stop}}, \mbox{\hyperlink{class_wall_adff3f232c15ce4c5f3a5a86a1e44f0d8}{Wall}}, \mbox{\hyperlink{class_wall___text_a2b6b4265a0b60d0b6616a2b03ace45b6}{Wall\+\_\+\+Text}}, \mbox{\hyperlink{class_water_a0117140f7a81693dd0d76eee6bfacce0}{Water}}, \mbox{\hyperlink{class_water___text_a262b7aeb0670fc09b836815289d3fd69}{Water\+\_\+\+Text}}, \mbox{\hyperlink{class_win_a1b6dcf1f1c5d751ad39ef24ed504acbb}{Win}}, and \mbox{\hyperlink{class_you_ad427a6f557d9541b782f725facaaa86e}{You}}.
+
+\mbox{\Hypertarget{class_element_a343efa58df1253861b1f2b4f99cb3d47}\label{class_element_a343efa58df1253861b1f2b4f99cb3d47}} 
+\index{Element@{Element}!getWin@{getWin}}
+\index{getWin@{getWin}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{getWin()}{getWin()}}
+{\footnotesize\ttfamily bool Element\+::get\+Win (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the \char`\"{}win\char`\"{} tag of the element. 
+
+\begin{DoxyReturn}{Returns}
+Whether the element is tagged as \char`\"{}win\char`\"{}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_element_a31b2eeacc8129d994a2d48d41e20e998}\label{class_element_a31b2eeacc8129d994a2d48d41e20e998}} 
+\index{Element@{Element}!getYou@{getYou}}
+\index{getYou@{getYou}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{getYou()}{getYou()}}
+{\footnotesize\ttfamily bool Element\+::get\+You (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the \char`\"{}you\char`\"{} tag of the element. 
+
+\begin{DoxyReturn}{Returns}
+Whether the element is tagged as \char`\"{}you\char`\"{}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_element_a465e7abc5a6075880d47b48bc8c5318d}\label{class_element_a465e7abc5a6075880d47b48bc8c5318d}} 
+\index{Element@{Element}!isMoveble@{isMoveble}}
+\index{isMoveble@{isMoveble}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{isMoveble()}{isMoveble()}}
+{\footnotesize\ttfamily bool Element\+::is\+Moveble (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Determines if the object is moveable. 
+
+\begin{DoxyReturn}{Returns}
+true if the object is moveable, false otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_baba_af158c2cd7fb12a60a53bef7be0d52d3a}{Baba}}, \mbox{\hyperlink{class_baba___text_a00d9166964e69b240cdb8d31ed65f172}{Baba\+\_\+\+Text}}, \mbox{\hyperlink{class_best___text_a248a1ae1d827195799daad95a26cf2e1}{Best\+\_\+\+Text}}, \mbox{\hyperlink{class_bone_ad71d677f6ceac7d1b65cca1b704630d1}{Bone}}, \mbox{\hyperlink{class_flag_a08fd470dfa970b3c2e5a588d658cec51}{Flag}}, \mbox{\hyperlink{class_flag___text_a41a285f230dac40ce37337a08b6e9f32}{Flag\+\_\+\+Text}}, \mbox{\hyperlink{class_grass_aac6e94283a0ac60be67e0b3127fdcd2c}{Grass}}, \mbox{\hyperlink{class_grass___text_ae095dc36c9b3a1d9816e73782cb09843}{Grass\+\_\+\+Text}}, \mbox{\hyperlink{class_is_ab32a8cdfdba59477097869dd6ddb8b65}{Is}}, \mbox{\hyperlink{class_kill_ae4698946652f37cd1bf8b0037b391c5a}{Kill}}, \mbox{\hyperlink{class_lava_aeb4776ebf6aac87989f1123e97e66e6e}{Lava}}, \mbox{\hyperlink{class_lava___text_a2eba5b600574208b69ea165e65d674d3}{Lava\+\_\+\+Text}}, \mbox{\hyperlink{class_metal_adaa4ac9d9b434d473e6380e2301f8d18}{Metal}}, \mbox{\hyperlink{class_metal___text_ac45b2d67cc0af987b988014200beba8c}{Metal\+\_\+\+Text}}, \mbox{\hyperlink{class_push_adc3211b4296779e83bb502ac9353e7a0}{Push}}, \mbox{\hyperlink{class_rock_ab18d706682f3d12f2ae5cf38a761221e}{Rock}}, \mbox{\hyperlink{class_rock___text_a9e64c8291851831cf9ca48ca438ae819}{Rock\+\_\+\+Text}}, \mbox{\hyperlink{class_sink_a0febdc914e226bbc21498f94d6e90fd7}{Sink}}, \mbox{\hyperlink{class_stop_a09aea4141290bfe816e32057d5c74369}{Stop}}, \mbox{\hyperlink{class_wall_a505f8605b6bd5971dec93532cd65850e}{Wall}}, \mbox{\hyperlink{class_wall___text_a716b01588301f339daf928b619ce4eaf}{Wall\+\_\+\+Text}}, \mbox{\hyperlink{class_water_a7448188d943bc7f09b95fa6ecf78343e}{Water}}, \mbox{\hyperlink{class_water___text_a4989499919388121f2935fd87789709e}{Water\+\_\+\+Text}}, \mbox{\hyperlink{class_win_a6aaf8b6c3261893fdeda37c453afa6c0}{Win}}, and \mbox{\hyperlink{class_you_a4af0c014942cd877ff1996f2d9c065b7}{You}}.
+
+\mbox{\Hypertarget{class_element_ac1bb3c155da9123cb06dfec67045cfd0}\label{class_element_ac1bb3c155da9123cb06dfec67045cfd0}} 
+\index{Element@{Element}!operator==@{operator==}}
+\index{operator==@{operator==}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Element\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_element}{Element}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator == Checks if this element is equal to another element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The element to compare to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the elements are equal, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_element_a1b94fa1fbfe746d65f9a042867367cb8}\label{class_element_a1b94fa1fbfe746d65f9a042867367cb8}} 
+\index{Element@{Element}!setCrossable@{setCrossable}}
+\index{setCrossable@{setCrossable}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{setCrossable()}{setCrossable()}}
+{\footnotesize\ttfamily void Element\+::set\+Crossable (\begin{DoxyParamCaption}\item[{bool}]{crossable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets whether or not the object can be crossed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em crossable} & true if the object is crossable, false otherwise. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_element_a6932f29a049ff097f0eec9a68bfd842d}\label{class_element_a6932f29a049ff097f0eec9a68bfd842d}} 
+\index{Element@{Element}!setDirection@{setDirection}}
+\index{setDirection@{setDirection}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{setDirection()}{setDirection()}}
+{\footnotesize\ttfamily void Element\+::set\+Direction (\begin{DoxyParamCaption}\item[{Direction}]{dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+To set the direction of the element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & the direction needed to set. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_baba_a6c46988214c5376ceac2817b7b66f0e8}{Baba}}, \mbox{\hyperlink{class_baba___text_a3aca7c8dff7149a28f73a65ffce47c8b}{Baba\+\_\+\+Text}}, \mbox{\hyperlink{class_best___text_aebbde8092d7fe9f9d6a2c5ab793a908c}{Best\+\_\+\+Text}}, \mbox{\hyperlink{class_bone_a7c7cd5c8935c961a510937cb5ff75068}{Bone}}, \mbox{\hyperlink{class_flag_ad1b6804e0f8c90047a9ad2ba1512cc48}{Flag}}, \mbox{\hyperlink{class_flag___text_afd418c2cdf0ed50838ba8ac12bdfcc83}{Flag\+\_\+\+Text}}, \mbox{\hyperlink{class_grass_a1c7088eedbf8699ad2a665d6b2bdddcf}{Grass}}, \mbox{\hyperlink{class_grass___text_a36daa8c43c062464d8addf09c3297367}{Grass\+\_\+\+Text}}, \mbox{\hyperlink{class_is_ae1e955bde9b73f9e17654a79e637c8f5}{Is}}, \mbox{\hyperlink{class_kill_aa2e189e578b1023ad04732cc29a37565}{Kill}}, \mbox{\hyperlink{class_lava_a35624f4ef8641a412f4c65b9e1b10461}{Lava}}, \mbox{\hyperlink{class_lava___text_a8c7528c924f479d54c0d832450677d40}{Lava\+\_\+\+Text}}, \mbox{\hyperlink{class_metal_abdfbedbb2340ab57e1ba6bff10c6bc98}{Metal}}, \mbox{\hyperlink{class_metal___text_adbd8e4fbc0b4444ed4492c5ef1e84f87}{Metal\+\_\+\+Text}}, \mbox{\hyperlink{class_push_a3d5eddb863390cf994aca7984cc3659b}{Push}}, \mbox{\hyperlink{class_rock_a44bac06b4db2cd7931e1683e7a61d85a}{Rock}}, \mbox{\hyperlink{class_rock___text_a9e940a0486767155ed654f45934a4658}{Rock\+\_\+\+Text}}, \mbox{\hyperlink{class_sink_afc2c1fe947b9aef7032748354e6e077d}{Sink}}, \mbox{\hyperlink{class_stop_ad957cfa5246624cbd129571db7c7e621}{Stop}}, \mbox{\hyperlink{class_wall_af76dc67e58d2b991032083b0b170230a}{Wall}}, \mbox{\hyperlink{class_wall___text_ae7528e8cde85979cf01a1e428eae3a01}{Wall\+\_\+\+Text}}, \mbox{\hyperlink{class_water_af7636de73dfe1ecf34ee8d1fce37758b}{Water}}, \mbox{\hyperlink{class_water___text_aff69ff720c9d002c5be19768f068278e}{Water\+\_\+\+Text}}, \mbox{\hyperlink{class_win_a840448b6581e82e2e77c336e6fdbe3ba}{Win}}, and \mbox{\hyperlink{class_you_ad72805dbc7b95da3ab4db98af9e363e7}{You}}.
+
+\mbox{\Hypertarget{class_element_a94b06e3c7c27bdc8e70a8275887cd6fc}\label{class_element_a94b06e3c7c27bdc8e70a8275887cd6fc}} 
+\index{Element@{Element}!setFlag@{setFlag}}
+\index{setFlag@{setFlag}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{setFlag()}{setFlag()}}
+{\footnotesize\ttfamily void Element\+::set\+Flag (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the flag value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The new value for the flag. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_element_a423861257105c671326d9fbfe2f4bdde}\label{class_element_a423861257105c671326d9fbfe2f4bdde}} 
+\index{Element@{Element}!setKill@{setKill}}
+\index{setKill@{setKill}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{setKill()}{setKill()}}
+{\footnotesize\ttfamily void Element\+::set\+Kill (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the \char`\"{}kill\char`\"{} tag of the element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to set the tag to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_element_a47632e8b85694fe6093e4add948ac50d}\label{class_element_a47632e8b85694fe6093e4add948ac50d}} 
+\index{Element@{Element}!setMoveble@{setMoveble}}
+\index{setMoveble@{setMoveble}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{setMoveble()}{setMoveble()}}
+{\footnotesize\ttfamily void Element\+::set\+Moveble (\begin{DoxyParamCaption}\item[{bool}]{movable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+To set an element on movable or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em movable} & the true or false parameter for the element. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_baba_af3095c19a083fdd51017e311169c9c61}{Baba}}, \mbox{\hyperlink{class_baba___text_a472c2feb16e269172823505b6504c65c}{Baba\+\_\+\+Text}}, \mbox{\hyperlink{class_best___text_ad3e49f3b3ad8e688f3e5f4acb0040fff}{Best\+\_\+\+Text}}, \mbox{\hyperlink{class_bone_a267ca53e883105c705ff9fd1d7a860b9}{Bone}}, \mbox{\hyperlink{class_flag_a1c16163e675fc8ab161171e62dd59244}{Flag}}, \mbox{\hyperlink{class_flag___text_ac56591b3f70b97e648b5faf02e027f8d}{Flag\+\_\+\+Text}}, \mbox{\hyperlink{class_grass_a4844739fd5c2045fb8f175e82dc562cd}{Grass}}, \mbox{\hyperlink{class_grass___text_a9d2087bc520425ac5e6907d191ff2aee}{Grass\+\_\+\+Text}}, \mbox{\hyperlink{class_is_a6bcb80794a60e7f0a90bb4c7e7ddefa6}{Is}}, \mbox{\hyperlink{class_kill_a7e9fc8f39760ed2386e5ba397c46d1f7}{Kill}}, \mbox{\hyperlink{class_lava_a1ef23704702a5aa0f760bb0e86a05949}{Lava}}, \mbox{\hyperlink{class_lava___text_a73d1cfc82dabc306e814c84b7acd303d}{Lava\+\_\+\+Text}}, \mbox{\hyperlink{class_metal_ad547c3480968e0c319abe6382312177b}{Metal}}, \mbox{\hyperlink{class_metal___text_a8b092ca853c02fc4313884f027b62030}{Metal\+\_\+\+Text}}, \mbox{\hyperlink{class_push_a3e9d21bf812e5ba2f9597b9df50c5bbf}{Push}}, \mbox{\hyperlink{class_rock_adfaffca24bd412a3793e296cfcd813ff}{Rock}}, \mbox{\hyperlink{class_rock___text_a193693bcdf4b09cc51f5092b81df6b43}{Rock\+\_\+\+Text}}, \mbox{\hyperlink{class_sink_ab56f05a45d9701bad666afd70459eb23}{Sink}}, \mbox{\hyperlink{class_stop_a893e5ff9db3708d4ee03498a36134412}{Stop}}, \mbox{\hyperlink{class_wall_acecf641e8961a8a49dc17f743d6072ea}{Wall}}, \mbox{\hyperlink{class_wall___text_a2c8af6060aa7d40a42a3b7d7c1e24745}{Wall\+\_\+\+Text}}, \mbox{\hyperlink{class_water_af338b0e6ebc9171e615bbeefccca4b92}{Water}}, \mbox{\hyperlink{class_water___text_a94c77cbb212ea079b61ee94b4287a6ee}{Water\+\_\+\+Text}}, \mbox{\hyperlink{class_win_a8a7c6b73d7167b899114b0b213c5f6c9}{Win}}, and \mbox{\hyperlink{class_you_a7e65e2c908290cd17b19920a2f88eddb}{You}}.
+
+\mbox{\Hypertarget{class_element_a66d1bf8786a21fbffac92d5ecbde5330}\label{class_element_a66d1bf8786a21fbffac92d5ecbde5330}} 
+\index{Element@{Element}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void Element\+::set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+To set the position of the element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & the position to set. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_baba_ab61b5215c215b9acaf9cd04b1f624172}{Baba}}, \mbox{\hyperlink{class_baba___text_a6e47d8e0b386b4ac03ee9494a436ed5b}{Baba\+\_\+\+Text}}, \mbox{\hyperlink{class_best___text_a6629bdccc803898a795cccba86bcf2c8}{Best\+\_\+\+Text}}, \mbox{\hyperlink{class_bone_a8fee53fcfb6a2190792a4775b75abe6c}{Bone}}, \mbox{\hyperlink{class_flag_afd53c34fce8738d061ab255cb62dc2b5}{Flag}}, \mbox{\hyperlink{class_flag___text_a11bc9735af65933553775ab65d88959a}{Flag\+\_\+\+Text}}, \mbox{\hyperlink{class_grass_af39ab39baddffb0a673f8c7fc29263b6}{Grass}}, \mbox{\hyperlink{class_grass___text_adb74a5565fb90c9607769b5c670f1634}{Grass\+\_\+\+Text}}, \mbox{\hyperlink{class_is_a2e19d54d3226374a174f53d6951a690a}{Is}}, \mbox{\hyperlink{class_kill_ab28966a11bbd6d1d950a9e77599c6b60}{Kill}}, \mbox{\hyperlink{class_lava_a00ab957cf4638e28fd495a7dd4025aff}{Lava}}, \mbox{\hyperlink{class_lava___text_aef028029a52c123dd9fe99138969a802}{Lava\+\_\+\+Text}}, \mbox{\hyperlink{class_metal_aaf87a3cd92b464abbc9fba5236dad49e}{Metal}}, \mbox{\hyperlink{class_metal___text_a312afa17f4efbc4f93f4e2467465a739}{Metal\+\_\+\+Text}}, \mbox{\hyperlink{class_push_a8d9fe35b348f5085d3711d12d55b7542}{Push}}, \mbox{\hyperlink{class_rock_a2206d97d4cb505a0c74dc313bee41e79}{Rock}}, \mbox{\hyperlink{class_rock___text_a87b4118aa9ce59f1a4e18370d8548ea4}{Rock\+\_\+\+Text}}, \mbox{\hyperlink{class_sink_a33e8298578e38c3f471514c80c6af027}{Sink}}, \mbox{\hyperlink{class_stop_a42af4a84437069ce229875b777c6a250}{Stop}}, \mbox{\hyperlink{class_wall_a97c2a36d2fb7ec156c9f62ecb27c18b3}{Wall}}, \mbox{\hyperlink{class_wall___text_ab33c602afd6969ae8494361e939dbe21}{Wall\+\_\+\+Text}}, \mbox{\hyperlink{class_water_a1624e8c5c5fa2af498ee38b066c200c4}{Water}}, \mbox{\hyperlink{class_water___text_a7a4141463dae369b7bab7b3491a15d30}{Water\+\_\+\+Text}}, \mbox{\hyperlink{class_win_ace1a7816d5dccc0e3d00b6eb6570f768}{Win}}, and \mbox{\hyperlink{class_you_a445ced87edc6557e2160ea55e05fa969}{You}}.
+
+\mbox{\Hypertarget{class_element_a569d58173f6a634d9b0c25d567217772}\label{class_element_a569d58173f6a634d9b0c25d567217772}} 
+\index{Element@{Element}!setPush@{setPush}}
+\index{setPush@{setPush}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{setPush()}{setPush()}}
+{\footnotesize\ttfamily void Element\+::set\+Push (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the \char`\"{}push\char`\"{} tag of the element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to set the tag to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_element_ad90417a5e124421b60a8a75561e4c300}\label{class_element_ad90417a5e124421b60a8a75561e4c300}} 
+\index{Element@{Element}!setSink@{setSink}}
+\index{setSink@{setSink}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{setSink()}{setSink()}}
+{\footnotesize\ttfamily void Element\+::set\+Sink (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the \char`\"{}sink\char`\"{} tag of the element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to set the tag to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_element_a9bbf906bd2012fb77e2d221d32baeb08}\label{class_element_a9bbf906bd2012fb77e2d221d32baeb08}} 
+\index{Element@{Element}!setStop@{setStop}}
+\index{setStop@{setStop}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{setStop()}{setStop()}}
+{\footnotesize\ttfamily void Element\+::set\+Stop (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the value of the stop variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The new value for stop \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_element_a8b087aaba82829ea736b4a4ea879b986}\label{class_element_a8b087aaba82829ea736b4a4ea879b986}} 
+\index{Element@{Element}!setWin@{setWin}}
+\index{setWin@{setWin}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{setWin()}{setWin()}}
+{\footnotesize\ttfamily void Element\+::set\+Win (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the \char`\"{}win\char`\"{} tag of the element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to set the tag to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_element_aabcc62f909fc30f76fad28d856c1f239}\label{class_element_aabcc62f909fc30f76fad28d856c1f239}} 
+\index{Element@{Element}!setYou@{setYou}}
+\index{setYou@{setYou}!Element@{Element}}
+\doxysubsubsection{\texorpdfstring{setYou()}{setYou()}}
+{\footnotesize\ttfamily void Element\+::set\+You (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the \char`\"{}you\char`\"{} tag of the element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to set the tag to. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+metier/Element.\+h\item 
+metier/Element.\+cpp\end{DoxyCompactItemize}

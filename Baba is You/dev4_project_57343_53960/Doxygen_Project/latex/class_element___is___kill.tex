@@ -1,0 +1,83 @@
+\hypertarget{class_element___is___kill}{}\doxysection{Element\+\_\+\+Is\+\_\+\+Kill Class Reference}
+\label{class_element___is___kill}\index{Element\_Is\_Kill@{Element\_Is\_Kill}}
+
+
+The \mbox{\hyperlink{class_element___is___kill}{Element\+\_\+\+Is\+\_\+\+Kill}} class is a concrete implementation of the \mbox{\hyperlink{class_game_rule}{Game\+Rule}} class that represents the \char`\"{}kill\char`\"{} rule for certain elements in the game.  
+
+
+
+
+{\ttfamily \#include $<$Element\+\_\+\+Is\+\_\+\+Kill.\+h$>$}
+
+Inheritance diagram for Element\+\_\+\+Is\+\_\+\+Kill\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_element___is___kill}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_element___is___kill_ae4d1df2ba70e09cf1e54eeda9977690a}{apply}} (\mbox{\hyperlink{class_element}{Element}} elem, \mbox{\hyperlink{class_board_loader}{Board\+Loader}} $\ast$board\+Loader) override
+\begin{DoxyCompactList}\small\item\em This method applies the \char`\"{}kill\char`\"{} rule to an element and updates the board loader accordingly. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_element___is___kill_a14316bdc70c8d21aaad19a9fbb931fa3}{disapply}} (\mbox{\hyperlink{class_element}{Element}} elem, \mbox{\hyperlink{class_board_loader}{Board\+Loader}} $\ast$board\+Loader) override
+\begin{DoxyCompactList}\small\item\em This method disapply the \char`\"{}kill\char`\"{} rule. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_game_rule_a297d84f86d064f1420555b9e157520bd}{apply}} (\mbox{\hyperlink{class_element}{Element}} elem, \mbox{\hyperlink{class_board_loader}{Board\+Loader}} $\ast$board\+Loader)=0
+\begin{DoxyCompactList}\small\item\em Applies a rule based on the different elements. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_rule_ad8009ada19a22c5ad7681d357c1f77dd}{disapply}} (\mbox{\hyperlink{class_element}{Element}} elem, \mbox{\hyperlink{class_board_loader}{Board\+Loader}} $\ast$board\+Loader)
+\begin{DoxyCompactList}\small\item\em Disapplies a rule based on the different elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_element___is___kill}{Element\+\_\+\+Is\+\_\+\+Kill}} class is a concrete implementation of the \mbox{\hyperlink{class_game_rule}{Game\+Rule}} class that represents the \char`\"{}kill\char`\"{} rule for certain elements in the game. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_element___is___kill_ae4d1df2ba70e09cf1e54eeda9977690a}\label{class_element___is___kill_ae4d1df2ba70e09cf1e54eeda9977690a}} 
+\index{Element\_Is\_Kill@{Element\_Is\_Kill}!apply@{apply}}
+\index{apply@{apply}!Element\_Is\_Kill@{Element\_Is\_Kill}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}}
+{\footnotesize\ttfamily void Element\+\_\+\+Is\+\_\+\+Kill\+::apply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}}}]{elem,  }\item[{\mbox{\hyperlink{class_board_loader}{Board\+Loader}} $\ast$}]{board\+Loader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This method applies the \char`\"{}kill\char`\"{} rule to an element and updates the board loader accordingly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & The element to apply the rule to. \\
+\hline
+{\em board\+Loader} & The board loader object representing the current state of the game board. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_game_rule_a297d84f86d064f1420555b9e157520bd}{Game\+Rule}}.
+
+\mbox{\Hypertarget{class_element___is___kill_a14316bdc70c8d21aaad19a9fbb931fa3}\label{class_element___is___kill_a14316bdc70c8d21aaad19a9fbb931fa3}} 
+\index{Element\_Is\_Kill@{Element\_Is\_Kill}!disapply@{disapply}}
+\index{disapply@{disapply}!Element\_Is\_Kill@{Element\_Is\_Kill}}
+\doxysubsubsection{\texorpdfstring{disapply()}{disapply()}}
+{\footnotesize\ttfamily void Element\+\_\+\+Is\+\_\+\+Kill\+::disapply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}}}]{elem,  }\item[{\mbox{\hyperlink{class_board_loader}{Board\+Loader}} $\ast$}]{board\+Loader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This method disapply the \char`\"{}kill\char`\"{} rule. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & The element to disapply the rule to. \\
+\hline
+{\em board\+Loader} & The board loader object representing the current state of the game board. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_game_rule_ad8009ada19a22c5ad7681d357c1f77dd}{Game\+Rule}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+metier/Element\+\_\+\+Is\+\_\+\+Kill.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,39 @@
+\hypertarget{_controller_8h_source}{}\doxysection{Controller.\+h}
+\label{_controller_8h_source}\index{console/Controller.h@{console/Controller.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CONTROLLER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CONTROLLER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}../metier/Game.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}View.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_controller}{Controller}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{int}\ \ currentLevel;}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_board_loader}{BoardLoader}}\ \ boardLoader;}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_game}{Game}}\ \ game\ ;}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_view}{View}}\ \ view;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_controller}{Controller}}\ (\textcolor{keywordtype}{int}\ currentLevel);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_controller_a8eaafa793bc05b538e21594159ae6364}{play}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00036\ \ \ \ \ Direction\ \mbox{\hyperlink{class_controller_ab0ab3908b4434626aa963c2c9132418a}{orientation}}(\textcolor{keywordtype}{int}\ \&key);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00043\ \ \ \ \ Direction\ \mbox{\hyperlink{class_controller_a7c2a7cd6fd31d9a038d72587d2fcba58}{updateLevelState}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_controller}{Controller}}*\ \mbox{\hyperlink{class_controller_a127b349126ae41b6e435c1fcf2d28ee0}{getController}}()\{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{class_game}{Game}}*\ \mbox{\hyperlink{class_controller_aa6f9cab2dd64ec7f93e4834bf44ca4a7}{getGame}}()\{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&game;}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CONTROLLER\_H}}
+
+\end{DoxyCode}

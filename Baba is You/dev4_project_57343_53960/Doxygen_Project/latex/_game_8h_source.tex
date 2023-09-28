@@ -1,0 +1,103 @@
+\hypertarget{_game_8h_source}{}\doxysection{Game.\+h}
+\label{_game_8h_source}\index{metier/Game.h@{metier/Game.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GAME\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GAME\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}BoardLoader.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}GameRule.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Element\_Is\_Kill.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Element\_Is\_Push.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Element\_Is\_Sink.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Element\_Is\_Stop.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Element\_Is\_Win.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Element\_Is\_You.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}Subject.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game}{Game}}\ :\textcolor{keyword}{public}\ \mbox{\hyperlink{class_subject}{Subject}}\{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ Level;}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_board_loader}{BoardLoader}}*\ board;}
+\DoxyCodeLine{00023\ \ \ \ \ std::vector<Element>\ currentElement;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ z\ =\ 0;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \ \ \ \ std::vector<Observer\ *>\ list\_of\_observer;}
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_game_a7dbcf6d5e3cb36d32adf8041832b7772}{Game}}(\mbox{\hyperlink{class_board_loader}{BoardLoader}}*\ b):board\{b\}\{\}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a0b9ce536d5972caea837cc4d41194c32}{saveLevel}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_a86d20cfd66dc1527e30bea762843f286}{isRestart}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_aad1950650eb1a786c13eef595be977cb}{getZ}}()\{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ z;}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_ae7d5a970574f188a03c01e00797c233b}{setZ}}(\textcolor{keywordtype}{int}\ newZ)\{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ z\ =\ newZ;}
+\DoxyCodeLine{00062\ \ \ \ \ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_ad96811523727a5120ef9b5c78b253620}{checkPositionNotInBoard}}(\mbox{\hyperlink{class_position}{Position}}\ pos);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a1e6dcfe8af4a19ff2c93a02f4bb00b8d}{applyRule}}(std::string\ rule,\ \mbox{\hyperlink{class_element}{Element}}\ elem);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_acd0ead9b657da3febef578b2a88ed627}{isRule}}(std::vector<Element*>\ elemsToCheck);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_a204c8f6a8ae0ee4aa96091ec589b67f4}{isConnector}}(std::vector<Element*>\ elemsToCheck);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_aabdb900a66d9c0fbc3b870b3db944643}{whichRule}}(\mbox{\hyperlink{class_element}{Element}}\ a,\mbox{\hyperlink{class_element}{Element}}\ rule);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a1db2398a1714939eaa88ffe9199f3631}{DisAllRules}}(\mbox{\hyperlink{class_element}{Element}}\ a);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a44b8cc682212baf1ea4ae9f6f10d6506}{changeIsPtr}}(\textcolor{keywordtype}{int}\ pos1,\ \textcolor{keywordtype}{int}\ pos2);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_ac2b4782b25c549c9f5aebd5818166dac}{searchYou}}();}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a5dded8ef267636856623052ebeec2de4}{disapplyRule}}();}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a9ef44709e993b74f06fb4b6513537f5c}{checkRule}}();}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00134\ \ \ \ \ \mbox{\hyperlink{class_board_loader}{BoardLoader}}*\ \mbox{\hyperlink{class_game_a04523681a85c6e04f0e5cdea902fed79}{getBoardLoader}}();}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a93dfa9f113b4487b5dda3962eadd5f0a}{setBoardLoader}}();}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_af5a8ca27c19918fd3af5127303965705}{checkElemPush}}(std::vector<Element*>\ elemsToCheck);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_a2a905ff46c2ef4ce0cf4c0a1d2681a0f}{checkPush}}(\mbox{\hyperlink{class_square}{Square}}*\ square,\ Direction\ dir);}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_aaeda0b874ba49f7d781cfb2ecd6c331a}{movePushableElems}}(\mbox{\hyperlink{class_square}{Square}}*\ square,\ Direction\ dir);}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_a80bc2ca3645215c7018bef0838fcf751}{checkElemStop}}(std::vector<Element*>\ elemsToCheck);}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_ada2c91ca3f4cb48c7a29480a1c7aae4c}{setAllPtr}}(std::vector<Element>\ test);}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00185\ \ \ \ \ \mbox{\hyperlink{class_position}{Position}}\ \mbox{\hyperlink{class_game_a3e6c3d3227de904fc41d55d28c6d7f06}{gapInDirection}}(\mbox{\hyperlink{class_square}{Square}}*\ currentSquare,Direction\ dir,\ \textcolor{keywordtype}{int}\ gap);}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a3d07d3e72fdeda13e8607708e8d09d4f}{updateIsPos}}();}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a9ab1059b7cd2f4aa343dbac7c7153cae}{updateElemPos}}(\mbox{\hyperlink{class_element}{Element}}\ elem);}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_aaf8369f3f55e237e4c0c35b4b2a6d3a8}{move}}(Direction\ \&dir);}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a2bb3eb4ee0745eb959d110fe578e5381}{Attach}}(\mbox{\hyperlink{class_observer}{Observer}}\ *\ observer)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_ac2a83e0f67fc7449459626527ef2ed10}{Detach}}(\mbox{\hyperlink{class_observer}{Observer}}\ *\ observer)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a36e7cac31a774293aafa460278196134}{Notify}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ \};}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GAME\_H}}
+\DoxyCodeLine{00226\ }
+
+\end{DoxyCode}

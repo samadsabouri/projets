@@ -1,0 +1,42 @@
+\hypertarget{_water_8h_source}{}\doxysection{Water.\+h}
+\label{_water_8h_source}\index{metier/elements/Water.h@{metier/elements/Water.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ WATER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ WATER\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}../Element.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_water}{Water}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_element}{Element}}\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{class_water}{Water}}(\mbox{\hyperlink{class_position}{Position}}\ pos,\ Direction\ dir):\ \mbox{\hyperlink{class_element_ab0d0e20be9a36ae676202db753faeec9}{Element}}(pos,\ dir,\ ElementType::BLOCK,\ \textcolor{stringliteral}{"{}water"{}},\ \textcolor{keyword}{false},\ \textcolor{stringliteral}{"{}\_\_\_\_\_"{}})\ \{\}}
+\DoxyCodeLine{00008\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{class_water_a1bc38a991afe2bd54f2e737b7eb512a1}{getName}}()\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_element_a2e2ee96d5698ea2aa998fd84e2c34f4f}{Element::getName}}();}
+\DoxyCodeLine{00010\ \ \ \ \ \};}
+\DoxyCodeLine{00011\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ Direction\ \mbox{\hyperlink{class_water_ac0d013b83980f09665369d551e5631d5}{getDirection}}()\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_element_a905bce215c7f79a309e6b4bbf58fa0c7}{Element::getDirection}}();}
+\DoxyCodeLine{00013\ \ \ \ \ \};}
+\DoxyCodeLine{00014\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ ElementType\ \mbox{\hyperlink{class_water_ac74635d625af94aabb1c565e5b00e733}{getElementType}}()\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_element_acea040d7ac78bc939ae1716da3627490}{Element::getElementType}}();}
+\DoxyCodeLine{00016\ \ \ \ \};}
+\DoxyCodeLine{00017\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_position}{Position}}\ \mbox{\hyperlink{class_water_ae7ebd1b364a77a9d6c8b466e27bd60df}{getPosition}}()\textcolor{keyword}{override}\{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_element_a290586fad7fc5baf794201988953fd2d}{Element::getPosition}}();}
+\DoxyCodeLine{00019\ \ \ \ \};}
+\DoxyCodeLine{00020\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_water_a1624e8c5c5fa2af498ee38b066c200c4}{setPosition}}(\mbox{\hyperlink{class_position}{Position}}\ position)\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_element_a66d1bf8786a21fbffac92d5ecbde5330}{Element::setPosition}}(position);}
+\DoxyCodeLine{00022\ \ \ \ \};}
+\DoxyCodeLine{00023\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_water_af7636de73dfe1ecf34ee8d1fce37758b}{setDirection}}(Direction\ dir)\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_element_a6932f29a049ff097f0eec9a68bfd842d}{Element::setDirection}}(dir);}
+\DoxyCodeLine{00025\ \ \ \ \};}
+\DoxyCodeLine{00026\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_water_af338b0e6ebc9171e615bbeefccca4b92}{setMoveble}}(\textcolor{keywordtype}{bool}\ movable)\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00027\ \ \ \ \mbox{\hyperlink{class_element_a47632e8b85694fe6093e4add948ac50d}{Element::setMoveble}}(movable);}
+\DoxyCodeLine{00028\ \ \ \ \};}
+\DoxyCodeLine{00029\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_water_a7448188d943bc7f09b95fa6ecf78343e}{isMoveble}}()\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_element_a465e7abc5a6075880d47b48bc8c5318d}{Element::isMoveble}}();}
+\DoxyCodeLine{00031\ \ \ \ \};}
+\DoxyCodeLine{00032\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{class_water_a0117140f7a81693dd0d76eee6bfacce0}{getSymbol}}()\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_element_ac453bc42415eae9ddb5a349d2b539a20}{Element::getSymbol}}();}
+\DoxyCodeLine{00034\ \ \ \ \};}
+\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WATER\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,850 @@
+\hypertarget{class_board_loader}{}\doxysection{Board\+Loader Class Reference}
+\label{class_board_loader}\index{BoardLoader@{BoardLoader}}
+
+
+The \mbox{\hyperlink{class_board_loader}{Board\+Loader}} class is responsible for loading the game board and movable elements for a specific level from a text file.  
+
+
+
+
+{\ttfamily \#include $<$Board\+Loader.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_board_loader_af27a3a4a9ac421d83bb4e2f8bd3772ed}{Board\+Loader}} (int level\+Number)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{class_board_loader}{Board\+Loader}} object for the given level number. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_board_loader_a0c1347762c336cd34ac16a58f5e15f0a}\label{class_board_loader_a0c1347762c336cd34ac16a58f5e15f0a}} 
+void {\bfseries save\+Level} ()
+\begin{DoxyCompactList}\small\item\em Saves the current level. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_board_loader_a9bdde7240667b6763f2b459d4b1feac7}\label{class_board_loader_a9bdde7240667b6763f2b459d4b1feac7}} 
+void {\bfseries set\+Level} (int level)
+\begin{DoxyCompactList}\small\item\em Sets the level number for the \mbox{\hyperlink{class_board_loader}{Board\+Loader}} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_loader_aca96d6338aa7e5a98e807025202e6aa0}{get\+Level\+Number}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current level number. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}} \mbox{\hyperlink{class_board_loader_a7b8b2e99a05a6a7eed58252628e6a75c}{get\+Board}} () const
+\begin{DoxyCompactList}\small\item\em Returns the \mbox{\hyperlink{class_board}{Board}} object constructed from the level data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}} $\ast$ \mbox{\hyperlink{class_board_loader_a5d90bda47c0c2c524382772a88289d87}{get\+Board\+Ptr}} ()
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the \mbox{\hyperlink{class_board}{Board}} object. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ \mbox{\hyperlink{class_board_loader_a5064a1fe4d6d6e806ff1a8e9be06f86b}{get\+Movable\+Elem\+Loader}} ()
+\begin{DoxyCompactList}\small\item\em Returns a vector of movable elements in the level data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_board_loader_a9cbcbe394e56f672279c3a7b56fb496b}{is\+Not\+Playable}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the level is playable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_element}{Element}} \mbox{\hyperlink{class_board_loader_a3153d92f71ec79ed15d22cb558dbef0f}{get\+Baba\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Gets a pointer to the \mbox{\hyperlink{class_baba}{Baba}} element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_element}{Element}} \mbox{\hyperlink{class_board_loader_a4e44bba44821c6050fb9da73ff8acc42}{get\+Baba\+Text\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Gets a pointer to the text representation of the \mbox{\hyperlink{class_baba}{Baba}} element. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ \mbox{\hyperlink{class_board_loader_ac7776e0d9bb892a5fb858162d8d3f297}{get\+Bone\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Gets a vector of pointers to the \mbox{\hyperlink{class_bone}{Bone}} element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_element}{Element}} \mbox{\hyperlink{class_board_loader_a6762ff30d0affc84f65715ff67226396}{get\+Flag\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Gets a pointer to the \mbox{\hyperlink{class_flag}{Flag}} element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_element}{Element}} \mbox{\hyperlink{class_board_loader_a55962138de2b9db6efc7e49d88777d00}{get\+Flag\+Text\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Gets a pointer to the text representation of the \mbox{\hyperlink{class_flag}{Flag}} element. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ \mbox{\hyperlink{class_board_loader_aba59f18e576a069c0b9ff19373e20325}{get\+Grass\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Gets a vector of pointers to the \mbox{\hyperlink{class_grass}{Grass}} elements. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ \mbox{\hyperlink{class_board_loader_af428833162cc7aa9db64ea9dc0e5182d}{get\+Is\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Gets a vector of pointers to the \mbox{\hyperlink{class_is}{Is}} elements. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_element}{Element}} \mbox{\hyperlink{class_board_loader_a7d2fb83e9e8761b897f25c48191eb422}{get\+Kill\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Gets a pointer to the \mbox{\hyperlink{class_kill}{Kill}} element. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ \mbox{\hyperlink{class_board_loader_a5e20e41a87770375941d9e238ae2e5dc}{get\+Lava\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Gets a vector of pointers to the \mbox{\hyperlink{class_lava}{Lava}} elements. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ \mbox{\hyperlink{class_board_loader_a3398c77c945e81245048c9d6fc817ec3}{get\+Metal\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Gets a vector of pointers to the \mbox{\hyperlink{class_metal}{Metal}} elements. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_element}{Element}} \mbox{\hyperlink{class_board_loader_a51d8c0720887a99aa0faf366e83a8f23}{get\+Metal\+Text\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Gets a pointer to the text representation of the \mbox{\hyperlink{class_metal}{Metal}} element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_element}{Element}} \mbox{\hyperlink{class_board_loader_a73f69dcf6ba384b67f31130741d2aa2e}{get\+Push\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Gets a pointer to the \mbox{\hyperlink{class_push}{Push}} element. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ \mbox{\hyperlink{class_board_loader_aa5c70ad457ea57198c40376b628d2728}{get\+Rock\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Gets a vector of pointers to the \mbox{\hyperlink{class_rock}{Rock}} elements. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_element}{Element}} \mbox{\hyperlink{class_board_loader_a2da3952ba5dbda760c2f699ee4f32d12}{get\+Rock\+Text\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Gets a pointer to the text representation of the \mbox{\hyperlink{class_rock}{Rock}} element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_element}{Element}} \mbox{\hyperlink{class_board_loader_ab54e9fc95d2b75d7bc0d260fc9eb22ed}{get\+Sink\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Gets a pointer to the \mbox{\hyperlink{class_sink}{Sink}} element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_element}{Element}} \mbox{\hyperlink{class_board_loader_a1e135b6de9f27e8f29faad9f23682ff3}{get\+Stop\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Gets a pointer to the \mbox{\hyperlink{class_stop}{Stop}} element. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ \mbox{\hyperlink{class_board_loader_af9226d722be25f98c6919a79b9097a98}{get\+Wall\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Gets a vector of pointers to the \mbox{\hyperlink{class_wall}{Wall}} elements. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ \mbox{\hyperlink{class_board_loader_a6b2a3438ed3a37d12761d7a7c7b988ce}{get\+Water\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Gets a vector of pointers to the \mbox{\hyperlink{class_water}{Water}} elements. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_element}{Element}} \mbox{\hyperlink{class_board_loader_a15db1f3d3c8c1ed02ae5495bb58089ab}{get\+Water\+Text\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Get a pointer to the \char`\"{}\+Water\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_element}{Element}} \mbox{\hyperlink{class_board_loader_a3c9c8ef12c6db70605d40f20f97cba0e}{get\+Win\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Get a pointer to the \char`\"{}\+Win\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_element}{Element}} \mbox{\hyperlink{class_board_loader_a1a15d39f9a2235c51aae4e75a46fc47d}{get\+You\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Get a pointer to the \char`\"{}\+You\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_loader_a359be07618a44eb47c7b87b3cbca98b0}{set\+Baba\+Ptr}} (\mbox{\hyperlink{class_element}{Element}} baba)
+\begin{DoxyCompactList}\small\item\em Set the \char`\"{}\+Baba\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_loader_aa41e9d01a01f560c514260aff9482bb8}{set\+Baba\+Text\+Ptr}} (\mbox{\hyperlink{class_element}{Element}} baba\+Text)
+\begin{DoxyCompactList}\small\item\em Set the \char`\"{}\+Baba is\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_loader_acef743dc1d73f488d2d725ae744ea637}{set\+Bone\+Ptr}} (std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ bone)
+\begin{DoxyCompactList}\small\item\em Set the \char`\"{}\+Bone\char`\"{} \mbox{\hyperlink{class_element}{Element}} objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_loader_a8a2237ba1c121db11d465abcc211e30b}{set\+Flag\+Ptr}} (\mbox{\hyperlink{class_element}{Element}} flag)
+\begin{DoxyCompactList}\small\item\em Set the \char`\"{}\+Flag\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_loader_a6fbf9da555b9b5ff4be0703cbc9e2a10}{set\+Flag\+Text\+Ptr}} (\mbox{\hyperlink{class_element}{Element}} flag\+Text)
+\begin{DoxyCompactList}\small\item\em Set the \char`\"{}\+Flag is\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_loader_a99218edb78806d217bc7c4ac14ac7a84}{set\+Grass\+Ptr}} (std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ grass)
+\begin{DoxyCompactList}\small\item\em Set the \char`\"{}\+Grass\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_loader_a6c0768ec66bbc5a4d797208b60d0d608}{set\+Grass\+Text\+Ptr}} (\mbox{\hyperlink{class_element}{Element}} grass\+Text)
+\begin{DoxyCompactList}\small\item\em Set the \char`\"{}\+Grass is\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_loader_a8ade1b977511fd5a211d36454a67be3e}{set\+Is\+Ptr}} (std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ is)
+\begin{DoxyCompactList}\small\item\em Set the \char`\"{}\+Is\char`\"{} \mbox{\hyperlink{class_element}{Element}} objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_loader_a8c739813b697335932303526733d4684}{set\+Kill\+Ptr}} (\mbox{\hyperlink{class_element}{Element}} kill)
+\begin{DoxyCompactList}\small\item\em Set the \char`\"{}\+Kill\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_loader_a6cac611c9871d6c1e51fedbacd4ecbe2}{set\+Lava\+Ptr}} (std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ lava)
+\begin{DoxyCompactList}\small\item\em Set the \char`\"{}\+Lava\char`\"{} \mbox{\hyperlink{class_element}{Element}} objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_loader_a03621c36a1e285a8679cafc1771f221e}{set\+Lava\+Text\+Ptr}} (\mbox{\hyperlink{class_element}{Element}} lava\+Text)
+\begin{DoxyCompactList}\small\item\em Set the \char`\"{}\+Lava is\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_loader_ad8b040c2108fbf35d9a5ae10299eee93}{set\+Metal\+Ptr}} (std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ metal)
+\begin{DoxyCompactList}\small\item\em Set the \char`\"{}\+Metal\char`\"{} \mbox{\hyperlink{class_element}{Element}} objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_loader_a0c4e0cf8c084ab56662b4538adb6fe32}{set\+Metal\+Text\+Ptr}} (\mbox{\hyperlink{class_element}{Element}} metal\+Text)
+\begin{DoxyCompactList}\small\item\em Set the \char`\"{}\+Metal is\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_loader_a4f1c2917e4d9d79dedc8352c54a9770c}{set\+Push\+Ptr}} (\mbox{\hyperlink{class_element}{Element}} push)
+\begin{DoxyCompactList}\small\item\em Set the \char`\"{}\+Push\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_loader_acac833b3a23dd614c65fa6fb332c1d94}{set\+Rock\+Ptr}} (std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ rock)
+\begin{DoxyCompactList}\small\item\em Set the \char`\"{}\+Rock\char`\"{} \mbox{\hyperlink{class_element}{Element}} objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_loader_a5e2617b13a42e8a38131aa96bdd919f6}{set\+Rock\+Text\+Ptr}} (\mbox{\hyperlink{class_element}{Element}} rock\+Text)
+\begin{DoxyCompactList}\small\item\em Set the \char`\"{}\+Rock is\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_loader_ae34357203348f91442513d89cfc09221}{set\+Sink\+Ptr}} (\mbox{\hyperlink{class_element}{Element}} sink)
+\begin{DoxyCompactList}\small\item\em Set the \char`\"{}\+Sink\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_loader_aa304f870a336c2df835dae2cf39c815b}{set\+Stop\+Ptr}} (\mbox{\hyperlink{class_element}{Element}} stop)
+\begin{DoxyCompactList}\small\item\em Set the pointer to the \mbox{\hyperlink{class_element}{Element}} representing the \char`\"{}\+Stop\char`\"{} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_loader_ae5fbd1b99437b801f187158c1575cb57}{set\+Wall\+Ptr}} (std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ wall)
+\begin{DoxyCompactList}\small\item\em Set the pointer to the vector of Elements representing the \char`\"{}\+Wall\char`\"{} objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_loader_a1a6bfe4ad9c8b390c7954fe59cbe4391}{set\+Wall\+Text\+Ptr}} (\mbox{\hyperlink{class_element}{Element}} wall\+Text)
+\begin{DoxyCompactList}\small\item\em Set the pointer to the \mbox{\hyperlink{class_element}{Element}} representing the text of the \char`\"{}\+Wall\char`\"{} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_loader_a58ed51099cb51aac814e6f2798704443}{set\+Water\+Ptr}} (std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ water)
+\begin{DoxyCompactList}\small\item\em Set the pointer to the vector of Elements representing the \char`\"{}\+Water\char`\"{} objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_loader_ac357cb38ee1f7f3e2818855ff5f040c4}{set\+Water\+Text\+Ptr}} (\mbox{\hyperlink{class_element}{Element}} water\+Text)
+\begin{DoxyCompactList}\small\item\em Set the pointer to the \mbox{\hyperlink{class_element}{Element}} representing the text of the \char`\"{}\+Water\char`\"{} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_loader_a21b0b15f4fa2079546b148959495d35c}{set\+Win\+Ptr}} (\mbox{\hyperlink{class_element}{Element}} win)
+\begin{DoxyCompactList}\small\item\em Set the pointer to the \mbox{\hyperlink{class_element}{Element}} representing the \char`\"{}\+Win\char`\"{} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_loader_ad71db186acc3bcd3afdab2982f2cf513}{set\+You\+Ptr}} (\mbox{\hyperlink{class_element}{Element}} you)
+\begin{DoxyCompactList}\small\item\em Set the pointer to the \mbox{\hyperlink{class_element}{Element}} representing the \char`\"{}\+You\char`\"{} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_board_loader}{Board\+Loader}} class is responsible for loading the game board and movable elements for a specific level from a text file. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_board_loader_af27a3a4a9ac421d83bb4e2f8bd3772ed}\label{class_board_loader_af27a3a4a9ac421d83bb4e2f8bd3772ed}} 
+\index{BoardLoader@{BoardLoader}!BoardLoader@{BoardLoader}}
+\index{BoardLoader@{BoardLoader}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{BoardLoader()}{BoardLoader()}}
+{\footnotesize\ttfamily Board\+Loader\+::\+Board\+Loader (\begin{DoxyParamCaption}\item[{int}]{level\+Number }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{class_board_loader}{Board\+Loader}} object for the given level number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level\+Number} & The number of the level to load \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_board_loader_a3153d92f71ec79ed15d22cb558dbef0f}\label{class_board_loader_a3153d92f71ec79ed15d22cb558dbef0f}} 
+\index{BoardLoader@{BoardLoader}!getBabaPtr@{getBabaPtr}}
+\index{getBabaPtr@{getBabaPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getBabaPtr()}{getBabaPtr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_element}{Element}} Board\+Loader\+::get\+Baba\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets a pointer to the \mbox{\hyperlink{class_baba}{Baba}} element. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the \mbox{\hyperlink{class_baba}{Baba}} element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_a4e44bba44821c6050fb9da73ff8acc42}\label{class_board_loader_a4e44bba44821c6050fb9da73ff8acc42}} 
+\index{BoardLoader@{BoardLoader}!getBabaTextPtr@{getBabaTextPtr}}
+\index{getBabaTextPtr@{getBabaTextPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getBabaTextPtr()}{getBabaTextPtr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_element}{Element}} Board\+Loader\+::get\+Baba\+Text\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets a pointer to the text representation of the \mbox{\hyperlink{class_baba}{Baba}} element. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the text representation of the \mbox{\hyperlink{class_baba}{Baba}} element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_a7b8b2e99a05a6a7eed58252628e6a75c}\label{class_board_loader_a7b8b2e99a05a6a7eed58252628e6a75c}} 
+\index{BoardLoader@{BoardLoader}!getBoard@{getBoard}}
+\index{getBoard@{getBoard}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getBoard()}{getBoard()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board}{Board}} Board\+Loader\+::get\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the \mbox{\hyperlink{class_board}{Board}} object constructed from the level data. 
+
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{class_board}{Board}} object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_a5d90bda47c0c2c524382772a88289d87}\label{class_board_loader_a5d90bda47c0c2c524382772a88289d87}} 
+\index{BoardLoader@{BoardLoader}!getBoardPtr@{getBoardPtr}}
+\index{getBoardPtr@{getBoardPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getBoardPtr()}{getBoardPtr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board}{Board}} $\ast$ Board\+Loader\+::get\+Board\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a pointer to the \mbox{\hyperlink{class_board}{Board}} object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the \mbox{\hyperlink{class_board}{Board}} object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_ac7776e0d9bb892a5fb858162d8d3f297}\label{class_board_loader_ac7776e0d9bb892a5fb858162d8d3f297}} 
+\index{BoardLoader@{BoardLoader}!getBonePtr@{getBonePtr}}
+\index{getBonePtr@{getBonePtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getBonePtr()}{getBonePtr()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ Board\+Loader\+::get\+Bone\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets a vector of pointers to the \mbox{\hyperlink{class_bone}{Bone}} element. 
+
+\begin{DoxyReturn}{Returns}
+Vector of pointers to the \mbox{\hyperlink{class_bone}{Bone}} elements 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_a6762ff30d0affc84f65715ff67226396}\label{class_board_loader_a6762ff30d0affc84f65715ff67226396}} 
+\index{BoardLoader@{BoardLoader}!getFlagPtr@{getFlagPtr}}
+\index{getFlagPtr@{getFlagPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getFlagPtr()}{getFlagPtr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_element}{Element}} Board\+Loader\+::get\+Flag\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets a pointer to the \mbox{\hyperlink{class_flag}{Flag}} element. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the \mbox{\hyperlink{class_flag}{Flag}} element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_a55962138de2b9db6efc7e49d88777d00}\label{class_board_loader_a55962138de2b9db6efc7e49d88777d00}} 
+\index{BoardLoader@{BoardLoader}!getFlagTextPtr@{getFlagTextPtr}}
+\index{getFlagTextPtr@{getFlagTextPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getFlagTextPtr()}{getFlagTextPtr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_element}{Element}} Board\+Loader\+::get\+Flag\+Text\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets a pointer to the text representation of the \mbox{\hyperlink{class_flag}{Flag}} element. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the text representation of the \mbox{\hyperlink{class_flag}{Flag}} element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_aba59f18e576a069c0b9ff19373e20325}\label{class_board_loader_aba59f18e576a069c0b9ff19373e20325}} 
+\index{BoardLoader@{BoardLoader}!getGrassPtr@{getGrassPtr}}
+\index{getGrassPtr@{getGrassPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getGrassPtr()}{getGrassPtr()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ Board\+Loader\+::get\+Grass\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets a vector of pointers to the \mbox{\hyperlink{class_grass}{Grass}} elements. 
+
+\begin{DoxyReturn}{Returns}
+Vector of pointers to the \mbox{\hyperlink{class_grass}{Grass}} elements 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_af428833162cc7aa9db64ea9dc0e5182d}\label{class_board_loader_af428833162cc7aa9db64ea9dc0e5182d}} 
+\index{BoardLoader@{BoardLoader}!getIsPtr@{getIsPtr}}
+\index{getIsPtr@{getIsPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getIsPtr()}{getIsPtr()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ Board\+Loader\+::get\+Is\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets a vector of pointers to the \mbox{\hyperlink{class_is}{Is}} elements. 
+
+\begin{DoxyReturn}{Returns}
+Vector of pointers to the \mbox{\hyperlink{class_is}{Is}} elements 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_a7d2fb83e9e8761b897f25c48191eb422}\label{class_board_loader_a7d2fb83e9e8761b897f25c48191eb422}} 
+\index{BoardLoader@{BoardLoader}!getKillPtr@{getKillPtr}}
+\index{getKillPtr@{getKillPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getKillPtr()}{getKillPtr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_element}{Element}} Board\+Loader\+::get\+Kill\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets a pointer to the \mbox{\hyperlink{class_kill}{Kill}} element. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the \mbox{\hyperlink{class_kill}{Kill}} element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_a5e20e41a87770375941d9e238ae2e5dc}\label{class_board_loader_a5e20e41a87770375941d9e238ae2e5dc}} 
+\index{BoardLoader@{BoardLoader}!getLavaPtr@{getLavaPtr}}
+\index{getLavaPtr@{getLavaPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getLavaPtr()}{getLavaPtr()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ Board\+Loader\+::get\+Lava\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets a vector of pointers to the \mbox{\hyperlink{class_lava}{Lava}} elements. 
+
+\begin{DoxyReturn}{Returns}
+Vector of pointers to the \mbox{\hyperlink{class_lava}{Lava}} elements 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_aca96d6338aa7e5a98e807025202e6aa0}\label{class_board_loader_aca96d6338aa7e5a98e807025202e6aa0}} 
+\index{BoardLoader@{BoardLoader}!getLevelNumber@{getLevelNumber}}
+\index{getLevelNumber@{getLevelNumber}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getLevelNumber()}{getLevelNumber()}}
+{\footnotesize\ttfamily int Board\+Loader\+::get\+Level\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current level number. 
+
+\begin{DoxyReturn}{Returns}
+The current level number 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_a3398c77c945e81245048c9d6fc817ec3}\label{class_board_loader_a3398c77c945e81245048c9d6fc817ec3}} 
+\index{BoardLoader@{BoardLoader}!getMetalPtr@{getMetalPtr}}
+\index{getMetalPtr@{getMetalPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getMetalPtr()}{getMetalPtr()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ Board\+Loader\+::get\+Metal\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets a vector of pointers to the \mbox{\hyperlink{class_metal}{Metal}} elements. 
+
+\begin{DoxyReturn}{Returns}
+Vector of pointers to the \mbox{\hyperlink{class_metal}{Metal}} elements 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_a51d8c0720887a99aa0faf366e83a8f23}\label{class_board_loader_a51d8c0720887a99aa0faf366e83a8f23}} 
+\index{BoardLoader@{BoardLoader}!getMetalTextPtr@{getMetalTextPtr}}
+\index{getMetalTextPtr@{getMetalTextPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getMetalTextPtr()}{getMetalTextPtr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_element}{Element}} Board\+Loader\+::get\+Metal\+Text\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets a pointer to the text representation of the \mbox{\hyperlink{class_metal}{Metal}} element. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the text representation of the \mbox{\hyperlink{class_metal}{Metal}} element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_a5064a1fe4d6d6e806ff1a8e9be06f86b}\label{class_board_loader_a5064a1fe4d6d6e806ff1a8e9be06f86b}} 
+\index{BoardLoader@{BoardLoader}!getMovableElemLoader@{getMovableElemLoader}}
+\index{getMovableElemLoader@{getMovableElemLoader}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getMovableElemLoader()}{getMovableElemLoader()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ Board\+Loader\+::get\+Movable\+Elem\+Loader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a vector of movable elements in the level data. 
+
+\begin{DoxyReturn}{Returns}
+Vector of movable elements 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_a73f69dcf6ba384b67f31130741d2aa2e}\label{class_board_loader_a73f69dcf6ba384b67f31130741d2aa2e}} 
+\index{BoardLoader@{BoardLoader}!getPushPtr@{getPushPtr}}
+\index{getPushPtr@{getPushPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getPushPtr()}{getPushPtr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_element}{Element}} Board\+Loader\+::get\+Push\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets a pointer to the \mbox{\hyperlink{class_push}{Push}} element. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the \mbox{\hyperlink{class_push}{Push}} element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_aa5c70ad457ea57198c40376b628d2728}\label{class_board_loader_aa5c70ad457ea57198c40376b628d2728}} 
+\index{BoardLoader@{BoardLoader}!getRockPtr@{getRockPtr}}
+\index{getRockPtr@{getRockPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getRockPtr()}{getRockPtr()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ Board\+Loader\+::get\+Rock\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets a vector of pointers to the \mbox{\hyperlink{class_rock}{Rock}} elements. 
+
+\begin{DoxyReturn}{Returns}
+Vector of pointers to the \mbox{\hyperlink{class_rock}{Rock}} elements 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_a2da3952ba5dbda760c2f699ee4f32d12}\label{class_board_loader_a2da3952ba5dbda760c2f699ee4f32d12}} 
+\index{BoardLoader@{BoardLoader}!getRockTextPtr@{getRockTextPtr}}
+\index{getRockTextPtr@{getRockTextPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getRockTextPtr()}{getRockTextPtr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_element}{Element}} Board\+Loader\+::get\+Rock\+Text\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets a pointer to the text representation of the \mbox{\hyperlink{class_rock}{Rock}} element. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the text representation of the \mbox{\hyperlink{class_rock}{Rock}} element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_ab54e9fc95d2b75d7bc0d260fc9eb22ed}\label{class_board_loader_ab54e9fc95d2b75d7bc0d260fc9eb22ed}} 
+\index{BoardLoader@{BoardLoader}!getSinkPtr@{getSinkPtr}}
+\index{getSinkPtr@{getSinkPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getSinkPtr()}{getSinkPtr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_element}{Element}} Board\+Loader\+::get\+Sink\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets a pointer to the \mbox{\hyperlink{class_sink}{Sink}} element. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the \mbox{\hyperlink{class_sink}{Sink}} element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_a1e135b6de9f27e8f29faad9f23682ff3}\label{class_board_loader_a1e135b6de9f27e8f29faad9f23682ff3}} 
+\index{BoardLoader@{BoardLoader}!getStopPtr@{getStopPtr}}
+\index{getStopPtr@{getStopPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getStopPtr()}{getStopPtr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_element}{Element}} Board\+Loader\+::get\+Stop\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets a pointer to the \mbox{\hyperlink{class_stop}{Stop}} element. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the \mbox{\hyperlink{class_stop}{Stop}} element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_af9226d722be25f98c6919a79b9097a98}\label{class_board_loader_af9226d722be25f98c6919a79b9097a98}} 
+\index{BoardLoader@{BoardLoader}!getWallPtr@{getWallPtr}}
+\index{getWallPtr@{getWallPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getWallPtr()}{getWallPtr()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ Board\+Loader\+::get\+Wall\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets a vector of pointers to the \mbox{\hyperlink{class_wall}{Wall}} elements. 
+
+\begin{DoxyReturn}{Returns}
+Vector of pointers to the \mbox{\hyperlink{class_wall}{Wall}} elements 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_a6b2a3438ed3a37d12761d7a7c7b988ce}\label{class_board_loader_a6b2a3438ed3a37d12761d7a7c7b988ce}} 
+\index{BoardLoader@{BoardLoader}!getWaterPtr@{getWaterPtr}}
+\index{getWaterPtr@{getWaterPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getWaterPtr()}{getWaterPtr()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ Board\+Loader\+::get\+Water\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets a vector of pointers to the \mbox{\hyperlink{class_water}{Water}} elements. 
+
+\begin{DoxyReturn}{Returns}
+Vector of pointers to the \mbox{\hyperlink{class_water}{Water}} elements 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_a15db1f3d3c8c1ed02ae5495bb58089ab}\label{class_board_loader_a15db1f3d3c8c1ed02ae5495bb58089ab}} 
+\index{BoardLoader@{BoardLoader}!getWaterTextPtr@{getWaterTextPtr}}
+\index{getWaterTextPtr@{getWaterTextPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getWaterTextPtr()}{getWaterTextPtr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_element}{Element}} Board\+Loader\+::get\+Water\+Text\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get a pointer to the \char`\"{}\+Water\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. 
+
+\begin{DoxyReturn}{Returns}
+A constant pointer to the \char`\"{}\+Water\char`\"{} \mbox{\hyperlink{class_element}{Element}} object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_a3c9c8ef12c6db70605d40f20f97cba0e}\label{class_board_loader_a3c9c8ef12c6db70605d40f20f97cba0e}} 
+\index{BoardLoader@{BoardLoader}!getWinPtr@{getWinPtr}}
+\index{getWinPtr@{getWinPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getWinPtr()}{getWinPtr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_element}{Element}} Board\+Loader\+::get\+Win\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get a pointer to the \char`\"{}\+Win\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. 
+
+\begin{DoxyReturn}{Returns}
+A constant pointer to the \char`\"{}\+Win\char`\"{} \mbox{\hyperlink{class_element}{Element}} object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_a1a15d39f9a2235c51aae4e75a46fc47d}\label{class_board_loader_a1a15d39f9a2235c51aae4e75a46fc47d}} 
+\index{BoardLoader@{BoardLoader}!getYouPtr@{getYouPtr}}
+\index{getYouPtr@{getYouPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{getYouPtr()}{getYouPtr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_element}{Element}} Board\+Loader\+::get\+You\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get a pointer to the \char`\"{}\+You\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. 
+
+\begin{DoxyReturn}{Returns}
+A constant pointer to the \char`\"{}\+You\char`\"{} \mbox{\hyperlink{class_element}{Element}} object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_a9cbcbe394e56f672279c3a7b56fb496b}\label{class_board_loader_a9cbcbe394e56f672279c3a7b56fb496b}} 
+\index{BoardLoader@{BoardLoader}!isNotPlayable@{isNotPlayable}}
+\index{isNotPlayable@{isNotPlayable}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{isNotPlayable()}{isNotPlayable()}}
+{\footnotesize\ttfamily bool Board\+Loader\+::is\+Not\+Playable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the level is playable. 
+
+\begin{DoxyReturn}{Returns}
+True if the level is not playable, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_loader_a359be07618a44eb47c7b87b3cbca98b0}\label{class_board_loader_a359be07618a44eb47c7b87b3cbca98b0}} 
+\index{BoardLoader@{BoardLoader}!setBabaPtr@{setBabaPtr}}
+\index{setBabaPtr@{setBabaPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{setBabaPtr()}{setBabaPtr()}}
+{\footnotesize\ttfamily void Board\+Loader\+::set\+Baba\+Ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}}}]{baba }\end{DoxyParamCaption})}
+
+
+
+Set the \char`\"{}\+Baba\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em baba} & The new \char`\"{}\+Baba\char`\"{} \mbox{\hyperlink{class_element}{Element}} object to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_loader_aa41e9d01a01f560c514260aff9482bb8}\label{class_board_loader_aa41e9d01a01f560c514260aff9482bb8}} 
+\index{BoardLoader@{BoardLoader}!setBabaTextPtr@{setBabaTextPtr}}
+\index{setBabaTextPtr@{setBabaTextPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{setBabaTextPtr()}{setBabaTextPtr()}}
+{\footnotesize\ttfamily void Board\+Loader\+::set\+Baba\+Text\+Ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}}}]{baba\+Text }\end{DoxyParamCaption})}
+
+
+
+Set the \char`\"{}\+Baba is\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em baba\+Text} & The new \char`\"{}\+Baba is\char`\"{} \mbox{\hyperlink{class_element}{Element}} object to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_loader_acef743dc1d73f488d2d725ae744ea637}\label{class_board_loader_acef743dc1d73f488d2d725ae744ea637}} 
+\index{BoardLoader@{BoardLoader}!setBonePtr@{setBonePtr}}
+\index{setBonePtr@{setBonePtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{setBonePtr()}{setBonePtr()}}
+{\footnotesize\ttfamily void Board\+Loader\+::set\+Bone\+Ptr (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$}]{bone }\end{DoxyParamCaption})}
+
+
+
+Set the \char`\"{}\+Bone\char`\"{} \mbox{\hyperlink{class_element}{Element}} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bone} & the new vector of \char`\"{}\+Bone\char`\"{} \mbox{\hyperlink{class_element}{Element}} objects to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_loader_a8a2237ba1c121db11d465abcc211e30b}\label{class_board_loader_a8a2237ba1c121db11d465abcc211e30b}} 
+\index{BoardLoader@{BoardLoader}!setFlagPtr@{setFlagPtr}}
+\index{setFlagPtr@{setFlagPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{setFlagPtr()}{setFlagPtr()}}
+{\footnotesize\ttfamily void Board\+Loader\+::set\+Flag\+Ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}}}]{flag }\end{DoxyParamCaption})}
+
+
+
+Set the \char`\"{}\+Flag\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & The new \char`\"{}\+Flag\char`\"{} \mbox{\hyperlink{class_element}{Element}} object to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_loader_a6fbf9da555b9b5ff4be0703cbc9e2a10}\label{class_board_loader_a6fbf9da555b9b5ff4be0703cbc9e2a10}} 
+\index{BoardLoader@{BoardLoader}!setFlagTextPtr@{setFlagTextPtr}}
+\index{setFlagTextPtr@{setFlagTextPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{setFlagTextPtr()}{setFlagTextPtr()}}
+{\footnotesize\ttfamily void Board\+Loader\+::set\+Flag\+Text\+Ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}}}]{flag\+Text }\end{DoxyParamCaption})}
+
+
+
+Set the \char`\"{}\+Flag is\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag\+Text} & The new \char`\"{}\+Flag is\char`\"{} \mbox{\hyperlink{class_element}{Element}} object to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_loader_a99218edb78806d217bc7c4ac14ac7a84}\label{class_board_loader_a99218edb78806d217bc7c4ac14ac7a84}} 
+\index{BoardLoader@{BoardLoader}!setGrassPtr@{setGrassPtr}}
+\index{setGrassPtr@{setGrassPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{setGrassPtr()}{setGrassPtr()}}
+{\footnotesize\ttfamily void Board\+Loader\+::set\+Grass\+Ptr (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$}]{grass }\end{DoxyParamCaption})}
+
+
+
+Set the \char`\"{}\+Grass\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grass} & The new vector of \char`\"{}\+Grass\char`\"{} \mbox{\hyperlink{class_element}{Element}} objects to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_loader_a6c0768ec66bbc5a4d797208b60d0d608}\label{class_board_loader_a6c0768ec66bbc5a4d797208b60d0d608}} 
+\index{BoardLoader@{BoardLoader}!setGrassTextPtr@{setGrassTextPtr}}
+\index{setGrassTextPtr@{setGrassTextPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{setGrassTextPtr()}{setGrassTextPtr()}}
+{\footnotesize\ttfamily void Board\+Loader\+::set\+Grass\+Text\+Ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}}}]{grass\+Text }\end{DoxyParamCaption})}
+
+
+
+Set the \char`\"{}\+Grass is\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grass\+Text} & The new \char`\"{}\+Grass is\char`\"{} \mbox{\hyperlink{class_element}{Element}} object to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_loader_a8ade1b977511fd5a211d36454a67be3e}\label{class_board_loader_a8ade1b977511fd5a211d36454a67be3e}} 
+\index{BoardLoader@{BoardLoader}!setIsPtr@{setIsPtr}}
+\index{setIsPtr@{setIsPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{setIsPtr()}{setIsPtr()}}
+{\footnotesize\ttfamily void Board\+Loader\+::set\+Is\+Ptr (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$}]{is }\end{DoxyParamCaption})}
+
+
+
+Set the \char`\"{}\+Is\char`\"{} \mbox{\hyperlink{class_element}{Element}} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & The new vector of \char`\"{}\+Is\char`\"{} \mbox{\hyperlink{class_element}{Element}} objects to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_loader_a8c739813b697335932303526733d4684}\label{class_board_loader_a8c739813b697335932303526733d4684}} 
+\index{BoardLoader@{BoardLoader}!setKillPtr@{setKillPtr}}
+\index{setKillPtr@{setKillPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{setKillPtr()}{setKillPtr()}}
+{\footnotesize\ttfamily void Board\+Loader\+::set\+Kill\+Ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}}}]{kill }\end{DoxyParamCaption})}
+
+
+
+Set the \char`\"{}\+Kill\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kill} & The new \char`\"{}\+Kill\char`\"{} \mbox{\hyperlink{class_element}{Element}} object to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_loader_a6cac611c9871d6c1e51fedbacd4ecbe2}\label{class_board_loader_a6cac611c9871d6c1e51fedbacd4ecbe2}} 
+\index{BoardLoader@{BoardLoader}!setLavaPtr@{setLavaPtr}}
+\index{setLavaPtr@{setLavaPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{setLavaPtr()}{setLavaPtr()}}
+{\footnotesize\ttfamily void Board\+Loader\+::set\+Lava\+Ptr (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$}]{lava }\end{DoxyParamCaption})}
+
+
+
+Set the \char`\"{}\+Lava\char`\"{} \mbox{\hyperlink{class_element}{Element}} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lava} & The new vector of \char`\"{}\+Lava\char`\"{} \mbox{\hyperlink{class_element}{Element}} objects to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_loader_a03621c36a1e285a8679cafc1771f221e}\label{class_board_loader_a03621c36a1e285a8679cafc1771f221e}} 
+\index{BoardLoader@{BoardLoader}!setLavaTextPtr@{setLavaTextPtr}}
+\index{setLavaTextPtr@{setLavaTextPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{setLavaTextPtr()}{setLavaTextPtr()}}
+{\footnotesize\ttfamily void Board\+Loader\+::set\+Lava\+Text\+Ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}}}]{lava\+Text }\end{DoxyParamCaption})}
+
+
+
+Set the \char`\"{}\+Lava is\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lava\+Text} & The new \char`\"{}\+Lava is\char`\"{} \mbox{\hyperlink{class_element}{Element}} object to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_loader_ad8b040c2108fbf35d9a5ae10299eee93}\label{class_board_loader_ad8b040c2108fbf35d9a5ae10299eee93}} 
+\index{BoardLoader@{BoardLoader}!setMetalPtr@{setMetalPtr}}
+\index{setMetalPtr@{setMetalPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{setMetalPtr()}{setMetalPtr()}}
+{\footnotesize\ttfamily void Board\+Loader\+::set\+Metal\+Ptr (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$}]{metal }\end{DoxyParamCaption})}
+
+
+
+Set the \char`\"{}\+Metal\char`\"{} \mbox{\hyperlink{class_element}{Element}} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em metal} & The new vector of \char`\"{}\+Metal\char`\"{} \mbox{\hyperlink{class_element}{Element}} objects to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_loader_a0c4e0cf8c084ab56662b4538adb6fe32}\label{class_board_loader_a0c4e0cf8c084ab56662b4538adb6fe32}} 
+\index{BoardLoader@{BoardLoader}!setMetalTextPtr@{setMetalTextPtr}}
+\index{setMetalTextPtr@{setMetalTextPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{setMetalTextPtr()}{setMetalTextPtr()}}
+{\footnotesize\ttfamily void Board\+Loader\+::set\+Metal\+Text\+Ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}}}]{metal\+Text }\end{DoxyParamCaption})}
+
+
+
+Set the \char`\"{}\+Metal is\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em metal\+Text} & The new \char`\"{}\+Metal is\char`\"{} \mbox{\hyperlink{class_element}{Element}} object to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_loader_a4f1c2917e4d9d79dedc8352c54a9770c}\label{class_board_loader_a4f1c2917e4d9d79dedc8352c54a9770c}} 
+\index{BoardLoader@{BoardLoader}!setPushPtr@{setPushPtr}}
+\index{setPushPtr@{setPushPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{setPushPtr()}{setPushPtr()}}
+{\footnotesize\ttfamily void Board\+Loader\+::set\+Push\+Ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}}}]{push }\end{DoxyParamCaption})}
+
+
+
+Set the \char`\"{}\+Push\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em push} & The new \char`\"{}\+Push\char`\"{} \mbox{\hyperlink{class_element}{Element}} object to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_loader_acac833b3a23dd614c65fa6fb332c1d94}\label{class_board_loader_acac833b3a23dd614c65fa6fb332c1d94}} 
+\index{BoardLoader@{BoardLoader}!setRockPtr@{setRockPtr}}
+\index{setRockPtr@{setRockPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{setRockPtr()}{setRockPtr()}}
+{\footnotesize\ttfamily void Board\+Loader\+::set\+Rock\+Ptr (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$}]{rock }\end{DoxyParamCaption})}
+
+
+
+Set the \char`\"{}\+Rock\char`\"{} \mbox{\hyperlink{class_element}{Element}} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rock} & The new vector of \char`\"{}\+Rock\char`\"{} \mbox{\hyperlink{class_element}{Element}} objects to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_loader_a5e2617b13a42e8a38131aa96bdd919f6}\label{class_board_loader_a5e2617b13a42e8a38131aa96bdd919f6}} 
+\index{BoardLoader@{BoardLoader}!setRockTextPtr@{setRockTextPtr}}
+\index{setRockTextPtr@{setRockTextPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{setRockTextPtr()}{setRockTextPtr()}}
+{\footnotesize\ttfamily void Board\+Loader\+::set\+Rock\+Text\+Ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}}}]{rock\+Text }\end{DoxyParamCaption})}
+
+
+
+Set the \char`\"{}\+Rock is\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rock\+Text} & The new \char`\"{}\+Rock is\char`\"{} \mbox{\hyperlink{class_element}{Element}} object to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_loader_ae34357203348f91442513d89cfc09221}\label{class_board_loader_ae34357203348f91442513d89cfc09221}} 
+\index{BoardLoader@{BoardLoader}!setSinkPtr@{setSinkPtr}}
+\index{setSinkPtr@{setSinkPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{setSinkPtr()}{setSinkPtr()}}
+{\footnotesize\ttfamily void Board\+Loader\+::set\+Sink\+Ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}}}]{sink }\end{DoxyParamCaption})}
+
+
+
+Set the \char`\"{}\+Sink\char`\"{} \mbox{\hyperlink{class_element}{Element}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sink} & The new \char`\"{}\+Sink\char`\"{} \mbox{\hyperlink{class_element}{Element}} object to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_loader_aa304f870a336c2df835dae2cf39c815b}\label{class_board_loader_aa304f870a336c2df835dae2cf39c815b}} 
+\index{BoardLoader@{BoardLoader}!setStopPtr@{setStopPtr}}
+\index{setStopPtr@{setStopPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{setStopPtr()}{setStopPtr()}}
+{\footnotesize\ttfamily void Board\+Loader\+::set\+Stop\+Ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}}}]{stop }\end{DoxyParamCaption})}
+
+
+
+Set the pointer to the \mbox{\hyperlink{class_element}{Element}} representing the \char`\"{}\+Stop\char`\"{} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stop} & Pointer to the \mbox{\hyperlink{class_element}{Element}} representing the \char`\"{}\+Stop\char`\"{} object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_loader_ae5fbd1b99437b801f187158c1575cb57}\label{class_board_loader_ae5fbd1b99437b801f187158c1575cb57}} 
+\index{BoardLoader@{BoardLoader}!setWallPtr@{setWallPtr}}
+\index{setWallPtr@{setWallPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{setWallPtr()}{setWallPtr()}}
+{\footnotesize\ttfamily void Board\+Loader\+::set\+Wall\+Ptr (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$}]{wall }\end{DoxyParamCaption})}
+
+
+
+Set the pointer to the vector of Elements representing the \char`\"{}\+Wall\char`\"{} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wall} & Vector of Elements representing the \char`\"{}\+Wall\char`\"{} objects. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_loader_a1a6bfe4ad9c8b390c7954fe59cbe4391}\label{class_board_loader_a1a6bfe4ad9c8b390c7954fe59cbe4391}} 
+\index{BoardLoader@{BoardLoader}!setWallTextPtr@{setWallTextPtr}}
+\index{setWallTextPtr@{setWallTextPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{setWallTextPtr()}{setWallTextPtr()}}
+{\footnotesize\ttfamily void Board\+Loader\+::set\+Wall\+Text\+Ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}}}]{wall\+Text }\end{DoxyParamCaption})}
+
+
+
+Set the pointer to the \mbox{\hyperlink{class_element}{Element}} representing the text of the \char`\"{}\+Wall\char`\"{} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wall\+Text} & Pointer to the \mbox{\hyperlink{class_element}{Element}} representing the text of the \char`\"{}\+Wall\char`\"{} object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_loader_a58ed51099cb51aac814e6f2798704443}\label{class_board_loader_a58ed51099cb51aac814e6f2798704443}} 
+\index{BoardLoader@{BoardLoader}!setWaterPtr@{setWaterPtr}}
+\index{setWaterPtr@{setWaterPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{setWaterPtr()}{setWaterPtr()}}
+{\footnotesize\ttfamily void Board\+Loader\+::set\+Water\+Ptr (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$}]{water }\end{DoxyParamCaption})}
+
+
+
+Set the pointer to the vector of Elements representing the \char`\"{}\+Water\char`\"{} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em water} & Vector of Elements representing the \char`\"{}\+Water\char`\"{} objects. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_loader_ac357cb38ee1f7f3e2818855ff5f040c4}\label{class_board_loader_ac357cb38ee1f7f3e2818855ff5f040c4}} 
+\index{BoardLoader@{BoardLoader}!setWaterTextPtr@{setWaterTextPtr}}
+\index{setWaterTextPtr@{setWaterTextPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{setWaterTextPtr()}{setWaterTextPtr()}}
+{\footnotesize\ttfamily void Board\+Loader\+::set\+Water\+Text\+Ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}}}]{water\+Text }\end{DoxyParamCaption})}
+
+
+
+Set the pointer to the \mbox{\hyperlink{class_element}{Element}} representing the text of the \char`\"{}\+Water\char`\"{} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em water\+Text} & Pointer to the \mbox{\hyperlink{class_element}{Element}} representing the text of the \char`\"{}\+Water\char`\"{} object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_loader_a21b0b15f4fa2079546b148959495d35c}\label{class_board_loader_a21b0b15f4fa2079546b148959495d35c}} 
+\index{BoardLoader@{BoardLoader}!setWinPtr@{setWinPtr}}
+\index{setWinPtr@{setWinPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{setWinPtr()}{setWinPtr()}}
+{\footnotesize\ttfamily void Board\+Loader\+::set\+Win\+Ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}}}]{win }\end{DoxyParamCaption})}
+
+
+
+Set the pointer to the \mbox{\hyperlink{class_element}{Element}} representing the \char`\"{}\+Win\char`\"{} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em win} & Pointer to the \mbox{\hyperlink{class_element}{Element}} representing the \char`\"{}\+Win\char`\"{} object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_loader_ad71db186acc3bcd3afdab2982f2cf513}\label{class_board_loader_ad71db186acc3bcd3afdab2982f2cf513}} 
+\index{BoardLoader@{BoardLoader}!setYouPtr@{setYouPtr}}
+\index{setYouPtr@{setYouPtr}!BoardLoader@{BoardLoader}}
+\doxysubsubsection{\texorpdfstring{setYouPtr()}{setYouPtr()}}
+{\footnotesize\ttfamily void Board\+Loader\+::set\+You\+Ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}}}]{you }\end{DoxyParamCaption})}
+
+
+
+Set the pointer to the \mbox{\hyperlink{class_element}{Element}} representing the \char`\"{}\+You\char`\"{} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em you} & Pointer to the \mbox{\hyperlink{class_element}{Element}} representing the \char`\"{}\+You\char`\"{} object. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+metier/Board\+Loader.\+h\item 
+metier/Board\+Loader.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,200 @@
+\hypertarget{_element___is___stop_8h_source}{}\doxysection{Element\+\_\+\+Is\+\_\+\+Stop.\+h}
+\label{_element___is___stop_8h_source}\index{metier/Element\_Is\_Stop.h@{metier/Element\_Is\_Stop.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ELEMENT\_IS\_STOP\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ELEMENT\_IS\_STOP\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}GameRule.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_element___is___stop}{Element\_Is\_Stop}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_rule}{GameRule}}\{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_element___is___stop_aa748c3ff1273afb2e9091cd26067d8d1}{apply}}(\mbox{\hyperlink{class_element}{Element}}\ elem,\ \mbox{\hyperlink{class_board_loader}{BoardLoader}}*\ boardLoader)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ std::string\ name\ =\ elem.\mbox{\hyperlink{class_element_a2e2ee96d5698ea2aa998fd84e2c34f4f}{getName}}();}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ std::vector<Element>\ cpUpdate;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_position}{Position}}\ elemPos;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (name\ ==\ \textcolor{stringliteral}{"{}text\_baba"{}})\{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ elemPos\ =\ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a3153d92f71ec79ed15d22cb558dbef0f}{getBabaPtr}}().\mbox{\hyperlink{class_element_a290586fad7fc5baf794201988953fd2d}{getPosition}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ baba\ :boardLoader-\/>\mbox{\hyperlink{class_board_loader_a5d90bda47c0c2c524382772a88289d87}{getBoardPtr}}()-\/>\mbox{\hyperlink{class_board_aec34ec066a00ac27fa423ae56192bd65}{getSquares}}()[elemPos.\mbox{\hyperlink{class_position_a99abd8b7df2940d78ed53aa9dd81f202}{getRow}}()][elemPos.\mbox{\hyperlink{class_position_a672b9b7960216f8bf4ccae287885877b}{getColumn}}()]-\/>getElementsPtr())\{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (baba-\/>getName()==\textcolor{stringliteral}{"{}baba"{}})\{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ baba-\/>setStop(\textcolor{keyword}{true});}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a359be07618a44eb47c7b87b3cbca98b0}{setBabaPtr}}(*baba);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (name\ ==\ \textcolor{stringliteral}{"{}text\_flag"{}})\{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ elemPos\ =\ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a6762ff30d0affc84f65715ff67226396}{getFlagPtr}}().\mbox{\hyperlink{class_element_a290586fad7fc5baf794201988953fd2d}{getPosition}}();}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ flag\ :boardLoader-\/>\mbox{\hyperlink{class_board_loader_a5d90bda47c0c2c524382772a88289d87}{getBoardPtr}}()-\/>\mbox{\hyperlink{class_board_aec34ec066a00ac27fa423ae56192bd65}{getSquares}}()[elemPos.\mbox{\hyperlink{class_position_a99abd8b7df2940d78ed53aa9dd81f202}{getRow}}()][elemPos.\mbox{\hyperlink{class_position_a672b9b7960216f8bf4ccae287885877b}{getColumn}}()]-\/>getElementsPtr())\{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (flag-\/>getName()==\textcolor{stringliteral}{"{}flag"{}})\{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ flag-\/>setStop(\textcolor{keyword}{true});}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a8a2237ba1c121db11d465abcc211e30b}{setFlagPtr}}(*flag);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (name\ ==\ \textcolor{stringliteral}{"{}text\_grass"{}})\{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ vtrGrass\ :\ boardLoader-\/>\mbox{\hyperlink{class_board_loader_aba59f18e576a069c0b9ff19373e20325}{getGrassPtr}}())\{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ elemPos\ =\ vtrGrass.\mbox{\hyperlink{class_position_a7a3ffb04f4c91a0bda59012abe22b2b7}{getPosition}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ grass\ :boardLoader-\/>\mbox{\hyperlink{class_board_loader_a5d90bda47c0c2c524382772a88289d87}{getBoardPtr}}()-\/>\mbox{\hyperlink{class_board_aec34ec066a00ac27fa423ae56192bd65}{getSquares}}()[elemPos.\mbox{\hyperlink{class_position_a99abd8b7df2940d78ed53aa9dd81f202}{getRow}}()][elemPos.\mbox{\hyperlink{class_position_a672b9b7960216f8bf4ccae287885877b}{getColumn}}()]-\/>getElementsPtr())\{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (grass-\/>getName()==\textcolor{stringliteral}{"{}grass"{}})\{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ grass-\/>setStop(\textcolor{keyword}{true});}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cpUpdate.push\_back(*grass);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a99218edb78806d217bc7c4ac14ac7a84}{setGrassPtr}}(cpUpdate);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (name\ ==\textcolor{stringliteral}{"{}text\_lava"{}})\{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ vtrLava\ :\ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a5e20e41a87770375941d9e238ae2e5dc}{getLavaPtr}}())\{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ elemPos\ =\ vtrLava.\mbox{\hyperlink{class_position_a7a3ffb04f4c91a0bda59012abe22b2b7}{getPosition}}();}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ lava\ :boardLoader-\/>\mbox{\hyperlink{class_board_loader_a5d90bda47c0c2c524382772a88289d87}{getBoardPtr}}()-\/>\mbox{\hyperlink{class_board_aec34ec066a00ac27fa423ae56192bd65}{getSquares}}()[elemPos.\mbox{\hyperlink{class_position_a99abd8b7df2940d78ed53aa9dd81f202}{getRow}}()][elemPos.\mbox{\hyperlink{class_position_a672b9b7960216f8bf4ccae287885877b}{getColumn}}()]-\/>getElementsPtr())\{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lava-\/>getName()==\textcolor{stringliteral}{"{}lava"{}})\{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lava-\/>setStop(\textcolor{keyword}{true});}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cpUpdate.push\_back(*lava);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a6cac611c9871d6c1e51fedbacd4ecbe2}{setLavaPtr}}(cpUpdate);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (name\ ==\ \textcolor{stringliteral}{"{}text\_metal"{}})\{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ vtrMetal\ :\ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a3398c77c945e81245048c9d6fc817ec3}{getMetalPtr}}())\{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ elemPos\ =\ vtrMetal.\mbox{\hyperlink{class_position_a7a3ffb04f4c91a0bda59012abe22b2b7}{getPosition}}();}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ metal\ :boardLoader-\/>\mbox{\hyperlink{class_board_loader_a5d90bda47c0c2c524382772a88289d87}{getBoardPtr}}()-\/>\mbox{\hyperlink{class_board_aec34ec066a00ac27fa423ae56192bd65}{getSquares}}()[elemPos.\mbox{\hyperlink{class_position_a99abd8b7df2940d78ed53aa9dd81f202}{getRow}}()][elemPos.\mbox{\hyperlink{class_position_a672b9b7960216f8bf4ccae287885877b}{getColumn}}()]-\/>getElementsPtr())\{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (metal-\/>getName()==\textcolor{stringliteral}{"{}metal"{}})\{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ metal-\/>setStop(\textcolor{keyword}{true});}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cpUpdate.push\_back(*metal);}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ boardLoader-\/>\mbox{\hyperlink{class_board_loader_ad8b040c2108fbf35d9a5ae10299eee93}{setMetalPtr}}(cpUpdate);}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (name\ ==\ \textcolor{stringliteral}{"{}text\_rock"{}})\{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ vtrRock\ :\ boardLoader-\/>\mbox{\hyperlink{class_board_loader_aa5c70ad457ea57198c40376b628d2728}{getRockPtr}}())\{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ elemPos\ =\ vtrRock.\mbox{\hyperlink{class_position_a7a3ffb04f4c91a0bda59012abe22b2b7}{getPosition}}();}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ rock\ :boardLoader-\/>\mbox{\hyperlink{class_board_loader_a5d90bda47c0c2c524382772a88289d87}{getBoardPtr}}()-\/>\mbox{\hyperlink{class_board_aec34ec066a00ac27fa423ae56192bd65}{getSquares}}()[elemPos.\mbox{\hyperlink{class_position_a99abd8b7df2940d78ed53aa9dd81f202}{getRow}}()][elemPos.\mbox{\hyperlink{class_position_a672b9b7960216f8bf4ccae287885877b}{getColumn}}()]-\/>getElementsPtr())\{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rock-\/>getName()==\textcolor{stringliteral}{"{}rock"{}})\{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rock-\/>setStop(\textcolor{keyword}{true});}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cpUpdate.push\_back(*rock);}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ boardLoader-\/>\mbox{\hyperlink{class_board_loader_acac833b3a23dd614c65fa6fb332c1d94}{setRockPtr}}(cpUpdate);}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (name\ ==\ \textcolor{stringliteral}{"{}text\_wall"{}})\{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ vtrWall\ :\ boardLoader-\/>\mbox{\hyperlink{class_board_loader_af9226d722be25f98c6919a79b9097a98}{getWallPtr}}())\{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ elemPos\ =\ vtrWall.\mbox{\hyperlink{class_position_a7a3ffb04f4c91a0bda59012abe22b2b7}{getPosition}}();}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ wall\ :boardLoader-\/>\mbox{\hyperlink{class_board_loader_a5d90bda47c0c2c524382772a88289d87}{getBoardPtr}}()-\/>\mbox{\hyperlink{class_board_aec34ec066a00ac27fa423ae56192bd65}{getSquares}}()[elemPos.\mbox{\hyperlink{class_position_a99abd8b7df2940d78ed53aa9dd81f202}{getRow}}()][elemPos.\mbox{\hyperlink{class_position_a672b9b7960216f8bf4ccae287885877b}{getColumn}}()]-\/>getElementsPtr())\{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (wall-\/>getName()==\textcolor{stringliteral}{"{}wall"{}})\{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ wall-\/>setStop(\textcolor{keyword}{true});}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cpUpdate.push\_back(*wall);}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ boardLoader-\/>\mbox{\hyperlink{class_board_loader_ae5fbd1b99437b801f187158c1575cb57}{setWallPtr}}(cpUpdate);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (name\ ==\ \textcolor{stringliteral}{"{}text\_water"{}})\{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ vtrWater\ :\ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a6b2a3438ed3a37d12761d7a7c7b988ce}{getWaterPtr}}())\{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ elemPos\ =\ vtrWater.\mbox{\hyperlink{class_position_a7a3ffb04f4c91a0bda59012abe22b2b7}{getPosition}}();}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ water\ :boardLoader-\/>\mbox{\hyperlink{class_board_loader_a5d90bda47c0c2c524382772a88289d87}{getBoardPtr}}()-\/>\mbox{\hyperlink{class_board_aec34ec066a00ac27fa423ae56192bd65}{getSquares}}()[elemPos.\mbox{\hyperlink{class_position_a99abd8b7df2940d78ed53aa9dd81f202}{getRow}}()][elemPos.\mbox{\hyperlink{class_position_a672b9b7960216f8bf4ccae287885877b}{getColumn}}()]-\/>getElementsPtr())\{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (water-\/>getName()==\textcolor{stringliteral}{"{}water"{}})\{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ water-\/>setStop(\textcolor{keyword}{true});}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cpUpdate.push\_back(*water);}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a58ed51099cb51aac814e6f2798704443}{setWaterPtr}}(cpUpdate);}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_element___is___stop_ab524b5d6fabe20bde9721fafd67ed5cc}{disapply}}(\mbox{\hyperlink{class_element}{Element}}\ elem,\ \mbox{\hyperlink{class_board_loader}{BoardLoader}}*\ boardLoader)\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ std::string\ name\ =\ elem.\mbox{\hyperlink{class_element_a2e2ee96d5698ea2aa998fd84e2c34f4f}{getName}}();}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ std::vector<Element>\ cpUpdate;}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_position}{Position}}\ elemPos;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (name\ ==\ \textcolor{stringliteral}{"{}text\_baba"{}})\{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ elemPos\ =\ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a3153d92f71ec79ed15d22cb558dbef0f}{getBabaPtr}}().\mbox{\hyperlink{class_element_a290586fad7fc5baf794201988953fd2d}{getPosition}}();}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ baba\ :boardLoader-\/>\mbox{\hyperlink{class_board_loader_a5d90bda47c0c2c524382772a88289d87}{getBoardPtr}}()-\/>\mbox{\hyperlink{class_board_aec34ec066a00ac27fa423ae56192bd65}{getSquares}}()[elemPos.\mbox{\hyperlink{class_position_a99abd8b7df2940d78ed53aa9dd81f202}{getRow}}()][elemPos.\mbox{\hyperlink{class_position_a672b9b7960216f8bf4ccae287885877b}{getColumn}}()]-\/>getElementsPtr())\{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (baba-\/>getName()==\textcolor{stringliteral}{"{}baba"{}})\{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ baba-\/>setStop(\textcolor{keyword}{false});}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a359be07618a44eb47c7b87b3cbca98b0}{setBabaPtr}}(*baba);}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (name\ ==\ \textcolor{stringliteral}{"{}text\_flag"{}})\{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ elemPos\ =\ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a6762ff30d0affc84f65715ff67226396}{getFlagPtr}}().\mbox{\hyperlink{class_element_a290586fad7fc5baf794201988953fd2d}{getPosition}}();}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ flag\ :boardLoader-\/>\mbox{\hyperlink{class_board_loader_a5d90bda47c0c2c524382772a88289d87}{getBoardPtr}}()-\/>\mbox{\hyperlink{class_board_aec34ec066a00ac27fa423ae56192bd65}{getSquares}}()[elemPos.\mbox{\hyperlink{class_position_a99abd8b7df2940d78ed53aa9dd81f202}{getRow}}()][elemPos.\mbox{\hyperlink{class_position_a672b9b7960216f8bf4ccae287885877b}{getColumn}}()]-\/>getElementsPtr())\{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (flag-\/>getName()==\textcolor{stringliteral}{"{}flag"{}})\{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ flag-\/>setStop(\textcolor{keyword}{false});}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a8a2237ba1c121db11d465abcc211e30b}{setFlagPtr}}(*flag);}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (name\ ==\ \textcolor{stringliteral}{"{}text\_grass"{}})\{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ vtrGrass\ :\ boardLoader-\/>\mbox{\hyperlink{class_board_loader_aba59f18e576a069c0b9ff19373e20325}{getGrassPtr}}())\{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ elemPos\ =\ vtrGrass.\mbox{\hyperlink{class_position_a7a3ffb04f4c91a0bda59012abe22b2b7}{getPosition}}();}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ grass\ :boardLoader-\/>\mbox{\hyperlink{class_board_loader_a5d90bda47c0c2c524382772a88289d87}{getBoardPtr}}()-\/>\mbox{\hyperlink{class_board_aec34ec066a00ac27fa423ae56192bd65}{getSquares}}()[elemPos.\mbox{\hyperlink{class_position_a99abd8b7df2940d78ed53aa9dd81f202}{getRow}}()][elemPos.\mbox{\hyperlink{class_position_a672b9b7960216f8bf4ccae287885877b}{getColumn}}()]-\/>getElementsPtr())\{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (grass-\/>getName()==\textcolor{stringliteral}{"{}grass"{}})\{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ grass-\/>setStop(\textcolor{keyword}{false});}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cpUpdate.push\_back(*grass);}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a99218edb78806d217bc7c4ac14ac7a84}{setGrassPtr}}(cpUpdate);}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (name\ ==\textcolor{stringliteral}{"{}text\_lava"{}})\{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ vtrLava\ :\ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a5e20e41a87770375941d9e238ae2e5dc}{getLavaPtr}}())\{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ elemPos\ =\ vtrLava.\mbox{\hyperlink{class_position_a7a3ffb04f4c91a0bda59012abe22b2b7}{getPosition}}();}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ lava\ :boardLoader-\/>\mbox{\hyperlink{class_board_loader_a5d90bda47c0c2c524382772a88289d87}{getBoardPtr}}()-\/>\mbox{\hyperlink{class_board_aec34ec066a00ac27fa423ae56192bd65}{getSquares}}()[elemPos.\mbox{\hyperlink{class_position_a99abd8b7df2940d78ed53aa9dd81f202}{getRow}}()][elemPos.\mbox{\hyperlink{class_position_a672b9b7960216f8bf4ccae287885877b}{getColumn}}()]-\/>getElementsPtr())\{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lava-\/>getName()==\textcolor{stringliteral}{"{}lava"{}})\{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lava-\/>setStop(\textcolor{keyword}{false});}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cpUpdate.push\_back(*lava);}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a6cac611c9871d6c1e51fedbacd4ecbe2}{setLavaPtr}}(cpUpdate);}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (name\ ==\ \textcolor{stringliteral}{"{}text\_metal"{}})\{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ vtrMetal\ :\ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a3398c77c945e81245048c9d6fc817ec3}{getMetalPtr}}())\{}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ elemPos\ =\ vtrMetal.\mbox{\hyperlink{class_position_a7a3ffb04f4c91a0bda59012abe22b2b7}{getPosition}}();}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ metal\ :boardLoader-\/>\mbox{\hyperlink{class_board_loader_a5d90bda47c0c2c524382772a88289d87}{getBoardPtr}}()-\/>\mbox{\hyperlink{class_board_aec34ec066a00ac27fa423ae56192bd65}{getSquares}}()[elemPos.\mbox{\hyperlink{class_position_a99abd8b7df2940d78ed53aa9dd81f202}{getRow}}()][elemPos.\mbox{\hyperlink{class_position_a672b9b7960216f8bf4ccae287885877b}{getColumn}}()]-\/>getElementsPtr())\{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (metal-\/>getName()==\textcolor{stringliteral}{"{}metal"{}})\{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ metal-\/>setStop(\textcolor{keyword}{false});}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cpUpdate.push\_back(*metal);}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ boardLoader-\/>\mbox{\hyperlink{class_board_loader_ad8b040c2108fbf35d9a5ae10299eee93}{setMetalPtr}}(cpUpdate);}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (name\ ==\ \textcolor{stringliteral}{"{}text\_rock"{}})\{}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ vtrRock\ :\ boardLoader-\/>\mbox{\hyperlink{class_board_loader_aa5c70ad457ea57198c40376b628d2728}{getRockPtr}}())\{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ elemPos\ =\ vtrRock.\mbox{\hyperlink{class_position_a7a3ffb04f4c91a0bda59012abe22b2b7}{getPosition}}();}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ rock\ :boardLoader-\/>\mbox{\hyperlink{class_board_loader_a5d90bda47c0c2c524382772a88289d87}{getBoardPtr}}()-\/>\mbox{\hyperlink{class_board_aec34ec066a00ac27fa423ae56192bd65}{getSquares}}()[elemPos.\mbox{\hyperlink{class_position_a99abd8b7df2940d78ed53aa9dd81f202}{getRow}}()][elemPos.\mbox{\hyperlink{class_position_a672b9b7960216f8bf4ccae287885877b}{getColumn}}()]-\/>getElementsPtr())\{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rock-\/>getName()==\textcolor{stringliteral}{"{}rock"{}})\{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rock-\/>setStop(\textcolor{keyword}{false});}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cpUpdate.push\_back(*rock);}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ boardLoader-\/>\mbox{\hyperlink{class_board_loader_acac833b3a23dd614c65fa6fb332c1d94}{setRockPtr}}(cpUpdate);}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (name\ ==\ \textcolor{stringliteral}{"{}text\_wall"{}})\{}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ vtrWall\ :\ boardLoader-\/>\mbox{\hyperlink{class_board_loader_af9226d722be25f98c6919a79b9097a98}{getWallPtr}}())\{}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ elemPos\ =\ vtrWall.\mbox{\hyperlink{class_position_a7a3ffb04f4c91a0bda59012abe22b2b7}{getPosition}}();}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ wall\ :boardLoader-\/>\mbox{\hyperlink{class_board_loader_a5d90bda47c0c2c524382772a88289d87}{getBoardPtr}}()-\/>\mbox{\hyperlink{class_board_aec34ec066a00ac27fa423ae56192bd65}{getSquares}}()[elemPos.\mbox{\hyperlink{class_position_a99abd8b7df2940d78ed53aa9dd81f202}{getRow}}()][elemPos.\mbox{\hyperlink{class_position_a672b9b7960216f8bf4ccae287885877b}{getColumn}}()]-\/>getElementsPtr())\{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (wall-\/>getName()==\textcolor{stringliteral}{"{}wall"{}})\{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ wall-\/>setStop(\textcolor{keyword}{false});}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cpUpdate.push\_back(*wall);}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ boardLoader-\/>\mbox{\hyperlink{class_board_loader_ae5fbd1b99437b801f187158c1575cb57}{setWallPtr}}(cpUpdate);}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (name\ ==\ \textcolor{stringliteral}{"{}text\_water"{}})\{}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ vtrWater\ :\ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a6b2a3438ed3a37d12761d7a7c7b988ce}{getWaterPtr}}())\{}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ elemPos\ =\ vtrWater.\mbox{\hyperlink{class_position_a7a3ffb04f4c91a0bda59012abe22b2b7}{getPosition}}();}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ water\ :boardLoader-\/>\mbox{\hyperlink{class_board_loader_a5d90bda47c0c2c524382772a88289d87}{getBoardPtr}}()-\/>\mbox{\hyperlink{class_board_aec34ec066a00ac27fa423ae56192bd65}{getSquares}}()[elemPos.\mbox{\hyperlink{class_position_a99abd8b7df2940d78ed53aa9dd81f202}{getRow}}()][elemPos.\mbox{\hyperlink{class_position_a672b9b7960216f8bf4ccae287885877b}{getColumn}}()]-\/>getElementsPtr())\{}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (water-\/>getName()==\textcolor{stringliteral}{"{}water"{}})\{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ water-\/>setStop(\textcolor{keyword}{false});}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cpUpdate.push\_back(*water);}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ boardLoader-\/>\mbox{\hyperlink{class_board_loader_a58ed51099cb51aac814e6f2798704443}{setWaterPtr}}(cpUpdate);}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00199\ \ \ \ \ \}}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \};}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ELEMENT\_IS\_STOP\_H}}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ }
+
+\end{DoxyCode}

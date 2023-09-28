@@ -1,0 +1,43 @@
+\hypertarget{class_observer}{}\doxysection{Observer Class Reference}
+\label{class_observer}\index{Observer@{Observer}}
+Inheritance diagram for Observer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_observer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_observer_ab5e067280bf8e1f102853f65a62a726c}{Update}} (\mbox{\hyperlink{class_subject}{Subject}} $\ast$subject)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual method that each concrete observer must implement\+: it is this method that the observed subject calls when a notification. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_observer_ab5e067280bf8e1f102853f65a62a726c}\label{class_observer_ab5e067280bf8e1f102853f65a62a726c}} 
+\index{Observer@{Observer}!Update@{Update}}
+\index{Update@{Update}!Observer@{Observer}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void Observer\+::\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_subject}{Subject}} $\ast$}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual method that each concrete observer must implement\+: it is this method that the observed subject calls when a notification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subject} & the subject of observation that notifies a change. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Subject\+::notify\+Observers(). 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{class_view_a332db5e045899429015ed63545789214}{View}}, \mbox{\hyperlink{class_main_window_a34dce5fede9f87d95270583bed333435}{Main\+Window}}, and \mbox{\hyperlink{class_view_g_u_i_aa80392769fc8901cef6031a1841edd91}{View\+GUI}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+metier/Observer.\+h\end{DoxyCompactItemize}

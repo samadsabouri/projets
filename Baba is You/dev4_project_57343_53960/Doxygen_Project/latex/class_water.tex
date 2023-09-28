@@ -1,0 +1,259 @@
+\hypertarget{class_water}{}\doxysection{Water Class Reference}
+\label{class_water}\index{Water@{Water}}
+Inheritance diagram for Water\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_water}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_water_a1c3690bf02e758cf820c79b2cd7839dd}\label{class_water_a1c3690bf02e758cf820c79b2cd7839dd}} 
+{\bfseries Water} (\mbox{\hyperlink{class_position}{Position}} pos, Direction dir)
+\item 
+virtual std\+::string \mbox{\hyperlink{class_water_a1bc38a991afe2bd54f2e737b7eb512a1}{get\+Name}} () override
+\begin{DoxyCompactList}\small\item\em To get the name of the element. \end{DoxyCompactList}\item 
+virtual Direction \mbox{\hyperlink{class_water_ac0d013b83980f09665369d551e5631d5}{get\+Direction}} () override
+\begin{DoxyCompactList}\small\item\em To get the direction of the element. \end{DoxyCompactList}\item 
+virtual Element\+Type \mbox{\hyperlink{class_water_ac74635d625af94aabb1c565e5b00e733}{get\+Element\+Type}} () override
+\begin{DoxyCompactList}\small\item\em To get the Element\+Type. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_water_ae7ebd1b364a77a9d6c8b466e27bd60df}{get\+Position}} () override
+\begin{DoxyCompactList}\small\item\em To get the position of the element. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_water_a1624e8c5c5fa2af498ee38b066c200c4}{set\+Position}} (\mbox{\hyperlink{class_position}{Position}} position) override
+\begin{DoxyCompactList}\small\item\em To set the position of the element. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_water_af7636de73dfe1ecf34ee8d1fce37758b}{set\+Direction}} (Direction dir) override
+\begin{DoxyCompactList}\small\item\em To set the direction of the element. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_water_af338b0e6ebc9171e615bbeefccca4b92}{set\+Moveble}} (bool movable) override
+\begin{DoxyCompactList}\small\item\em To set an element on movable or not. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_water_a7448188d943bc7f09b95fa6ecf78343e}{is\+Moveble}} () override
+\begin{DoxyCompactList}\small\item\em Determines if the object is moveable. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_water_a0117140f7a81693dd0d76eee6bfacce0}{get\+Symbol}} () override
+\begin{DoxyCompactList}\small\item\em Returns the symbol of the element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_element}{Element}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_element_ab0d0e20be9a36ae676202db753faeec9}\label{class_element_ab0d0e20be9a36ae676202db753faeec9}} 
+{\bfseries Element} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \mbox{\hyperlink{class_element}{Element}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_element_a273a0e9c0a90b4c4b33a5e353b9d4b95}{Element}} (\mbox{\hyperlink{class_position}{Position}} pos, Direction dir, Element\+Type type, std\+::string name, bool is\+Movable, std\+::string symbol)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{class_element}{Element}} class. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_element_a31b2eeacc8129d994a2d48d41e20e998}{get\+You}} ()
+\begin{DoxyCompactList}\small\item\em Gets the \char`\"{}you\char`\"{} tag of the element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_element_aabcc62f909fc30f76fad28d856c1f239}{set\+You}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the \char`\"{}you\char`\"{} tag of the element. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_element_a8f4bff88380ffe99be22ad1d58666907}{get\+Kill}} ()
+\begin{DoxyCompactList}\small\item\em Gets the \char`\"{}kill\char`\"{} tag of the element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_element_a423861257105c671326d9fbfe2f4bdde}{set\+Kill}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the \char`\"{}kill\char`\"{} tag of the element. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_element_a7046460fdcf7a03fc6ac6fb827f6ad73}{get\+Push}} ()
+\begin{DoxyCompactList}\small\item\em Gets the \char`\"{}push\char`\"{} tag of the element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_element_a569d58173f6a634d9b0c25d567217772}{set\+Push}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the \char`\"{}push\char`\"{} tag of the element. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_element_aedb3046a307f8ea7afb0f98a23a630a8}{get\+Sink}} ()
+\begin{DoxyCompactList}\small\item\em Gets the \char`\"{}sink\char`\"{} tag of the element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_element_ad90417a5e124421b60a8a75561e4c300}{set\+Sink}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the \char`\"{}sink\char`\"{} tag of the element. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_element_a343efa58df1253861b1f2b4f99cb3d47}{get\+Win}} ()
+\begin{DoxyCompactList}\small\item\em Gets the \char`\"{}win\char`\"{} tag of the element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_element_a8b087aaba82829ea736b4a4ea879b986}{set\+Win}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the \char`\"{}win\char`\"{} tag of the element. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_element_aedd6f3d02eb5d2d809796d7e4581737b}{get\+Flag}} ()
+\begin{DoxyCompactList}\small\item\em Gets the \char`\"{}flag\char`\"{} tag of the element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_element_a94b06e3c7c27bdc8e70a8275887cd6fc}{set\+Flag}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the flag value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_element_ac919f70642e91b71da0944a0fe0f6ad2}{get\+Stop}} ()
+\begin{DoxyCompactList}\small\item\em Gets the value of the stop variable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_element_a9bbf906bd2012fb77e2d221d32baeb08}{set\+Stop}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the value of the stop variable. \end{DoxyCompactList}\item 
+virtual Element\+Type \mbox{\hyperlink{class_element_acea040d7ac78bc939ae1716da3627490}{get\+Element\+Type}} ()
+\begin{DoxyCompactList}\small\item\em To get the Element\+Type. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_element_a2e2ee96d5698ea2aa998fd84e2c34f4f}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em To get the name of the element. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_element_a290586fad7fc5baf794201988953fd2d}{get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em To get the position of the element. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_element_a66d1bf8786a21fbffac92d5ecbde5330}{set\+Position}} (\mbox{\hyperlink{class_position}{Position}} position)
+\begin{DoxyCompactList}\small\item\em To set the position of the element. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_element_a6932f29a049ff097f0eec9a68bfd842d}{set\+Direction}} (Direction dir)
+\begin{DoxyCompactList}\small\item\em To set the direction of the element. \end{DoxyCompactList}\item 
+virtual Direction \mbox{\hyperlink{class_element_a905bce215c7f79a309e6b4bbf58fa0c7}{get\+Direction}} ()
+\begin{DoxyCompactList}\small\item\em To get the direction of the element. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_element_a47632e8b85694fe6093e4add948ac50d}{set\+Moveble}} (bool movable)
+\begin{DoxyCompactList}\small\item\em To set an element on movable or not. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_element_a465e7abc5a6075880d47b48bc8c5318d}{is\+Moveble}} ()
+\begin{DoxyCompactList}\small\item\em Determines if the object is moveable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_element_a1b94fa1fbfe746d65f9a042867367cb8}{set\+Crossable}} (bool \mbox{\hyperlink{class_element_aada97c4795b7136f03c3de38f76d36ee}{crossable}})
+\begin{DoxyCompactList}\small\item\em Sets whether or not the object can be crossed. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_element_aada97c4795b7136f03c3de38f76d36ee}{crossable}} ()
+\begin{DoxyCompactList}\small\item\em Determines if the object can be crossed. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_element_ac453bc42415eae9ddb5a349d2b539a20}{get\+Symbol}} ()
+\begin{DoxyCompactList}\small\item\em Returns the symbol of the element. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_element_ac1bb3c155da9123cb06dfec67045cfd0}{operator==}} (const \mbox{\hyperlink{class_element}{Element}} \&other) const
+\begin{DoxyCompactList}\small\item\em operator == Checks if this element is equal to another element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_water_ac0d013b83980f09665369d551e5631d5}\label{class_water_ac0d013b83980f09665369d551e5631d5}} 
+\index{Water@{Water}!getDirection@{getDirection}}
+\index{getDirection@{getDirection}!Water@{Water}}
+\doxysubsubsection{\texorpdfstring{getDirection()}{getDirection()}}
+{\footnotesize\ttfamily virtual Direction Water\+::get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+To get the direction of the element. 
+
+\begin{DoxyReturn}{Returns}
+the direction of the element. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_element_a905bce215c7f79a309e6b4bbf58fa0c7}{Element}}.
+
+\mbox{\Hypertarget{class_water_ac74635d625af94aabb1c565e5b00e733}\label{class_water_ac74635d625af94aabb1c565e5b00e733}} 
+\index{Water@{Water}!getElementType@{getElementType}}
+\index{getElementType@{getElementType}!Water@{Water}}
+\doxysubsubsection{\texorpdfstring{getElementType()}{getElementType()}}
+{\footnotesize\ttfamily virtual Element\+Type Water\+::get\+Element\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+To get the Element\+Type. 
+
+\begin{DoxyReturn}{Returns}
+the type of the element. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_element_acea040d7ac78bc939ae1716da3627490}{Element}}.
+
+\mbox{\Hypertarget{class_water_a1bc38a991afe2bd54f2e737b7eb512a1}\label{class_water_a1bc38a991afe2bd54f2e737b7eb512a1}} 
+\index{Water@{Water}!getName@{getName}}
+\index{getName@{getName}!Water@{Water}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily virtual std\+::string Water\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+To get the name of the element. 
+
+\begin{DoxyReturn}{Returns}
+the name of the element. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_element_a2e2ee96d5698ea2aa998fd84e2c34f4f}{Element}}.
+
+\mbox{\Hypertarget{class_water_ae7ebd1b364a77a9d6c8b466e27bd60df}\label{class_water_ae7ebd1b364a77a9d6c8b466e27bd60df}} 
+\index{Water@{Water}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Water@{Water}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_position}{Position}} Water\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+To get the position of the element. 
+
+\begin{DoxyReturn}{Returns}
+the position of the element. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_element_a290586fad7fc5baf794201988953fd2d}{Element}}.
+
+\mbox{\Hypertarget{class_water_a0117140f7a81693dd0d76eee6bfacce0}\label{class_water_a0117140f7a81693dd0d76eee6bfacce0}} 
+\index{Water@{Water}!getSymbol@{getSymbol}}
+\index{getSymbol@{getSymbol}!Water@{Water}}
+\doxysubsubsection{\texorpdfstring{getSymbol()}{getSymbol()}}
+{\footnotesize\ttfamily virtual std\+::string Water\+::get\+Symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the symbol of the element. 
+
+\begin{DoxyReturn}{Returns}
+The symbol of the element as a string. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_element_ac453bc42415eae9ddb5a349d2b539a20}{Element}}.
+
+\mbox{\Hypertarget{class_water_a7448188d943bc7f09b95fa6ecf78343e}\label{class_water_a7448188d943bc7f09b95fa6ecf78343e}} 
+\index{Water@{Water}!isMoveble@{isMoveble}}
+\index{isMoveble@{isMoveble}!Water@{Water}}
+\doxysubsubsection{\texorpdfstring{isMoveble()}{isMoveble()}}
+{\footnotesize\ttfamily virtual bool Water\+::is\+Moveble (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Determines if the object is moveable. 
+
+\begin{DoxyReturn}{Returns}
+true if the object is moveable, false otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_element_a465e7abc5a6075880d47b48bc8c5318d}{Element}}.
+
+\mbox{\Hypertarget{class_water_af7636de73dfe1ecf34ee8d1fce37758b}\label{class_water_af7636de73dfe1ecf34ee8d1fce37758b}} 
+\index{Water@{Water}!setDirection@{setDirection}}
+\index{setDirection@{setDirection}!Water@{Water}}
+\doxysubsubsection{\texorpdfstring{setDirection()}{setDirection()}}
+{\footnotesize\ttfamily virtual void Water\+::set\+Direction (\begin{DoxyParamCaption}\item[{Direction}]{dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+To set the direction of the element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & the direction needed to set. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_element_a6932f29a049ff097f0eec9a68bfd842d}{Element}}.
+
+\mbox{\Hypertarget{class_water_af338b0e6ebc9171e615bbeefccca4b92}\label{class_water_af338b0e6ebc9171e615bbeefccca4b92}} 
+\index{Water@{Water}!setMoveble@{setMoveble}}
+\index{setMoveble@{setMoveble}!Water@{Water}}
+\doxysubsubsection{\texorpdfstring{setMoveble()}{setMoveble()}}
+{\footnotesize\ttfamily virtual void Water\+::set\+Moveble (\begin{DoxyParamCaption}\item[{bool}]{movable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+To set an element on movable or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em movable} & the true or false parameter for the element. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_element_a47632e8b85694fe6093e4add948ac50d}{Element}}.
+
+\mbox{\Hypertarget{class_water_a1624e8c5c5fa2af498ee38b066c200c4}\label{class_water_a1624e8c5c5fa2af498ee38b066c200c4}} 
+\index{Water@{Water}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Water@{Water}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily virtual void Water\+::set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+To set the position of the element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & the position to set. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_element_a66d1bf8786a21fbffac92d5ecbde5330}{Element}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+metier/elements/Water.\+h\end{DoxyCompactItemize}

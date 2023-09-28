@@ -1,0 +1,34 @@
+\hypertarget{_subject_8h_source}{}\doxysection{Subject.\+h}
+\label{_subject_8h_source}\index{metier/Subject.h@{metier/Subject.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SUBJECT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SUBJECT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <../metier/Observer.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00007\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ \(\backslash\)brief\ Basic\ class\ of\ any\ "{}subject\ of\ observation"{}.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ Class\ from\ which\ any\ event\ source\ (or\ "{}observation\ subject"{})\ is\ derived}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ of\ the\ "{}Observer\ /\ ObservationSubject"{}\ design\ model.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_subject}{Subject}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_subject_ae5980067d5ec5522db5a0d78100a34be}{\string~Subject}}()\{\}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_subject_a581f8b2df56da9a4e150b4f87f999c16}{Attach}}(\mbox{\hyperlink{class_observer}{Observer}}\ *observer)\ =\ 0;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_subject_ab4cab8641e46ebcb280ec881952d528c}{Detach}}(\mbox{\hyperlink{class_observer}{Observer}}\ *observer)\ =\ 0;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_subject_ac00d35bcd330090f9db946a0c883aca3}{Notify}}()\ =\ 0;}
+\DoxyCodeLine{00046\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00047\ \ \ \ \ std::set<Observer\ *>\ observers\_\{\};}
+\DoxyCodeLine{00048\ \};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SUBJECT\_H}}
+
+\end{DoxyCode}

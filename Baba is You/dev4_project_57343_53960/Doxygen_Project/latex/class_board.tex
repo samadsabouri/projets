@@ -1,0 +1,171 @@
+\hypertarget{class_board}{}\doxysection{Board Class Reference}
+\label{class_board}\index{Board@{Board}}
+
+
+The class \mbox{\hyperlink{class_board}{Board}} is a class representing a game board.  
+
+
+
+
+{\ttfamily \#include $<$Board.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_board_a9ee491d4fea680cf69b033374a9fdfcb}\label{class_board_a9ee491d4fea680cf69b033374a9fdfcb}} 
+{\bfseries Board} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_board}{Board}} default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board_a8d988a2e125b928b7ee6d63ed174e3e2}{Board}} (int \&board\+Cols, int \&board\+Rows, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_square}{Square}} $>$ $>$ \&squares, std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ movable\+Elements)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_board}{Board}} class constructor with parameters. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a704bbe861f6af90784188944def9e2ef}{get\+Board\+Rows}} () const
+\begin{DoxyCompactList}\small\item\em Getter method to get the number of rows on the board. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_aeeb7a50c5db7cb4861a319448ca832ce}{get\+Board\+Cols}} () const
+\begin{DoxyCompactList}\small\item\em Getter method to get the number of columns on the board. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_square}{Square}} $\ast$ $>$ $>$ \mbox{\hyperlink{class_board_aec34ec066a00ac27fa423ae56192bd65}{get\+Squares}} ()
+\begin{DoxyCompactList}\small\item\em Getter method to get the vector of vector of Squares representing the game board. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ \mbox{\hyperlink{class_board_ae405d8fc863bfcda98198a6271825ec5}{get\+Movable\+Elements}} ()
+\begin{DoxyCompactList}\small\item\em Checks if elements can be moved. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_af6f402b503ecbffeda24ade6cb5afcb5}{update\+Movable\+Elements}} (std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ new\+Movable\+Element)
+\begin{DoxyCompactList}\small\item\em To set the vector of movable elements. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_square}{Square}} $\ast$ \mbox{\hyperlink{class_board_a48dde60decf821b386a513c8ae18de30}{get\+Square\+At\+Position}} (\mbox{\hyperlink{class_position}{Position}} pos)
+\begin{DoxyCompactList}\small\item\em To get the \mbox{\hyperlink{class_square}{Square}} at a specific position on the game board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_a49c0ac3fc38d63458afd18c19d9ecfbe}{move\+Element}} (\mbox{\hyperlink{class_element}{Element}} $\ast$elem, \mbox{\hyperlink{class_position}{Position}} you\+Pos)
+\begin{DoxyCompactList}\small\item\em Moves an element to a new position on the game board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class \mbox{\hyperlink{class_board}{Board}} is a class representing a game board. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_board_a8d988a2e125b928b7ee6d63ed174e3e2}\label{class_board_a8d988a2e125b928b7ee6d63ed174e3e2}} 
+\index{Board@{Board}!Board@{Board}}
+\index{Board@{Board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{Board()}{Board()}}
+{\footnotesize\ttfamily Board\+::\+Board (\begin{DoxyParamCaption}\item[{int \&}]{board\+Cols,  }\item[{int \&}]{board\+Rows,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_square}{Square}} $>$ $>$ \&}]{squares,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$}]{movable\+Elements }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_board}{Board}} class constructor with parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board\+Cols} & The number of columns on the board. \\
+\hline
+{\em board\+Rows} & The number of rows on the board. \\
+\hline
+{\em squares} & A vector of vectors of Squares representing the game board. \\
+\hline
+{\em movable\+Elements} & A vector of Elements representing the movable elements on the board. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_board_aeeb7a50c5db7cb4861a319448ca832ce}\label{class_board_aeeb7a50c5db7cb4861a319448ca832ce}} 
+\index{Board@{Board}!getBoardCols@{getBoardCols}}
+\index{getBoardCols@{getBoardCols}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{getBoardCols()}{getBoardCols()}}
+{\footnotesize\ttfamily int Board\+::get\+Board\+Cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter method to get the number of columns on the board. 
+
+\begin{DoxyReturn}{Returns}
+The number of columns on the board. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a704bbe861f6af90784188944def9e2ef}\label{class_board_a704bbe861f6af90784188944def9e2ef}} 
+\index{Board@{Board}!getBoardRows@{getBoardRows}}
+\index{getBoardRows@{getBoardRows}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{getBoardRows()}{getBoardRows()}}
+{\footnotesize\ttfamily int Board\+::get\+Board\+Rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter method to get the number of rows on the board. 
+
+\begin{DoxyReturn}{Returns}
+The number of rows on the board. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_ae405d8fc863bfcda98198a6271825ec5}\label{class_board_ae405d8fc863bfcda98198a6271825ec5}} 
+\index{Board@{Board}!getMovableElements@{getMovableElements}}
+\index{getMovableElements@{getMovableElements}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{getMovableElements()}{getMovableElements()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ Board\+::get\+Movable\+Elements (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if elements can be moved. 
+
+\begin{DoxyReturn}{Returns}
+True if elements can be moved, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a48dde60decf821b386a513c8ae18de30}\label{class_board_a48dde60decf821b386a513c8ae18de30}} 
+\index{Board@{Board}!getSquareAtPosition@{getSquareAtPosition}}
+\index{getSquareAtPosition@{getSquareAtPosition}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{getSquareAtPosition()}{getSquareAtPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_square}{Square}} $\ast$ Board\+::get\+Square\+At\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}}}]{pos }\end{DoxyParamCaption})}
+
+
+
+To get the \mbox{\hyperlink{class_square}{Square}} at a specific position on the game board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The position to get the \mbox{\hyperlink{class_square}{Square}} from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the \mbox{\hyperlink{class_square}{Square}} at the given position. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_aec34ec066a00ac27fa423ae56192bd65}\label{class_board_aec34ec066a00ac27fa423ae56192bd65}} 
+\index{Board@{Board}!getSquares@{getSquares}}
+\index{getSquares@{getSquares}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{getSquares()}{getSquares()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_square}{Square}} $\ast$ $>$ $>$ Board\+::get\+Squares (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter method to get the vector of vector of Squares representing the game board. 
+
+\begin{DoxyReturn}{Returns}
+A vector of vectors of Squares representing the game board. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a49c0ac3fc38d63458afd18c19d9ecfbe}\label{class_board_a49c0ac3fc38d63458afd18c19d9ecfbe}} 
+\index{Board@{Board}!moveElement@{moveElement}}
+\index{moveElement@{moveElement}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{moveElement()}{moveElement()}}
+{\footnotesize\ttfamily void Board\+::move\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}} $\ast$}]{elem,  }\item[{\mbox{\hyperlink{class_position}{Position}}}]{you\+Pos }\end{DoxyParamCaption})}
+
+
+
+Moves an element to a new position on the game board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & The element to be moved. \\
+\hline
+{\em you\+Pos} & The position to move the element to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_af6f402b503ecbffeda24ade6cb5afcb5}\label{class_board_af6f402b503ecbffeda24ade6cb5afcb5}} 
+\index{Board@{Board}!updateMovableElements@{updateMovableElements}}
+\index{updateMovableElements@{updateMovableElements}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{updateMovableElements()}{updateMovableElements()}}
+{\footnotesize\ttfamily void Board\+::update\+Movable\+Elements (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$}]{new\+Movable\+Element }\end{DoxyParamCaption})}
+
+
+
+To set the vector of movable elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Movable\+Element} & A vector of Elements representing the new movable elements. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+metier/Board.\+h\item 
+metier/Board.\+cpp\end{DoxyCompactItemize}

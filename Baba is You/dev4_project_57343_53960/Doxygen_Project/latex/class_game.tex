@@ -1,0 +1,480 @@
+\hypertarget{class_game}{}\doxysection{Game Class Reference}
+\label{class_game}\index{Game@{Game}}
+
+
+Class representing the game, it contains the essential methods for the progress of the game.  
+
+
+
+
+{\ttfamily \#include $<$Game.\+h$>$}
+
+Inheritance diagram for Game\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_a7dbcf6d5e3cb36d32adf8041832b7772}\label{class_game_a7dbcf6d5e3cb36d32adf8041832b7772}} 
+{\bfseries Game} (\mbox{\hyperlink{class_board_loader}{Board\+Loader}} $\ast$b)
+\begin{DoxyCompactList}\small\item\em Default constructor of the \mbox{\hyperlink{class_game}{Game}} class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_a0b9ce536d5972caea837cc4d41194c32}\label{class_game_a0b9ce536d5972caea837cc4d41194c32}} 
+void {\bfseries save\+Level} ()
+\begin{DoxyCompactList}\small\item\em Saves the current level. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_a86d20cfd66dc1527e30bea762843f286}{is\+Restart}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the game should be restarted. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_aad1950650eb1a786c13eef595be977cb}{getZ}} ()
+\begin{DoxyCompactList}\small\item\em Returns the z-\/coordinate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_ae7d5a970574f188a03c01e00797c233b}{setZ}} (int newZ)
+\begin{DoxyCompactList}\small\item\em Sets the z-\/coordinate. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_ad96811523727a5120ef9b5c78b253620}{check\+Position\+Not\+In\+Board}} (\mbox{\hyperlink{class_position}{Position}} pos)
+\begin{DoxyCompactList}\small\item\em Checks if a position is not inside the game board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a1e6dcfe8af4a19ff2c93a02f4bb00b8d}{apply\+Rule}} (std\+::string rule, \mbox{\hyperlink{class_element}{Element}} elem)
+\begin{DoxyCompactList}\small\item\em Applies a rule to the current element. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_acd0ead9b657da3febef578b2a88ed627}{is\+Rule}} (std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $\ast$ $>$ elems\+To\+Check)
+\begin{DoxyCompactList}\small\item\em is\+Rule to check if a element is a rule or not. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_a204c8f6a8ae0ee4aa96091ec589b67f4}{is\+Connector}} (std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $\ast$ $>$ elems\+To\+Check)
+\begin{DoxyCompactList}\small\item\em is\+Connector to check if a element is a connector or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_aabdb900a66d9c0fbc3b870b3db944643}{which\+Rule}} (\mbox{\hyperlink{class_element}{Element}} a, \mbox{\hyperlink{class_element}{Element}} rule)
+\begin{DoxyCompactList}\small\item\em which\+Rule to disapply a specific rule. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a1db2398a1714939eaa88ffe9199f3631}{Dis\+All\+Rules}} (\mbox{\hyperlink{class_element}{Element}} a)
+\begin{DoxyCompactList}\small\item\em Dis\+All\+Rules to disapply all the rules of an element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a44b8cc682212baf1ea4ae9f6f10d6506}{change\+Is\+Ptr}} (int pos1, int pos2)
+\begin{DoxyCompactList}\small\item\em change\+Is\+Ptr to change the order of the \textquotesingle{}is\textquotesingle{} pointer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_ac2b4782b25c549c9f5aebd5818166dac}{search\+You}} ()
+\begin{DoxyCompactList}\small\item\em search\+You to find the rule \textquotesingle{}you\textquotesingle{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_a5dded8ef267636856623052ebeec2de4}\label{class_game_a5dded8ef267636856623052ebeec2de4}} 
+void {\bfseries disapply\+Rule} ()
+\begin{DoxyCompactList}\small\item\em disapply\+Rule to disapply the rules aren\textquotesingle{}t written or broken. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_a9ef44709e993b74f06fb4b6513537f5c}\label{class_game_a9ef44709e993b74f06fb4b6513537f5c}} 
+void {\bfseries check\+Rule} ()
+\begin{DoxyCompactList}\small\item\em Checks if a square respects the rules of the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board_loader}{Board\+Loader}} $\ast$ \mbox{\hyperlink{class_game_a04523681a85c6e04f0e5cdea902fed79}{get\+Board\+Loader}} ()
+\begin{DoxyCompactList}\small\item\em Returns the \mbox{\hyperlink{class_board_loader}{Board\+Loader}} instance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_a93dfa9f113b4487b5dda3962eadd5f0a}\label{class_game_a93dfa9f113b4487b5dda3962eadd5f0a}} 
+void {\bfseries set\+Board\+Loader} ()
+\begin{DoxyCompactList}\small\item\em Sets the \mbox{\hyperlink{class_board_loader}{Board\+Loader}} . \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_af5a8ca27c19918fd3af5127303965705}{check\+Elem\+Push}} (std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $\ast$ $>$ elems\+To\+Check)
+\begin{DoxyCompactList}\small\item\em Checks if a vector of elements can be pushed in a certain direction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_a2a905ff46c2ef4ce0cf4c0a1d2681a0f}{check\+Push}} (\mbox{\hyperlink{class_square}{Square}} $\ast$square, Direction dir)
+\begin{DoxyCompactList}\small\item\em Checks if a square can be pushed in a certain direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_aaeda0b874ba49f7d781cfb2ecd6c331a}{move\+Pushable\+Elems}} (\mbox{\hyperlink{class_square}{Square}} $\ast$square, Direction dir)
+\begin{DoxyCompactList}\small\item\em Moves all pushable elements in a square in a certain direction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_a80bc2ca3645215c7018bef0838fcf751}{check\+Elem\+Stop}} (std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $\ast$ $>$ elems\+To\+Check)
+\begin{DoxyCompactList}\small\item\em Checks if a vector of elements can be stopped. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_ada2c91ca3f4cb48c7a29480a1c7aae4c}{set\+All\+Ptr}} (std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$ test)
+\begin{DoxyCompactList}\small\item\em Sets pointers to all elements in a vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_game_a3e6c3d3227de904fc41d55d28c6d7f06}{gap\+In\+Direction}} (\mbox{\hyperlink{class_square}{Square}} $\ast$current\+Square, Direction dir, int gap)
+\begin{DoxyCompactList}\small\item\em Returns the position of the first gap in a certain direction from a square. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_a3d07d3e72fdeda13e8607708e8d09d4f}\label{class_game_a3d07d3e72fdeda13e8607708e8d09d4f}} 
+void {\bfseries update\+Is\+Pos} ()
+\begin{DoxyCompactList}\small\item\em update\+Is\+Pos to update the position of the element \textquotesingle{}is\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a9ab1059b7cd2f4aa343dbac7c7153cae}{update\+Elem\+Pos}} (\mbox{\hyperlink{class_element}{Element}} elem)
+\begin{DoxyCompactList}\small\item\em update\+Elem\+Pos to update the position of an element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_aaf8369f3f55e237e4c0c35b4b2a6d3a8}\label{class_game_aaf8369f3f55e237e4c0c35b4b2a6d3a8}} 
+void {\bfseries move} (Direction \&dir)
+\begin{DoxyCompactList}\small\item\em Moves the player according to the current orientation and the current element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a2bb3eb4ee0745eb959d110fe578e5381}{Attach}} (\mbox{\hyperlink{class_observer}{Observer}} $\ast$observer) override
+\begin{DoxyCompactList}\small\item\em Attach, add the given observer of the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_ac2a83e0f67fc7449459626527ef2ed10}{Detach}} (\mbox{\hyperlink{class_observer}{Observer}} $\ast$observer) override
+\begin{DoxyCompactList}\small\item\em Detach, delete the given observer of the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a36e7cac31a774293aafa460278196134}{Notify}} () override
+\begin{DoxyCompactList}\small\item\em Notify, Call the method Update of the view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_subject}{Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_subject_ae5980067d5ec5522db5a0d78100a34be}\label{class_subject_ae5980067d5ec5522db5a0d78100a34be}} 
+virtual {\bfseries $\sim$\+Subject} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor by default, prevent polymorphic use. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_subject_a581f8b2df56da9a4e150b4f87f999c16}{Attach}} (\mbox{\hyperlink{class_observer}{Observer}} $\ast$observer)=0
+\begin{DoxyCompactList}\small\item\em Method allowing an observer to record himself as listener of the subject of observation. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_subject_ab4cab8641e46ebcb280ec881952d528c}{Detach}} (\mbox{\hyperlink{class_observer}{Observer}} $\ast$observer)=0
+\begin{DoxyCompactList}\small\item\em Method allowing an observer to withdraw from the list of the listener of the subject of observation. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_subject_ac00d35bcd330090f9db946a0c883aca3}{Notify}} ()=0
+\begin{DoxyCompactList}\small\item\em A method that warns the observers of a change of state of the subject of observation, by invoking their method Observer\+::update(). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_subject}{Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_subject_afd3df5fd2eb3f169980fe40f5eacf5c5}\label{class_subject_afd3df5fd2eb3f169980fe40f5eacf5c5}} 
+std\+::set$<$ \mbox{\hyperlink{class_observer}{Observer}} $\ast$ $>$ {\bfseries observers\+\_\+} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing the game, it contains the essential methods for the progress of the game. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_a1e6dcfe8af4a19ff2c93a02f4bb00b8d}\label{class_game_a1e6dcfe8af4a19ff2c93a02f4bb00b8d}} 
+\index{Game@{Game}!applyRule@{applyRule}}
+\index{applyRule@{applyRule}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{applyRule()}{applyRule()}}
+{\footnotesize\ttfamily void Game\+::apply\+Rule (\begin{DoxyParamCaption}\item[{std\+::string}]{rule,  }\item[{\mbox{\hyperlink{class_element}{Element}}}]{elem }\end{DoxyParamCaption})}
+
+
+
+Applies a rule to the current element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rule} & The name of the rule to apply. \\
+\hline
+{\em elem} & The element to apply the rule to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_a2bb3eb4ee0745eb959d110fe578e5381}\label{class_game_a2bb3eb4ee0745eb959d110fe578e5381}} 
+\index{Game@{Game}!Attach@{Attach}}
+\index{Attach@{Attach}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Attach()}{Attach()}}
+{\footnotesize\ttfamily void Game\+::\+Attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_observer}{Observer}} $\ast$}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Attach, add the given observer of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer,the} & given observer to add. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_subject_a581f8b2df56da9a4e150b4f87f999c16}{Subject}}.
+
+\mbox{\Hypertarget{class_game_a44b8cc682212baf1ea4ae9f6f10d6506}\label{class_game_a44b8cc682212baf1ea4ae9f6f10d6506}} 
+\index{Game@{Game}!changeIsPtr@{changeIsPtr}}
+\index{changeIsPtr@{changeIsPtr}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{changeIsPtr()}{changeIsPtr()}}
+{\footnotesize\ttfamily void Game\+::change\+Is\+Ptr (\begin{DoxyParamCaption}\item[{int}]{pos1,  }\item[{int}]{pos2 }\end{DoxyParamCaption})}
+
+
+
+change\+Is\+Ptr to change the order of the \textquotesingle{}is\textquotesingle{} pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos1} & the position of the first \textquotesingle{}is\textquotesingle{}. \\
+\hline
+{\em pos2} & the position of the \textquotesingle{}is\textquotesingle{} next to the \textquotesingle{}you\textquotesingle{} rule. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_af5a8ca27c19918fd3af5127303965705}\label{class_game_af5a8ca27c19918fd3af5127303965705}} 
+\index{Game@{Game}!checkElemPush@{checkElemPush}}
+\index{checkElemPush@{checkElemPush}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{checkElemPush()}{checkElemPush()}}
+{\footnotesize\ttfamily bool Game\+::check\+Elem\+Push (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $\ast$ $>$}]{elems\+To\+Check }\end{DoxyParamCaption})}
+
+
+
+Checks if a vector of elements can be pushed in a certain direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elems\+To\+Check} & The vector of elements to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the vector of elements can be pushed, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_a80bc2ca3645215c7018bef0838fcf751}\label{class_game_a80bc2ca3645215c7018bef0838fcf751}} 
+\index{Game@{Game}!checkElemStop@{checkElemStop}}
+\index{checkElemStop@{checkElemStop}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{checkElemStop()}{checkElemStop()}}
+{\footnotesize\ttfamily bool Game\+::check\+Elem\+Stop (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $\ast$ $>$}]{elems\+To\+Check }\end{DoxyParamCaption})}
+
+
+
+Checks if a vector of elements can be stopped. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elems\+To\+Check} & The vector of elements to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the vector of elements can be stopped, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_ad96811523727a5120ef9b5c78b253620}\label{class_game_ad96811523727a5120ef9b5c78b253620}} 
+\index{Game@{Game}!checkPositionNotInBoard@{checkPositionNotInBoard}}
+\index{checkPositionNotInBoard@{checkPositionNotInBoard}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{checkPositionNotInBoard()}{checkPositionNotInBoard()}}
+{\footnotesize\ttfamily bool Game\+::check\+Position\+Not\+In\+Board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}}}]{pos }\end{DoxyParamCaption})}
+
+
+
+Checks if a position is not inside the game board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The position to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the position is not inside the game board, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_a2a905ff46c2ef4ce0cf4c0a1d2681a0f}\label{class_game_a2a905ff46c2ef4ce0cf4c0a1d2681a0f}} 
+\index{Game@{Game}!checkPush@{checkPush}}
+\index{checkPush@{checkPush}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{checkPush()}{checkPush()}}
+{\footnotesize\ttfamily bool Game\+::check\+Push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_square}{Square}} $\ast$}]{square,  }\item[{Direction}]{dir }\end{DoxyParamCaption})}
+
+
+
+Checks if a square can be pushed in a certain direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em square} & The square to check. \\
+\hline
+{\em dir} & The direction to push the square in. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the square can be pushed, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_ac2a83e0f67fc7449459626527ef2ed10}\label{class_game_ac2a83e0f67fc7449459626527ef2ed10}} 
+\index{Game@{Game}!Detach@{Detach}}
+\index{Detach@{Detach}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Detach()}{Detach()}}
+{\footnotesize\ttfamily void Game\+::\+Detach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_observer}{Observer}} $\ast$}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Detach, delete the given observer of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer,the} & given observer to delete. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_subject_ab4cab8641e46ebcb280ec881952d528c}{Subject}}.
+
+\mbox{\Hypertarget{class_game_a1db2398a1714939eaa88ffe9199f3631}\label{class_game_a1db2398a1714939eaa88ffe9199f3631}} 
+\index{Game@{Game}!DisAllRules@{DisAllRules}}
+\index{DisAllRules@{DisAllRules}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{DisAllRules()}{DisAllRules()}}
+{\footnotesize\ttfamily void Game\+::\+Dis\+All\+Rules (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Dis\+All\+Rules to disapply all the rules of an element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & the element to disapply all the rules. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_a3e6c3d3227de904fc41d55d28c6d7f06}\label{class_game_a3e6c3d3227de904fc41d55d28c6d7f06}} 
+\index{Game@{Game}!gapInDirection@{gapInDirection}}
+\index{gapInDirection@{gapInDirection}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{gapInDirection()}{gapInDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_position}{Position}} Game\+::gap\+In\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_square}{Square}} $\ast$}]{current\+Square,  }\item[{Direction}]{dir,  }\item[{int}]{gap }\end{DoxyParamCaption})}
+
+
+
+Returns the position of the first gap in a certain direction from a square. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Square} & The square to start from. \\
+\hline
+{\em dir} & The direction to look in. \\
+\hline
+{\em dir} & The direction to look in. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The position of the first gap in the given direction and gap size. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_a04523681a85c6e04f0e5cdea902fed79}\label{class_game_a04523681a85c6e04f0e5cdea902fed79}} 
+\index{Game@{Game}!getBoardLoader@{getBoardLoader}}
+\index{getBoardLoader@{getBoardLoader}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getBoardLoader()}{getBoardLoader()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board_loader}{Board\+Loader}} $\ast$ Game\+::get\+Board\+Loader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the \mbox{\hyperlink{class_board_loader}{Board\+Loader}} instance. 
+
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{class_board_loader}{Board\+Loader}} instance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_aad1950650eb1a786c13eef595be977cb}\label{class_game_aad1950650eb1a786c13eef595be977cb}} 
+\index{Game@{Game}!getZ@{getZ}}
+\index{getZ@{getZ}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getZ()}{getZ()}}
+{\footnotesize\ttfamily int Game\+::getZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the z-\/coordinate. 
+
+\begin{DoxyReturn}{Returns}
+The z-\/coordinate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_a204c8f6a8ae0ee4aa96091ec589b67f4}\label{class_game_a204c8f6a8ae0ee4aa96091ec589b67f4}} 
+\index{Game@{Game}!isConnector@{isConnector}}
+\index{isConnector@{isConnector}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{isConnector()}{isConnector()}}
+{\footnotesize\ttfamily bool Game\+::is\+Connector (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $\ast$ $>$}]{elems\+To\+Check }\end{DoxyParamCaption})}
+
+
+
+is\+Connector to check if a element is a connector or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elems\+To\+Check} & element to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the element type is \textquotesingle{}connector\textquotesingle{}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_a86d20cfd66dc1527e30bea762843f286}\label{class_game_a86d20cfd66dc1527e30bea762843f286}} 
+\index{Game@{Game}!isRestart@{isRestart}}
+\index{isRestart@{isRestart}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{isRestart()}{isRestart()}}
+{\footnotesize\ttfamily bool Game\+::is\+Restart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the game should be restarted. 
+
+\begin{DoxyReturn}{Returns}
+True if the game should be restarted, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_acd0ead9b657da3febef578b2a88ed627}\label{class_game_acd0ead9b657da3febef578b2a88ed627}} 
+\index{Game@{Game}!isRule@{isRule}}
+\index{isRule@{isRule}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{isRule()}{isRule()}}
+{\footnotesize\ttfamily bool Game\+::is\+Rule (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $\ast$ $>$}]{elems\+To\+Check }\end{DoxyParamCaption})}
+
+
+
+is\+Rule to check if a element is a rule or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elems\+To\+Check} & element to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the element type is \textquotesingle{}rule\textquotesingle{}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_aaeda0b874ba49f7d781cfb2ecd6c331a}\label{class_game_aaeda0b874ba49f7d781cfb2ecd6c331a}} 
+\index{Game@{Game}!movePushableElems@{movePushableElems}}
+\index{movePushableElems@{movePushableElems}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{movePushableElems()}{movePushableElems()}}
+{\footnotesize\ttfamily void Game\+::move\+Pushable\+Elems (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_square}{Square}} $\ast$}]{square,  }\item[{Direction}]{dir }\end{DoxyParamCaption})}
+
+
+
+Moves all pushable elements in a square in a certain direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em square} & The square to move pushable elements from. \\
+\hline
+{\em dir} & The direction to move the pushable elements in. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_a36e7cac31a774293aafa460278196134}\label{class_game_a36e7cac31a774293aafa460278196134}} 
+\index{Game@{Game}!Notify@{Notify}}
+\index{Notify@{Notify}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Notify()}{Notify()}}
+{\footnotesize\ttfamily void Game\+::\+Notify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Notify, Call the method Update of the view. 
+
+
+
+Implements \mbox{\hyperlink{class_subject_ac00d35bcd330090f9db946a0c883aca3}{Subject}}.
+
+\mbox{\Hypertarget{class_game_ac2b4782b25c549c9f5aebd5818166dac}\label{class_game_ac2b4782b25c549c9f5aebd5818166dac}} 
+\index{Game@{Game}!searchYou@{searchYou}}
+\index{searchYou@{searchYou}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{searchYou()}{searchYou()}}
+{\footnotesize\ttfamily int Game\+::search\+You (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+search\+You to find the rule \textquotesingle{}you\textquotesingle{}. 
+
+\begin{DoxyReturn}{Returns}
+the index of the \textquotesingle{}is\textquotesingle{} next to \textquotesingle{}you\textquotesingle{}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_ada2c91ca3f4cb48c7a29480a1c7aae4c}\label{class_game_ada2c91ca3f4cb48c7a29480a1c7aae4c}} 
+\index{Game@{Game}!setAllPtr@{setAllPtr}}
+\index{setAllPtr@{setAllPtr}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{setAllPtr()}{setAllPtr()}}
+{\footnotesize\ttfamily void Game\+::set\+All\+Ptr (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $>$}]{test }\end{DoxyParamCaption})}
+
+
+
+Sets pointers to all elements in a vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em test} & The vector of elements to set pointers for. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_ae7d5a970574f188a03c01e00797c233b}\label{class_game_ae7d5a970574f188a03c01e00797c233b}} 
+\index{Game@{Game}!setZ@{setZ}}
+\index{setZ@{setZ}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{setZ()}{setZ()}}
+{\footnotesize\ttfamily void Game\+::setZ (\begin{DoxyParamCaption}\item[{int}]{newZ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the z-\/coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newZ} & The new z-\/coordinate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_a9ab1059b7cd2f4aa343dbac7c7153cae}\label{class_game_a9ab1059b7cd2f4aa343dbac7c7153cae}} 
+\index{Game@{Game}!updateElemPos@{updateElemPos}}
+\index{updateElemPos@{updateElemPos}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{updateElemPos()}{updateElemPos()}}
+{\footnotesize\ttfamily void Game\+::update\+Elem\+Pos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}}}]{elem }\end{DoxyParamCaption})}
+
+
+
+update\+Elem\+Pos to update the position of an element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & the element to update his position. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_aabdb900a66d9c0fbc3b870b3db944643}\label{class_game_aabdb900a66d9c0fbc3b870b3db944643}} 
+\index{Game@{Game}!whichRule@{whichRule}}
+\index{whichRule@{whichRule}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{whichRule()}{whichRule()}}
+{\footnotesize\ttfamily void Game\+::which\+Rule (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_element}{Element}}}]{a,  }\item[{\mbox{\hyperlink{class_element}{Element}}}]{rule }\end{DoxyParamCaption})}
+
+
+
+which\+Rule to disapply a specific rule. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & the element where we disapply the rule. \\
+\hline
+{\em rule} & the specific rule to disapply. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+metier/Game.\+h\item 
+metier/Game.\+cpp\end{DoxyCompactItemize}

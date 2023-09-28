@@ -1,0 +1,226 @@
+\hypertarget{class_position}{}\doxysection{Position Class Reference}
+\label{class_position}\index{Position@{Position}}
+
+
+Class representing a position.  
+
+
+
+
+{\ttfamily \#include $<$Position.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_position_a922d315b24e2d84d737705b8c7bfae2f}{Position}} (int row, int column)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_position}{Position}} class constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_position_a7a3ffb04f4c91a0bda59012abe22b2b7}{get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Get the current position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_position_a1a64c86cc3f86646e4e489b792a33bd4}\label{class_position_a1a64c86cc3f86646e4e489b792a33bd4}} 
+void {\bfseries next\+Position} (Direction dir)
+\begin{DoxyCompactList}\small\item\em Set the next position. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_position_a99abd8b7df2940d78ed53aa9dd81f202}{get\+Row}} () const
+\begin{DoxyCompactList}\small\item\em Get the row of the position. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_position_a672b9b7960216f8bf4ccae287885877b}{get\+Column}} () const
+\begin{DoxyCompactList}\small\item\em Get the column of the position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_position_a3a53bb2641c38d8a145f1defe1335034}{set\+Position}} (int \&row, int \&col)
+\begin{DoxyCompactList}\small\item\em Set the position of the square. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_position_acf13e7e45c7c07a67c2adf2f7e1dcc5f}{operator==}} (const \mbox{\hyperlink{class_position}{Position}} \&other) const
+\begin{DoxyCompactList}\small\item\em Operator == to compare two positions. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_position_ae4d491be71bc11896f864835187e860d}{operator!=}} (const \mbox{\hyperlink{class_position}{Position}} \&other) const
+\begin{DoxyCompactList}\small\item\em operator != overload of the \char`\"{}not equal\char`\"{} operator for \mbox{\hyperlink{class_position}{Position}} objects. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_position_a9ec6b49c2f17c87eaf17c0b57e5bbb1a}\label{class_position_a9ec6b49c2f17c87eaf17c0b57e5bbb1a}} 
+bool {\bfseries operator$<$} (const \mbox{\hyperlink{class_position}{Position}} \&other) const
+\item 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_position_aad987a6c43c984aec05236fd120ae362}{operator+}} (const Direction \&dir) const
+\begin{DoxyCompactList}\small\item\em operator + overload of the addition operator for a \mbox{\hyperlink{class_position}{Position}} object and a Direction object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_position_ac0a89a1aedc011cb7ebd4cdb3a08cb99}{operator-\/}} (const Direction \&dir) const
+\begin{DoxyCompactList}\small\item\em operator -\/ overload of the subtraction operator for a \mbox{\hyperlink{class_position}{Position}} object and a Direction object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_position_ab7ab267bcecdb85160da8e5a7069a98e}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_position}{Position}} \&pos)
+\begin{DoxyCompactList}\small\item\em operator \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} overload of the output stream operator for \mbox{\hyperlink{class_position}{Position}} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a position. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_position_a922d315b24e2d84d737705b8c7bfae2f}\label{class_position_a922d315b24e2d84d737705b8c7bfae2f}} 
+\index{Position@{Position}!Position@{Position}}
+\index{Position@{Position}!Position@{Position}}
+\doxysubsubsection{\texorpdfstring{Position()}{Position()}}
+{\footnotesize\ttfamily Position\+::\+Position (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_position}{Position}} class constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em column} & The column of the position. \\
+\hline
+{\em row} & The row of the position. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_position_a672b9b7960216f8bf4ccae287885877b}\label{class_position_a672b9b7960216f8bf4ccae287885877b}} 
+\index{Position@{Position}!getColumn@{getColumn}}
+\index{getColumn@{getColumn}!Position@{Position}}
+\doxysubsubsection{\texorpdfstring{getColumn()}{getColumn()}}
+{\footnotesize\ttfamily int Position\+::get\+Column (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the column of the position. 
+
+\begin{DoxyReturn}{Returns}
+The column of the position. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_position_a7a3ffb04f4c91a0bda59012abe22b2b7}\label{class_position_a7a3ffb04f4c91a0bda59012abe22b2b7}} 
+\index{Position@{Position}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Position@{Position}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_position}{Position}} Position\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the current position. 
+
+\begin{DoxyReturn}{Returns}
+The current position. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_position_a99abd8b7df2940d78ed53aa9dd81f202}\label{class_position_a99abd8b7df2940d78ed53aa9dd81f202}} 
+\index{Position@{Position}!getRow@{getRow}}
+\index{getRow@{getRow}!Position@{Position}}
+\doxysubsubsection{\texorpdfstring{getRow()}{getRow()}}
+{\footnotesize\ttfamily int Position\+::get\+Row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the row of the position. 
+
+\begin{DoxyReturn}{Returns}
+The row of the position. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_position_ae4d491be71bc11896f864835187e860d}\label{class_position_ae4d491be71bc11896f864835187e860d}} 
+\index{Position@{Position}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Position@{Position}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Position\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_position}{Position}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator != overload of the \char`\"{}not equal\char`\"{} operator for \mbox{\hyperlink{class_position}{Position}} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \mbox{\hyperlink{class_position}{Position}} object to compare to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the two \mbox{\hyperlink{class_position}{Position}} objects are different, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_position_aad987a6c43c984aec05236fd120ae362}\label{class_position_aad987a6c43c984aec05236fd120ae362}} 
+\index{Position@{Position}!operator+@{operator+}}
+\index{operator+@{operator+}!Position@{Position}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_position}{Position}} Position\+::operator+ (\begin{DoxyParamCaption}\item[{const Direction \&}]{dir }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator + overload of the addition operator for a \mbox{\hyperlink{class_position}{Position}} object and a Direction object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & The Direction object to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \mbox{\hyperlink{class_position}{Position}} object with the same row and column as this object but shifted in the direction of the input Direction object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_position_ac0a89a1aedc011cb7ebd4cdb3a08cb99}\label{class_position_ac0a89a1aedc011cb7ebd4cdb3a08cb99}} 
+\index{Position@{Position}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Position@{Position}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_position}{Position}} Position\+::operator-\/ (\begin{DoxyParamCaption}\item[{const Direction \&}]{dir }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator -\/ overload of the subtraction operator for a \mbox{\hyperlink{class_position}{Position}} object and a Direction object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & The Direction object to subtract. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \mbox{\hyperlink{class_position}{Position}} object with the same row and column as this object but shifted in the opposite direction of the input Direction object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_position_acf13e7e45c7c07a67c2adf2f7e1dcc5f}\label{class_position_acf13e7e45c7c07a67c2adf2f7e1dcc5f}} 
+\index{Position@{Position}!operator==@{operator==}}
+\index{operator==@{operator==}!Position@{Position}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Position\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_position}{Position}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operator == to compare two positions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other position to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the two positions are equal, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_position_a3a53bb2641c38d8a145f1defe1335034}\label{class_position_a3a53bb2641c38d8a145f1defe1335034}} 
+\index{Position@{Position}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Position@{Position}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void Position\+::set\+Position (\begin{DoxyParamCaption}\item[{int \&}]{row,  }\item[{int \&}]{col }\end{DoxyParamCaption})}
+
+
+
+Set the position of the square. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & The row position of the square. \\
+\hline
+{\em col} & The column position of the square. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_position_ab7ab267bcecdb85160da8e5a7069a98e}\label{class_position_ab7ab267bcecdb85160da8e5a7069a98e}} 
+\index{Position@{Position}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Position@{Position}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_position}{Position}} \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+operator \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} overload of the output stream operator for \mbox{\hyperlink{class_position}{Position}} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream object. \\
+\hline
+{\em pos} & The \mbox{\hyperlink{class_position}{Position}} object to output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The output stream object. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+metier/Position.\+h\item 
+metier/Position.\+cpp\end{DoxyCompactItemize}
