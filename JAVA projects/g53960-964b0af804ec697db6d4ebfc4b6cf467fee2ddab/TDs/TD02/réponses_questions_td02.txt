@@ -1,0 +1,300 @@
+ TD02 - Programmation OO : héritage, polymorphisme
+
+ **QUESTION 1**
+
+**1. Qu’affiche le programme TestPoints ?**
+
+
+(3.0, 6.0) - FF0000FF
+x: 3.0
+color : FF0000FF
+
+			
+
+**2. Quelle(s) erreur(s) de compilation obtient-on si on modifie la première ligne comme suit :**
+ 
+Point p = new ColoredPoint(2, 4, 0xFF0000FF);
+
+			
+
+On ne trouve pas la méthode getColor() car l'objet p est de type point. 
+
+
+**Quelle ligne pose problème et pourquoi ?**
+
+La dernière ligne.
+
+La classe parent n'a pas accès aux méthodes de classe enfant. Donc l'objet p de type Point ne connaît pas la méthode getColor().
+
+
+**A-t-on toujours une erreur si on supprime (ou commente) cette ligne problématique?**
+
+Non car on appelle plus la méthode getColor().
+
+
+**3. Peut-on ajouter la ligne suivante au main ?**
+
+ColoredPoint p2 = new Point(2, 4);
+
+
+Non, car p2 est de type ColoredPoint et on fais appel au costructeur de la classe Point. Un objet de type ColoredPoint a besoin de 3 attributs : x, y et color.
+
+
+**4. Peut-on remplacer le contenu de la méthode toString() de ColoredPoint via :**
+ 
+return this.x +" - "+ this.y +" - "+ this.color;
+
+
+Non car les attributs x et y sont privés. Il faut utilisr les getteurs.
+
+
+**5. Quelle erreur obtient-on si l’on modifie la déclaration de la classe Point comme suit :**
+ 
+public class Point extends ColoredPoint {
+    ...
+}
+
+
+Un problème niveau de la hiérarchie. La classe coloredPoint hérite déjà de point et donc un père ne peut pas hériter de son fils.
+
+
+**6. Quelle erreur obtient-on si on déclare final la classe Point :**
+
+ 
+public final class Point {
+    ...
+}
+
+
+L'érreur obtenue est : "cannot inherit from final point"
+Une classe ne peut pas hériter d'une autre classe avec final.
+
+
+**********************************************************************************************************************************
+
+**QUESTION2**
+
+**1. Peut-on ajouter la ligne suivante au main ?**
+
+
+Object p3 = new Point(2, 4);
+
+**Pourquoi?**
+
+Oui car la classe point hérite de la classe object
+
+
+**2. Peut-on ajouter la ligne suivante au main ?**
+
+Object p4 = new ColoredPoint(2, 4, 0xFF0000FF);
+
+**Pourquoi?**
+C'est la même chose, classe est le parent (ancien), donc ca fonctionne. 
+Car elle hérite de la classe object.
+
+**3. Peut-on ajouter la ligne suivante au main ?**
+
+p.hashCode();
+
+On peut faire ça, la méthode ``hashCode()`` est dans la classe ``Object``, elle marche avec chaque type d'objet afin d'avoir son hash. On peut aussi le surdéfinir. 
+**Où est définie cette méthode ?**
+
+Dans la classe Object.
+
+
+**Pourquoi peut-on l’appeler sur un objet de type ColoredPoint ?**
+
+Car ColoredPoint hérite de Point et Point hérite de Object.
+
+****************************************************************************************************************************************
+
+**QUESTION3**
+
+**1. Quelle erreur de compilation obtenez-vous si vous ajoutez**
+
+System.out.println("test");
+
+**comme première ligne du constructeur de la classe ColoredPoint ?**
+
+super(x,y) doit être la 1ere instruction dans le constructeur.
+
+
+**2. Quelle erreur de compilation obtenez-vous si vous supprimez la ligne**
+
+super(x,y);
+
+**dans le constructeur de la classe ColoredPoint ? A quoi sert cette ligne ?**
+
+L'érreur obtenue est : constructor Point in class esi.atl.oo_inheritance.Point cannot be applied to given types.
+
+C'est à dire que Point ne peut pas être donner à des types données . Donc le constructeur de Point n'est pas défini, il faut l'appeler explicitement.
+
+Cette ligne sert à intialiser les attributs de la classe enfant en appelant le constructeur de la classe parent.
+
+
+**3. Après avoir supprimé la ligne au point précédent, ajoutez dans la classe Point le constructeur suivant :**
+
+public Point() {
+    this(0,0);
+}
+
+**A-t-on toujours la même erreur qu’au point précédent ?**
+
+Non
+
+******************************************************************************************************************************************
+
+**Question 4**
+
+**Considérons maintenant le test suivant :**
+
+
+package esi.atl.oo_inheritance;
+
+class A {
+    A () {
+        System.out.println("constructor of A");
+    }
+}
+class B extends A {
+    B () {
+        System.out.println("constructor of B");
+    }
+}
+class C extends B {
+    C () {
+        System.out.println("constructor of C");
+    }
+}
+public class TestConstructor {
+    
+    public static void main(String[] args) {
+        new C();
+    }
+}
+
+
+**1. Qu’affiche ce programme ?**
+
+constructor of A
+constructor of B
+constructor of C
+```
+
+**2. Supprimez le constructeur de la classe C, qu’affiche maintenant le programme ?**
+
+
+constructor of A
+constructor of B
+```
+**3. Après avoir remis le constructeur de la classe C, ajoutez dans chaque constructeur un appel explicite au constructeur de la super-classe (super(). Vérifiez que l’effet est bien identique.**
+
+
+Oui c'est identique.
+
+constructor of A
+constructor of B
+constructor of C
+```
+
+**4. A votre avis, quelles sont les constructeurs de la classe Object ? Vérifiez en consultant la javadoc.**
+
+
+public Object() {
+   ...
+}
+
+*****************************************************************************************************************************************************************
+
+**QUESTION5**
+
+**1. Qu’affiche ce programme ?**
+
+(0.0, 0.0) - not pinned
+(1.0, 1.0) - pinned
+
+
+**2. Selon vous, quelle méthode move est exécutée :**
+
+* celle de Point car la variable est déclarée de type Point ?
+* celle de PinnablePoint car l’objet référencé par la variable à ce moment-là
+est de type PinnablePoint ?**
+
+
+Celle de PinnablePoint
+**3. Ajoutez une exception à la méthode move.**
+
+@Override
+public Point move(double dx, double dy) throws Exception {
+    if(!pinned)
+        super.move(dx, dy);
+    else throw new Exception("Point is pinned, cannot move anymore");
+        return this;
+}
+
+**Quelle erreur obtenez-vous ?**
+
+
+L'erreur obtenue est : move(double, double) in PinnablePoint cannot override move(double, double) in Point. Overridden method does not throw Exception.
+C'est à dire que la méthode move ne lance aucune exception donc Exception n'est pas compatible avec la clause throw de la méthode move de Point.
+L'en-tête doit être identique vu que move est une redéfinition.
+
+
+**4. Remplacez Exception par une IllegalStateException. Avez-vous toujours une erreur ? Pourquoi ?**
+
+
+Non mais il y aura un problème de compilation
+
+
+**5. Retirez la clause throws (mais gardez le throw), avez–vous une erreur ?**
+
+
+Oui, l'exception n'est pas gére.
+
+
+**6. Remplacez le type de retour par PinnablePoint, avez-vous une erreur ?**
+
+Non
+
+
+**7. Remplacez le type de retour par Object, obtenez-vous une erreur ?pourquoi ?**
+
+
+Oui car le type de retour n'est pas compatible. La classe Object n'a pas de méthode move
+
+
+**8. Remplacez le modificateur d’accès public par protected, quelle erreur obtient-on ?**
+
+
+La méthode move est public dans la classe parent (Point) et on doit pas changer l'accès dans les classes enfants (doivent rester public).
+ 
+**9. Dans la méthode move, que fait l’appel "super.move(...);" ?**
+
+Fait appel a la méthode de la classe parent Point.
+
+******************************************************************************************************************************************
+
+**QUESTION6**
+
+* Il affiche:
+	```
+	(1.0, 1.0)
+	(3.0, 5.0) - FF0000FF
+	(2.0, 2.0) - not pinned
+	```
+
+*******************************************************************************************************************************************
+	
+
+**QUESTION7**
+
+
+** Un modificateur protected n'est pas autorisé.
+	
+** C'est autorisé.
+	
+** Il a affiche la même chose:
+	```
+	(1.0, 1.0)
+	(3.0, 5.0) - FF0000FF
+	(2.0, 2.0) - not pinned
